@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 locale                   : "ko-KR"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
 title                    : "티끌모아 코딩"
-title_separator          :  "|"
+title_separator          :  # "|"
 subtitle                 : # "site tagline that appears below site title in masthead"
 name                     : "songbyhyeok"
 description              : "아는 만큼 보이는 법"
