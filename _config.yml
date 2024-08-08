@@ -19,7 +19,7 @@ locale                   : "ko-KR"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
 title                    : "티끌모아 코딩"
 title_separator          :  # "|"
-subtitle                 : # "site tagline that appears below site title in masthead"
+subtitle                 : "Songbyhyeok`s history blog"
 name                     : "songbyhyeok"
 description              : "아는 만큼 보이는 법"
 url                      : "https://songbyhyeok.github.io"
@@ -36,7 +36,7 @@ copyright_url            : # "copyright" URL, defaults to site.url
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
-    shortname            : "songbyhyeok`note" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : "songbyhyeok-blog" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
