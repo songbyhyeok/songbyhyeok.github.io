@@ -17,6 +17,8 @@ layout: default
 <div id="main" role="main">
   {% include sidebar.html %}
 
+  <a href="mailto:songbyhyeok@gmail.com?subject=Test%20Email&body=Hello%20there">Send Email</a>
+
   <div class="archive">
     {% unless page.header.overlay_color or page.header.overlay_image %}
       <h1 id="page-title" class="page__title"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>{{ page.title }}</h1>
