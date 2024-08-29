@@ -47,10 +47,11 @@ body {
 
   .page__inner-wrap {
     float: inline-start;
-    margin-top: 1em;
+    margin-top: 2em;
     margin-inline: 0;
     width: 100%;
     clear: both;
+    font-size: $type-size-6;
 
     .page__content,
     .page__meta,

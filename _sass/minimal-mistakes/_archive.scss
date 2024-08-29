@@ -20,6 +20,7 @@
 
 .archive__item {
   position: relative;
+  font-size: 0.85rem;
 
   a {
     position: relative;
@@ -32,8 +33,8 @@
 }
 
 .archive__subtitle {
-  margin: 1.414em 0 0.5em;
-  padding-bottom: 0.5em;
+  margin: 0 0 0.5em;
+  padding-bottom: 0.3em;
   font-size: $type-size-5;
   color: $muted-text-color;
   border-bottom: 1px solid $border-color;
