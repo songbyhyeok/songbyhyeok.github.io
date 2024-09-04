@@ -15,6 +15,7 @@ tag: [ISSUE, AWS, RDS, MYSQL]
 
 ## 로컬 포트 포워딩으로 RDS 연결하기.
 기존 방식은 생성된 rds ip로 연동시키면 됐지만, 이제는 ssh 방식으로 ec2에 접근해서 우회하여 rds에 연동시켜야 한다.
+
 **Intellij DataGrip**  
 ![image](https://github.com/user-attachments/assets/ea1d2c4f-c8ac-4cc0-b326-6eed5723553f)
 
