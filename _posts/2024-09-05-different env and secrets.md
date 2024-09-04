@@ -1,7 +1,7 @@
 ---
 title: 환경 변수와 secrets
 categories: Note
-tag: [Note, Github Actions, Secrets, Env]
+tag: [NOTE, GITHUB_ACTIONS, SECRETS, ENV]
 ---
 
 workflow 작성하면서 secrets와 환경 변수 두 개를 때에 따라 사용해야 할 일이 많아서 어떻게 사용할 수 있는지 정리 목적으로 작성한다.
