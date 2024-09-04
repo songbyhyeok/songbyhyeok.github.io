@@ -1,7 +1,7 @@
 ---
 title: Github Actions CI/CD Review
 categories: Review
-tag: [ISSUE, Review, Github Actions, CI/CD, AWS, EC2, RDS, Docker]
+tag: [ISSUE, REVIEW, GITHUB_ACTIONS, CI/CD, AWS, EC2, RDS, DOCKER]
 ---
 
 ![image](https://github.com/user-attachments/assets/817594f2-afe3-4ed9-a49a-1f8bec26e7d4)

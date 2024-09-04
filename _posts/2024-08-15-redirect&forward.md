@@ -1,7 +1,7 @@
 ---
 title: Redirect, Foward 개념과 차이점
 categories: Spring
-tag: [Spring]
+tag: [SPRING]
 ---
 
 ## 정의
