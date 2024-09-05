@@ -1,7 +1,6 @@
 ---
 title: Minimal Mistakes 테마 사용 시 home 제목이 중복되는 현상 해결하기
-categories: Troubleshooting
-tag: [ISSUE, JEKYLL]
+categories: github
 ---
 
 ## 동일한 블로그 제목이 두 개가 표시되는 현상

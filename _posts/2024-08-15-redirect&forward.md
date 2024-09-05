@@ -1,7 +1,6 @@
 ---
 title: Redirect, Foward 개념과 차이점
-categories: Spring
-tag: [SPRING]
+categories: network
 ---
 
 ## 정의

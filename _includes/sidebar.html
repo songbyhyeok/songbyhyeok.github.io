@@ -15,5 +15,12 @@
       {% include nav_list nav=page.sidebar.nav %}
     {% endif %}
   {% endif %}
+
+
+  <!-- 식빵맘님 사이드바 카테고리 -->
+  {% if page.sidebar_main %}
+    {% include nav_list_main %}
+  {% endif %}
+
   </div>
 {% endif %}

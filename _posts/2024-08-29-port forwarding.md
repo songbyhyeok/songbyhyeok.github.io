@@ -1,7 +1,6 @@
 ---
 title: 포트 포워딩 정리
-categories: Network
-tag: [NETWORK]
+categories: network
 ---
 
 ## 간략 설명

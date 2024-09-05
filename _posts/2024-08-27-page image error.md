@@ -1,7 +1,6 @@
 ---
 title: Github page 이미지 엑박 현상
-categories: Troubleshooting
-tag: [ISSUE]
+categories: github
 ---
 
 ## 이슈

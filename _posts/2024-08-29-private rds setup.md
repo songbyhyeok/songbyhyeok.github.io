@@ -1,7 +1,6 @@
 ---
 title: AWS RDS IP 과금 이슈 및 로컬 포트 포워딩 RDS연동과 Github Action Workflow Build
-categories: Troubleshooting
-tag: [ISSUE, AWS, RDS, MYSQL]
+categories: aws
 ---
 
 ![image](https://github.com/user-attachments/assets/f85a6436-1c39-4c3b-989f-c1fd4fffcf22)
