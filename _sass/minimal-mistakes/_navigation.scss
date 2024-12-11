@@ -486,6 +486,10 @@
   font-weight: bold;
 }
 
+#nav__sub-total {
+  font-size: large;
+}
+
 .nav__sub-title {
   display: block;
   margin: 0.5rem 0;
@@ -495,6 +499,15 @@
   font-weight: bold;
   text-transform: uppercase;
   border-bottom: 1px solid $border-color;
+}
+
+#nav__sub-item {
+  color: rgb(160, 160, 160);
+  font-weight: bold;
+}
+
+#nav__sub-item:hover {
+  opacity: 0.5;
 }
 
 /*

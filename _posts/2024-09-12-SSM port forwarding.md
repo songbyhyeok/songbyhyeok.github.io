@@ -96,15 +96,15 @@ categories: aws
 ## SpringBoot Local 자동 연동 설정
 shell or powerShell 둘 중 하나의 스크립트를 사용한다. 인텔리제이 터미널 default = powerShell이므로 powerShell을 추천한다.
 
-**shell**
+**shell**  
 위 shell 스크립트를 .sh 확장자로 저장 및 Run/Debug Configurations에서 스크립트 등록
 
-**powerShell** 
+**powerShell**  
 ![image](https://github.com/user-attachments/assets/04fb8dda-038b-4a04-92d7-bd44ddc05194)
 
 인텔리제이에서 powerShell 플러그인 설치 및 위 powerShell 스크립트를 .ps1 확장자로 저장 후 Run/Debug Configurations에서 스크립트 등록
 
-**multirun**
+**multirun**  
 ![image](https://github.com/user-attachments/assets/db14eb1a-2afc-4791-9d92-8c1d3b5c5bfa)
 
 인텔리제이에서 multirun 플러그인 설치, Run/Debug Configurations에서 스프링부트 & powerShell 로컬 포트 포워딩 연동
