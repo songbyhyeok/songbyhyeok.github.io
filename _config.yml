@@ -116,19 +116,22 @@ author:
   name             : "백곰(songbyhyeok)"
   avatar           : "/assets/images/bio-photo.jpg"
   bio              : "'오.늘.도' 기꺼이 받아들이고 할 수 있는 일을 하자"
-  location         : "South Korea"
+  location         : 
   email            : 
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:songbyhyeok@gmail.com"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/songbyhyeok"
+    # - label: ''
+    #   icon: "fas fa-fw fa-envelope-square"
+    #   url: "mailto:songbyhyeok@gmail.com"
+    # - label: ''
+    #   icon: "fab fa-fw fa-github"
+    #   url: "https://github.com/songbyhyeok"
 
 # Site Footer
 footer:
   links:
+    - label: ''
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:songbyhyeok@gmail.com"
     - label: ''
       icon: "fab fa-fw fa-github"
       url: "https://github.com/songbyhyeok"

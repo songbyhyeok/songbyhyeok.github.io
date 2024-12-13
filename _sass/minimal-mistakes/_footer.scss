@@ -12,15 +12,16 @@
   animation: $intro-transition;
   -webkit-animation-delay: 0.45s;
   animation-delay: 0.45s;
-  color: rgb(1, 0, 0);
-  background-color: rgb(243, 243, 243);
+  color: white;
+  //background-color: rgb(243, 243, 243);
+  background-color: rgb(34, 34, 34);
 
   footer {
     @include clearfix;
     margin-inline: auto;
-    margin-top: 2em;
+    margin-top: 1em;
     max-width: 100%;
-    padding: 0 1em 2em;
+    padding: 0 1em 1em;
 
     @include breakpoint($x-large) {
       max-width: $x-large;
