@@ -235,7 +235,8 @@
 
     a {
       position: relative;
-
+      color: black;
+      
       &:before {
         content: "";
         position: absolute;
@@ -487,8 +488,9 @@
 }
 
 #nav__sub-total {
-  font-size: x-large;
-  
+  font-size: smaller;
+  color: $muted-text-color;
+  font-weight: bold;
 }
 
 .nav__sub-title {
@@ -497,14 +499,16 @@
   padding: 0.25rem 0;
   font-family: $sans-serif-narrow;
   font-size: $type-size-5;
+  color: #000;
   font-weight: bold;
   //text-transform: uppercase;
   border-bottom: 1px solid $border-color;
 }
 
 #nav__sub-item {
-  color: rgb(160, 160, 160);
-  font-weight: bold;
+  // color: rgb(160, 160, 160);
+  color: #000;
+  // font-weight: bold;
 }
 
 #nav__sub-item:hover {

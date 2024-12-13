@@ -28,7 +28,7 @@ repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-m
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-breadcrumbs              : false   # true, false (default)
+breadcrumbs              : true   # true, false (default)
 words_per_minute         : 200
 enable_copy_code_button  : # true, false (default)
 copyright                : # "copyright" name, defaults to site.title
@@ -113,8 +113,8 @@ analytics:
 
 # Site Author
 author:
-  name             : "백곰(songbyhyeok)"
-  avatar           : "/assets/images/bio-photo.jpg"
+  name             : "Hyeok Namgung"
+  avatar           : "https://songbyhyeok.github.io/assets/avatar/bio-photo.png"
   bio              : "'오.늘.도' 기꺼이 받아들이고 할 수 있는 일을 하자"
   location         : 
   email            : 
@@ -265,13 +265,13 @@ tag_archive:
   type: liquid
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
-jekyll-archives:
-  enabled:
-    - categories
-  layouts:
-    category: archive-taxonomy
-  permalinks:
-    category: /categories/:name/
+# jekyll-archives:
+#   enabled:
+#     - categories
+#   layouts:
+#     category: archive-taxonomy
+#   permalinks:
+#     category: /categories/:name/
 
 
 # HTML Compression
@@ -296,9 +296,9 @@ defaults:
       share: true
       related: true
       show_date: true
-      toc: true
+      toc: false
       toc_sticky: true
-      toc_label: 목차
+      toc_label: Table of Contents
       sidebar_main: true
 
 date_format: "%Y-%m-%d"

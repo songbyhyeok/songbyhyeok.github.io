@@ -11,7 +11,7 @@
   max-width: 100%;
   -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
-
+  
   @include breakpoint($x-large) {
     max-width: $max-width;
   }
@@ -51,7 +51,7 @@ body {
     margin-inline: 0;
     width: 150%;
     clear: both;
-    font-size: $type-size-6;
+    font-size: large;
 
     .page__content,
     .page__meta,

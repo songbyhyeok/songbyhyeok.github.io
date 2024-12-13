@@ -173,6 +173,7 @@
 .sidebar .author__name {
   font-family: $sans-serif;
   font-size: $type-size-5;
+  color: #000;
 }
 
 .author__bio {
@@ -182,6 +183,8 @@
     margin-top: 10px;
     margin-bottom: 20px;
   }
+
+  color: #000;
 }
 
 .author__urls-wrapper {
