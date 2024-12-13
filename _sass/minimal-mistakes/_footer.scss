@@ -8,11 +8,12 @@
   margin-inline: 0;
   width: 100%;
   margin-top: 3em;
-  color: $muted-text-color;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.45s;
   animation-delay: 0.45s;
+  color: rgb(1, 0, 0);
+  background-color: rgb(243, 243, 243);
 
   footer {
     @include clearfix;

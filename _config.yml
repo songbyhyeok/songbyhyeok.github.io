@@ -12,14 +12,14 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "dirt" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "ko-KR"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
 title                    : "티끌모아 코딩"
 title_separator          :  # "|"
-subtitle                 : "Songbyhyeok`s history blog"
+subtitle                 : # "Songbyhyeok`s history blog"
 name                     : "songbyhyeok"
 description              : "아는 만큼 보이는 법"
 url                      : "https://songbyhyeok.github.io"
@@ -114,7 +114,7 @@ analytics:
 # Site Author
 author:
   name             : "백곰(songbyhyeok)"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/bio-photo.jpg"
   bio              : "'오.늘.도' 기꺼이 받아들이고 할 수 있는 일을 하자"
   location         : "South Korea"
   email            : 
@@ -129,7 +129,7 @@ author:
 # Site Footer
 footer:
   links:
-    - label: "GitHub"
+    - label: ''
       icon: "fab fa-fw fa-github"
       url: "https://github.com/songbyhyeok"
 
