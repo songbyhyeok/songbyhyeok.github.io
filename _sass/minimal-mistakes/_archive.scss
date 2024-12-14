@@ -19,8 +19,8 @@
 }
 
 .archive__item {
-  position: relative;  
-
+  position: relative;   
+  
   a {
     position: relative;
     z-index: 10;
@@ -32,16 +32,19 @@
 }
 
 .archive__subtitle {
-  margin: 0 0 0.5em;
+  font-size: x-large;
+  color: red;
+  margin: 0 0 10px 30px;
   padding-bottom: 0.3em;
-  border-bottom: 1px solid $border-color;
+  // border-bottom: 1px solid $border-color;
 
   + .list__item .archive__item-title {
-    margin-top: 0.5em;    
+    margin-top: 0.5em;        
   }
 }
 
 .archive__item-title {
+  margin: 0;
   margin-bottom: 0.25em;
   font-family: $sans-serif-narrow;
   line-height: initial;
@@ -130,6 +133,17 @@
     margin: 0 0 4px;
     font-size: 0.6em;
   }
+
+  border: 1px solid;
+  border-color: rgba(233, 220, 190, 0.3);
+
+  margin: 7px 0px 7px 20px;
+  padding: 15px 15px 0px 20px;  
+  width: 130%;
+}
+
+.list__item:hover {
+  border-color: rgba(233, 220, 190, 1);
 }
 
 /*

@@ -1,7 +1,10 @@
 # main links
 main:
+  - title: "Categories"
+    url: /categories
+
   - title: "About"
-    url: /index
+    url: /about
 
   - title: "Github"
     url: https://github.com/songbyhyeok
