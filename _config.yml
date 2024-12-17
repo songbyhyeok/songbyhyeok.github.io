@@ -114,7 +114,8 @@ analytics:
 # Site Author
 author:
   name             : "Hyeok Namgung"
-  avatar           : "https://songbyhyeok.github.io/assets/avatar/bio-photo.png"
+  # avatar           : "https://songbyhyeok.github.io/assets/avatar/bio-photo.jpg"
+  avatar           : "assets/avatar/bio-photo.jpg"
   bio              : "'오.늘.도' 기꺼이 받아들이고 할 수 있는 일을 하자"
   location         : 
   email            : 

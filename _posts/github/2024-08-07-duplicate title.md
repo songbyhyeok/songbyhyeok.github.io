@@ -6,7 +6,7 @@ categories: github
 ## 동일한 블로그 제목이 두 개가 표시되는 현상
 ![화면 캡처 2024-08-07 160300](https://github.com/user-attachments/assets/ab8422bd-bee0-4635-b4a0-c3e4622dd5c8)
 
-메인 페이지에서는 블로그 제목이 하나만 표시가 되어야 하는데, 중복된 제목 두 개가 같이 출력되는 이슈가 발생하였다.
+**메인 페이지에서는 블로그 제목이 하나만 표시가 되어야 하는데, 중복된 제목 두 개가 같이 출력되는 이슈가 발생하였다.**  
 
 ## 해결 과정
 ![image](https://github.com/user-attachments/assets/7b352134-1c00-46ad-b09e-81f17bf845f3)

@@ -3,13 +3,19 @@ title: 포트 포워딩 정리
 categories: network
 ---
 
-## 간략 설명
+## 목차
+- [간략 설명](#간략-설명)
+- [SSH 터널?](#ssh-터널)
+- [포워딩 종류](#포워딩-종류)
+- [참고](#참고)
+
+# 간략 설명
 패킷을 보낼 때 라우터나 방화벽 요소들로 인해서 목적지에 보낼 수 없는 상황일 때, 포트 포워딩 기술을 사용하여 경유지 주소를 통해 우회하여 목적지에 정상적으로 통신할 수 있다. 여기서 경유지 역할로 보편적으로 사용되는 SSH 22 PORT (과거엔 보안 기능이 없는 Telnet 23 PORT 사용)을 사용하고 있는데, 이 녀석을 이용하여 SSH Tunneling을 명령어를 통해 생성하면 하나의 Proxy 서버가 구축이 된다. 
 
-## SSH 터널?
+# SSH 터널?
 패킷을 주고 받을 수 있는 암호화된 SSH 연결 통로를 의미한다. 외부에서 데이터를 도청하거나 가로챌 수 없어, 기밀성 및 무결성을 보장한다. 하지만 내부 허가된 자가 나쁜 의도로 접근하여 백도어 공격을 통해 MALWARE와 같은 침투를 할 수 있어 주의해야 한다.
 
-## 포워딩 종류
+# 포워딩 종류
 * **로컬 포워딩**  
 ![image](https://github.com/user-attachments/assets/968c3ddc-76a4-4caa-a7d8-fee1c333f002)  
 포워딩 기술 중 보편적으로 사용되는 유형으로서, ssh 터널을 통해 from 로컬에서 to private 목적지까지 우회해서 통신이 가능한 구조  
@@ -33,7 +39,7 @@ SOCKS는 프록시 서버가 클라와 서버가 패킷을 라우팅 처리 중 
 
         ssh -D localhost:1080 [socksname@socks주소]
 
-## 참고
+# 참고
 - [link1](https://omoknooni.tistory.com/m/73)
 - [link2](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=alice_k106&logNo=221364560794)
 - [link3](https://www.ssh.com/academy/ssh/tunneling-example)

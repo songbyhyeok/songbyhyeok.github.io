@@ -43,8 +43,8 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                {% if category[0] == "github_actions" %}
-                <li><a href="/categories/github_actions" id="nav__sub-item">GithubActions ({{category[1].size}})</a></li>
+                {% if category[0] == "dbms" %}
+                <li><a href="/categories/dbms" id="nav__sub-item">DBMS ({{category[1].size}})</a></li>
                 {% endif %}
                 {% endfor %}
             </ul>
@@ -55,9 +55,47 @@
                 {% endif %}
                 {% endfor %}
             </ul>
+            <ul>
+                {% for category in site.categories %}
+                {% if category[0] == "github_actions" %}
+                <li><a href="/categories/github_actions" id="nav__sub-item">GithubActions ({{category[1].size}})</a></li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                {% if category[0] == "data_analysis" %}
+                <li><a href="/categories/data_analysis" id="nav__sub-item">DataAnalysis ({{category[1].size}})</a></li>
+                {% endif %}
+                {% endfor %}
+            </ul>
         </li>
         <li>
             <span class="nav__sub-title">CodingTest</span>
+            <ul>
+                {% for category in site.categories %}
+                {% if category[0] == "leetcode" %}
+                <li><a href="/categories/leetcode" id="nav__sub-item">LeetCode ({{category[1].size}})</a></li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                {% if category[0] == "programmers" %}
+                <li><a href="/categories/programmers" id="nav__sub-item">Programmers ({{category[1].size}})</a></li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </li>
+        <li>
+            <span class="nav__sub-title">Language</span>
+            <ul>
+                {% for category in site.categories %}
+                {% if category[0] == "java" %}
+                <li><a href="/categories/java" id="nav__sub-item">Java ({{category[1].size}})</a></li>
+                {% endif %}
+                {% endfor %}
+            </ul>
         </li>
     </ul>
 </nav>
