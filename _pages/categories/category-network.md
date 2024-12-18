@@ -1,5 +1,5 @@
 ---
-title: "network"
+title: "Network"
 layout: archive
 permalink: /categories/network
 author_profile: true

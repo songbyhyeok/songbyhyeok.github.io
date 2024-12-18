@@ -1,5 +1,5 @@
 ---
-title: "aws"
+title: "AWS"
 layout: archive
 permalink: /categories/aws
 author_profile: true

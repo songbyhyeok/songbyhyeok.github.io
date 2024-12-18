@@ -1,5 +1,5 @@
 ---
-title: "github"
+title: "Github"
 layout: archive
 permalink: /categories/github
 author_profile: true

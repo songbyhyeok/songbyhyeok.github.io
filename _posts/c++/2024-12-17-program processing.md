@@ -1,6 +1,6 @@
 ---
 title: C++ 실행 과정
-categories: c++
+categories: cpp
 ---
 
 ## 목차
