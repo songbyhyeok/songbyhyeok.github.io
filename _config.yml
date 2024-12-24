@@ -118,14 +118,14 @@ author:
   avatar           : "assets/avatar/bio-photo.jpg"
   bio              : "'오.늘.도' 기꺼이 받아들이고 할 수 있는 일을 하자"
   location         : 
-  email            : 
+  email            : "songbyhyeok@gmail.com"
   links:
     # - label: ''
     #   icon: "fas fa-fw fa-envelope-square"
     #   url: "mailto:songbyhyeok@gmail.com"
-    # - label: ''
-    #   icon: "fab fa-fw fa-github"
-    #   url: "https://github.com/songbyhyeok"
+    - label: "https://github.com/songbyhyeok"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/songbyhyeok"
 
 # Site Footer
 footer:
@@ -292,14 +292,14 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      read_time: false
       comments: true
       share: true
       related: true
       show_date: true
-      toc: false
-      toc_sticky: true
-      toc_label: Table of Contents
+      toc: true
+      toc_sticky: false
+      toc_label: 목차
       sidebar_main: true
 
 date_format: "%Y-%m-%d"

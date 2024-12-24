@@ -3,9 +3,6 @@ main:
   - title: "Categories"
     url: /categories
 
-  - title: "Github"
-    url: https://github.com/songbyhyeok
-
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"

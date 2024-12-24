@@ -3,13 +3,6 @@ title: 3차 파일명 정렬 2 - Java
 categories: programmers
 ---
 
-## 목차
-- [문제](#문제)
-- [풀이](#풀이)
-- [이슈](#이슈)
-- [다른 풀이](#다른-풀이)
-- [코드](#코드)
-
 # 문제
 [https://school.programmers.co.kr/learn/courses/30/lessons/17686](https://school.programmers.co.kr/learn/courses/30/lessons/17686)  
   

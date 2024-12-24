@@ -3,14 +3,6 @@ title: 택배 배달과 수거하기 레벨 2 - Java
 categories: programmers
 ---
 
-## 목차
-- [문제](#문제)
-- [풀이](#풀이)
-  - [접근 방식](#접근-방식)
-  - [Stack 접근](#stack-접근)
-  - [Greedy 접근](#greedy-접근)
-- [코드](#코드)
-
 # 문제
 [https://school.programmers.co.kr/learn/courses/30/lessons/150369](https://school.programmers.co.kr/learn/courses/30/lessons/150369)  
   

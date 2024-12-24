@@ -3,20 +3,6 @@ title: CSRF, XSS 정리
 categories: network
 ---
 
-## 목차
-- [개요](#개요)
-- [CSRF(Cross-Site-Request-Forgery)](#csrfcross-site-request-forgery)
-  - [공격 방식](#공격-방식)
-  - [공격 예시](#공격-예시)
-  - [대응 방법](#대응-방법)
-    - [- docs.spring.io \[CSRF 공격으로부터 보호\] -](#--docsspringio-csrf-공격으로부터-보호--)
-- [XSS(Cross-Site Scripting)](#xsscross-site-scripting)
-  - [공격 방식](#공격-방식-1)
-  - [대응 방법](#대응-방법-1)
-- [비교](#비교)
-  - [차이점](#차이점)
-- [참고](#참고)
-
 # 개요
 웹 애플리케이션의 보안 취약점을 이용한 공격 방식으로 익히 알려진 CSRF, XSS  
 사이트 이용에 있어 신뢰성과 사용자 개인정보 보호 차원에서 개념 및 방어 대응에 대해 학습할 필요가 있다.  

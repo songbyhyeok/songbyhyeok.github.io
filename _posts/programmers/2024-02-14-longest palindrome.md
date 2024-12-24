@@ -3,13 +3,6 @@ title: 가장 긴 팰린드롬 레벨 3 - Java
 categories: programmers
 ---
 
-## 목차
-- [문제](#문제)
-- [풀이](#풀이)
-  - [투포인터와 완전탐색](#투포인터와-완전탐색)
-- [이슈](#이슈)
-- [코드](#코드)
-
 # 문제
 [https://school.programmers.co.kr/learn/courses/30/lessons/12904](https://school.programmers.co.kr/learn/courses/30/lessons/12904)  
   

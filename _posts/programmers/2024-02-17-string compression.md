@@ -3,12 +3,6 @@ title: 문자열 압축 레벨 2 - Java
 categories: programmers
 ---
 
-## 목차
-- [문제](#문제)
-- [풀이](#풀이)
-- [이슈](#이슈)
-- [코드](#코드)
-
 # 문제
 [https://school.programmers.co.kr/learn/courses/30/lessons/60057](https://school.programmers.co.kr/learn/courses/30/lessons/60057)  
   

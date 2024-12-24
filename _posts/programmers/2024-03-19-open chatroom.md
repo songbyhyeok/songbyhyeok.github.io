@@ -3,12 +3,6 @@ title: 오픈채팅방 레벨 2 - Java
 categories: programmers
 ---
 
-## 목차
-- [문제](#문제)
-- [풀이](#풀이)
-  - [record의 data를 가공하여 nick + command 조합으로 출력하기](#record의-data를-가공하여-nick--command-조합으로-출력하기)
-- [코드](#코드)
-
 # 문제
 [https://school.programmers.co.kr/learn/courses/30/lessons/42888](https://school.programmers.co.kr/learn/courses/30/lessons/42888)  
   

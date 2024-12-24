@@ -3,32 +3,6 @@ title: Spring Security, Thymeleaf CSRF Issue
 categories: spring
 ---
 
-## 목차
-- [회원가입 로직 구현중...](#회원가입-로직-구현중)
-  - [휴대폰 인증, Submit 통신 처리](#휴대폰-인증-submit-통신-처리)
-  - [403 Forbidden Issue](#403-forbidden-issue)
-- [Security CSRF](#security-csrf)
-  - [제어 권한](#제어-권한)
-  - [CSRF Methods](#csrf-methods)
-  - [토큰 관리](#토큰-관리)
-    - [Cookie](#cookie)
-    - [Session](#session)
-    - [Lazy](#lazy)
-    - [CSRF.disable()](#csrfdisable)
-- [토큰 요청 및 생성](#토큰-요청-및-생성)
-  - [서버에서 클라이언트로 CSRF 토큰 발급](#서버에서-클라이언트로-csrf-토큰-발급)
-    - [동기화된 패턴 방식의 CSRF](#동기화된-패턴-방식의-csrf)
-    - [비동기 패턴 방식의 CSRF](#비동기-패턴-방식의-csrf)
-  - [요청에 대한 응답값 전달](#요청에-대한-응답값-전달)
-    - [세션](#세션)
-    - [쿠키](#쿠키)
-- [CsrfFilter](#csrffilter)
-  - [요청 흐름](#요청-흐름)
-  - [코드 관점](#코드-관점)
-    - [CsrfFilter 클래스](#csrffilter-클래스)
-- [그래서 무슨 방법을 사용했는가?](#그래서-무슨-방법을-사용했는가)
-- [참고](#참고)
-
 # 회원가입 로직 구현중...
 회원가입 로직 개발을 하고 있었고, 다음과 같은 기술 스택들을 사용하게 되었다.  
 **Spring Security, Thymeleaf(SSR), MVC, Html Form tag, Axios**  
