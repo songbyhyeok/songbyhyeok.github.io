@@ -21,7 +21,7 @@ title                    : "티끌모아 코딩"
 title_separator          :  # "|"
 subtitle                 : # "Songbyhyeok`s history blog"
 name                     : "songbyhyeok"
-description              : "아는 만큼 보이는 법"
+description              : "코딩 기술 블로그"
 url                      : "https://songbyhyeok.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -116,7 +116,7 @@ author:
   name             : "Hyeok Namgung"
   # avatar           : "https://songbyhyeok.github.io/assets/avatar/bio-photo.jpg"
   avatar           : "assets/avatar/bio-photo.jpg"
-  bio              : "'오.늘.도' 기꺼이 받아들이고 할 수 있는 일을 하자"
+  bio              : "'오늘도' 기꺼이 받아들이고 할 수 있는 일을 하자"
   location         : 
   email            : "songbyhyeok@gmail.com"
   links:
