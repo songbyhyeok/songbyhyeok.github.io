@@ -1,0 +1,10 @@
+User-agent: Naverbot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Yeti
+Allow: /
+
+Sitemap: https://songbyhyeok.github.io/sitemap.xml
