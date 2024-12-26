@@ -3,33 +3,30 @@ title: AWS RDS IP 과금 이슈 및 로컬 포트 포워딩 RDS연동과 Github 
 categories: aws
 ---
 
-![image](https://github.com/user-attachments/assets/f85a6436-1c39-4c3b-989f-c1fd4fffcf22)
+# 개요
+![image](https://github.com/user-attachments/assets/f85a6436-1c39-4c3b-989f-c1fd4fffcf22)  
+지난 3 ~ 7월까지 매달 5달러 가량을 AWS에 지불하고 있었다. 그 원인이 무엇인지는 비용이 그리 크지 않아 그냥 방치하고 있었지만, 쌓이면 그래도 무시못할 금액이기에 이를 해결하고자 나섰다.  
 
-지난 3 ~ 7월까지 매달 5달러 가량을 AWS에 지불하고 있었다. 그 원인이 무엇인지는 비용이 그리 크지 않아 그냥 방치하고 있었지만, 쌓이면 그래도 무시못할 금액이기에 이를 해결하고자 나섰다.
+# 원인 파악하기
+![image](https://github.com/user-attachments/assets/28d6b763-cf9c-4798-9e34-721075870d5d)  
+단순 VPC 부분이 문제인 것은 알겠지만 구체적으로 어디서 무엇이 어떻게 작동되어 비용이 발생하는 것인지는 파악하기 힘들어 나와 같은 사례를 찾게 되었고, 어떤 한 분이 고맙게도 똑같은 현상에 대해 해결 방법을 글로 써주셔서 해결할 수 있게 되었다.  
+대강 원인과 해결 방법은 Public RDS가 새로운 IPv4를 생성해서 비용이 발생했고, 이를 Private 상태로 변경시켜 IP를 사용하지 않으면 되는 것이었다.(IPv4 고갈로 인한... 조치)  
 
-## 원인 파악하기
-![image](https://github.com/user-attachments/assets/28d6b763-cf9c-4798-9e34-721075870d5d)
+# 로컬 포트 포워딩으로 RDS 연결하기.
+기존 방식은 생성된 rds ip로 연동시키면 됐지만, 이제는 ssh 방식으로 ec2에 접근해서 우회하여 rds에 연동시켜야 한다.  
 
-단순 VPC 부분이 문제인 것은 알겠지만 구체적으로 어디서 무엇이 어떻게 작동되어 비용이 발생하는 것인지는 파악하기 힘들어 나와 같은 사례를 찾게 되었고 어떤 한 분이 고맙게도 똑같은 현상에 대해 해결 방법을 글로 써주셔서 해결할 수 있게 되었다. 대강 원인과 해결 방법은 Public RDS가 새로운 IPv4를 생성해서 비용이 발생했고, 이를 Private 상태로 변경시켜 IP를 사용하지 않으면 되는 것이었다.(IPv4 고갈로 인한... 조치)
-
-## 로컬 포트 포워딩으로 RDS 연결하기.
-기존 방식은 생성된 rds ip로 연동시키면 됐지만, 이제는 ssh 방식으로 ec2에 접근해서 우회하여 rds에 연동시켜야 한다.
-
-**Intellij DataGrip**  
-![image](https://github.com/user-attachments/assets/ea1d2c4f-c8ac-4cc0-b326-6eed5723553f)
-
+## Intellij DataGrip
+![image](https://github.com/user-attachments/assets/ea1d2c4f-c8ac-4cc0-b326-6eed5723553f)  
 숫자 순번대로 클릭해 넘어가서 접속할 SSH 설정을 입력하면 된다. 비대칭 키를 사용했었기 때문에 Host는 ec2 ip, Username은 os명, key 방식 및 file.pem을 지정시킨다.
 
-![image](https://github.com/user-attachments/assets/743ea187-0a33-451d-bdaf-ef9989308b75)
+![image](https://github.com/user-attachments/assets/743ea187-0a33-451d-bdaf-ef9989308b75)  
+그다음 General 탭으로 들어가서 RDS 정보를 입력하면 된다. Host는 엔드포인트, user 및 비번 그리고 Database는 권한부여된 스키마명이다.  
 
-그다음 General 탭으로 들어가서 RDS 정보를 입력하면 된다. Host는 엔드포인트, user 및 비번 그리고 Database는 권한부여된 스키마명이다.
+## MySQL Workbench
+![image](https://github.com/user-attachments/assets/b681b8cd-498f-4cd4-8cf8-089ceb45a96d)  
+DataGrip에 입력했던 데이터명을 참고해서 매핑할 것  
 
-**MySQL Workbench**
-![image](https://github.com/user-attachments/assets/b681b8cd-498f-4cd4-8cf8-089ceb45a96d)
-
-DataGrip에 입력했던 데이터명을 참고해서 매핑할 것
-
-**application.yml**  
+## application.yml
 가장 중요한 부분이 아닐까 싶다.  
 
     spring:
@@ -46,7 +43,7 @@ DataGrip에 입력했던 데이터명을 참고해서 매핑할 것
 
 ssh 터널을 생성시키면 spring 환경에서 접속할 수 있게 된다. port를 3307로 설정한 이유는 기존 3306이 사용 중이기 때문이다.
 
-**github action workflow**  
+## github action workflow
 ci/cd 구축 중이라면 가장 난감한 문제가 아닐까 싶다. 왜냐하면 application.yml -> ssh 설정 및 터널 생성 그리고 빌드 테스트 후 생성된 ssh 서버 종료까지 전부 다 해야 하기 때문이다.
 
       - name: Create Application.yml
@@ -97,6 +94,6 @@ ci/cd 구축 중이라면 가장 난감한 문제가 아닐까 싶다. 왜냐하
             echo "No PID file found. SSH tunnel might not have been started."
           fi
 
-## 참고
+# 참고
 - [link1](https://velog.io/@dev_hyun/AWS-%ED%94%84%EB%A6%AC%ED%8B%B0%EC%96%B4%EC%9D%B8%EB%8D%B0-%EB%8F%88%EC%9D%B4%EB%82%98%EA%B0%84%EB%8B%A4-RDS-Public-IPv4)
 - [link2](https://velog.io/@kjyeon1101/Spring-%EC%88%98%EC%88%99%EA%B4%80-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0Spring-Boot-IntelliJ-MySQL-ssh)
