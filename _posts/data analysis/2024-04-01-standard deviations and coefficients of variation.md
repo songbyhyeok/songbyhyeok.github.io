@@ -6,11 +6,13 @@ categories: data_analysis
 # 변동계수
 ![변동계수](https://github.com/user-attachments/assets/b1c032c8-821f-4d32-aabc-7a67f5cdf264)  
 변동비율이라고도 하며, 금융쪽에서 수익률(평균)대비 위험률(표준편차)이라고 표현한다.  
+<br>
 
 # 표준편차
 표준편차 = 변동폭 and 변동계수 = 변동비율  
 ![표준편차](https://github.com/user-attachments/assets/40e9f8a0-1f4e-429c-a781-97c362159bef)  
-단위 변환 시 표준편차 값도 달라지지만 변동계수는 같다, 그 이유는 단위 변환이 되더라도 비율은 같기 때문
+단위 변환 시 표준편차 값도 달라지지만 변동계수는 같다, 그 이유는 단위 변환이 되더라도 비율은 같기 때문  
+<br>
 
 ## [case1] 두 국가 이자률 변동성 비교  
 

@@ -136,6 +136,7 @@ bigInt1 is equal to bigInt3
 
 ## 언제 유용한가?
 BigInteger는 정수의 크기 제한이 필요 없고, 정확한 계산이 필요한 경우에 유용하다. 개인적으로 금융, 특정 알고리즘에서 필요함을 느꼈다.  
+<br>
 
 # 참고
 * [Java에서 큰 수 다루기 (BigInteger)](https://lsmman.tistory.com/47)

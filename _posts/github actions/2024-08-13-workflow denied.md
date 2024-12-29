@@ -4,15 +4,16 @@ categories: github_actions
 ---
 
 # 빌드 시도 시 denied 문제
-![denied issue](https://github.com/user-attachments/assets/0e660572-8982-41a4-ab70-00bb4f24e153)
-
+![denied issue](https://github.com/user-attachments/assets/0e660572-8982-41a4-ab70-00bb4f24e153)  
 **github actions 상에서 build 과정에서 이미지의 내용에 있는 거부 명령을 받게 되었다.**  
+<br>
 
 # 왜 거부를 당했지?
 ![image](https://github.com/user-attachments/assets/b445ed0b-8db5-4f32-b45c-93bd283723fa)
 
 Gradle 공식문서에 위와 같이 처리를 할 수 있지만 실행 가능하지 않다고 설명이 되어 있고, 해결 명령어를 제시하고 있다.  
-[https://docs.gradle.org/current/userguide/troubleshooting.html](https://docs.gradle.org/current/userguide/troubleshooting.html)
+[https://docs.gradle.org/current/userguide/troubleshooting.html](https://docs.gradle.org/current/userguide/troubleshooting.html)  
+<br>
 
 # 명령어를 삽입하자.
 ```yaml

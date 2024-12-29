@@ -20,7 +20,8 @@ categories: c
 'print.c'의 전역변수 'num222'를 'main.c'로 가져와 사용하고 싶을 때, **'extern keyword'** 를 'main.c'의 전역란에 extern과 num222 전역변수명을 함께 명시하여 외부에 있다는 것을 알리면 사용할 수 있다.
 
 ## 생성 과정에서 이해
-두 개의 소스 파일들이 컴파일러에 의해 기계어가 포함된 목적파일(.o)로 변환 후, 링킹 과정에서 링커에 두 개를 묶어 global 변수로서 사용이 가능하게 된 것.
+두 개의 소스 파일들이 컴파일러에 의해 기계어가 포함된 목적파일(.o)로 변환 후, 링킹 과정에서 링커에 두 개를 묶어 global 변수로서 사용이 가능하게 된 것.  
+<br>
 
 # 참고
 * [C++ 전역변수의 static 과 extern 키워드](https://mr-dingo.github.io/c/c++%EB%BD%80%EA%B0%9C%EA%B8%B0/2019/01/10/static&extern.html)

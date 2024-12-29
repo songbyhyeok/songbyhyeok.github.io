@@ -7,6 +7,7 @@ categories: programmers
 [https://school.programmers.co.kr/learn/courses/30/lessons/12904](https://school.programmers.co.kr/learn/courses/30/lessons/12904)  
   
 ![팰린드롬 문제](https://github.com/user-attachments/assets/242dcfda-9c11-4b29-8d87-8e7dc651ae7c)  
+<br>
 
 # 풀이
 ![입출력](https://github.com/user-attachments/assets/c57c2587-dd72-4583-95d6-c17ad5d90439)  
@@ -17,6 +18,7 @@ categories: programmers
 팰린드롬 기초 문제를 풀 때 투포인터를 통해 푸는 것을 알고 있었다. 그리고 선택한 지점 기준에서 가장 많은 팰린드롬을 찾아야 하면서 그 개수가 가장 긴 팰린드롬이라는 보장을 찾기 위해서는 완전 탐색을 통해 계속 찾아야만 했다.  
 ![다운로드 (2)](https://github.com/user-attachments/assets/d0c2775d-6b6c-418e-ba76-169bee8b2516)  
 완전탐색을 통해 i의 위치 char와 j의 위치 char가 같다면 투포인터 알고리즘을 돌려 answer에 가장 긴 length를 math.max를 통해 구하면 된다.  
+<br>
 
 # 이슈
 ![다운로드 (3)](https://github.com/user-attachments/assets/d3f8349b-f232-4299-b3d9-d1b62ab55902)  
@@ -26,6 +28,7 @@ categories: programmers
 **효율성 테스트2**  
 ![다운로드 (4)](https://github.com/user-attachments/assets/56af2da0-cc8e-44bc-98b6-0e4d4ca7e919)  
 처음에 시작점 i와 비교 대상은 i + 1의 위치인 j로 시작해 비효율적으로 가장 긴 길이를 구하려고 했기 때문에 실패하게 됐다. 그렇지만 2500개의 문자열을 시간복잡도 분석을 했을 때 2500 * 2499 = 6,247,500 이 나오므로 전혀 문제가 되지 않는데도 실패했다는 점에서 조금 당황스러웠다.  
+<br>
 
 # 코드  
 ```

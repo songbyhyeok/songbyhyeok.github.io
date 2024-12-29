@@ -4,7 +4,8 @@ categories: aws
 ---
 
 # 개요
-기존 SSH를 통한 EC2 연결 방식은 공개키를 개인이 가지고 있어야 하는 부담감과 다른 로컬에서 접속하려고 할 경우 공개키를 공유로 인한 귀찮음과 보안 걱정을 해야만 했다. 하지만 AWS의 SSM 서비스를 사용한다면 이런 고민을 해결 할 수 있다.
+기존 SSH를 통한 EC2 연결 방식은 공개키를 개인이 가지고 있어야 하는 부담감과 다른 로컬에서 접속하려고 할 경우 공개키를 공유로 인한 귀찮음과 보안 걱정을 해야만 했다. 하지만 AWS의 SSM 서비스를 사용한다면 이런 고민을 해결 할 수 있다.  
+<br>
 
 # SSM이란?
 "**AWS Systems Manager**"의 약자로 AWS 애플리케이션 및 리소스를 관리하는 시스템이다.  
@@ -114,7 +115,8 @@ shell or powerShell 둘 중 하나의 스크립트를 사용한다.
 ### SSH 터널링을 설정 및 생성하지 않아도 된다. 
 1. ec2 보안그룹 및 역할이 필요 없다.
 2. ssh 사용자마다 공개키 생성 및 인증 절차가 없다.
-3. EC2 IP를 경유할 필요가 없다.(배스천x)
+3. EC2 IP를 경유할 필요가 없다.(배스천x)  
+<br>
 
 # 참고
 * [SSM 개요](https://docs.aws.amazon.com/ko_kr/systems-manager/latest/userguide/what-is-systems-manager.html)  

@@ -4,9 +4,9 @@ categories: github
 ---
 
 # 동일한 블로그 제목이 두 개가 표시되는 현상
-![화면 캡처 2024-08-07 160300](https://github.com/user-attachments/assets/ab8422bd-bee0-4635-b4a0-c3e4622dd5c8)
-
+![화면 캡처 2024-08-07 160300](https://github.com/user-attachments/assets/ab8422bd-bee0-4635-b4a0-c3e4622dd5c8)  
 **메인 페이지에서는 블로그 제목이 하나만 표시가 되어야 하는데, 중복된 제목 두 개가 같이 출력되는 이슈가 발생하였다.**  
+<br>
 
 # 해결 과정
 ![image](https://github.com/user-attachments/assets/7b352134-1c00-46ad-b09e-81f17bf845f3)
@@ -29,7 +29,8 @@ default에서 드디어 <head> 구조가 포함된 것을 확인하였다.
 
 ![image](https://github.com/user-attachments/assets/5be16155-3b3e-4b1e-ac5d-af2d016a88e6)
 
-들어가보니 head.html의 seo.html이 title 부분을 담당하고 있었다.
+들어가보니 head.html의 seo.html이 title 부분을 담당하고 있었다.  
+<br>
 
 # 해결
 ![image](https://github.com/user-attachments/assets/9dab8865-d663-467e-9d6e-4d9c33c71f3c)
@@ -45,6 +46,8 @@ default에서 드디어 <head> 구조가 포함된 것을 확인하였다.
     else
     assign seo_title = page_title | append: " " | append: title_separator | append: " " | append: site.title | replace: '|', '&#124;'
     endif
+
+<br>
 
 # 알게된 정보
 1. %- 이게 무슨 언어의 문법일까?

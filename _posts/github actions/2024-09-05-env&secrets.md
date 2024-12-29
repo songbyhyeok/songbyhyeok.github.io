@@ -4,7 +4,8 @@ categories: github_actions
 ---
 
 # 개요
-workflow 작성하면서 secrets와 환경 변수 두 개를 때에 따라 사용해야 할 일이 많아서 어떻게 사용할 수 있는지 정리 목적으로 작성한다.
+workflow 작성하면서 secrets와 환경 변수 두 개를 때에 따라 사용해야 할 일이 많아서 어떻게 사용할 수 있는지 정리 목적으로 작성한다.  
+<br>
 
 # secrets
 ![image](https://github.com/user-attachments/assets/ba21aa9a-0fac-4a17-8e0d-6c5abc3257b6)

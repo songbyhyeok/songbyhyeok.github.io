@@ -5,6 +5,7 @@ categories: data_analysis
 
 # 상자그림
 ![상자그림](https://github.com/user-attachments/assets/c0d9a55d-fe4c-46a5-8a39-b938995b968a)  
+<br>
 
 # 수치형 자료 그래프
 사분위수(quartile)의 1에서 3까지의 범위의 네모 형태로 표현된 하나의 산포도 종류의 그래프 지표  

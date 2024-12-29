@@ -7,6 +7,7 @@ categories: programmers
 [https://school.programmers.co.kr/learn/courses/30/lessons/150369](https://school.programmers.co.kr/learn/courses/30/lessons/150369)  
   
 **트럭에 상자를 실을 수 있는 크기 Cap개 만큼 싣고 n개의 집을 왕복하여 배달과 수거를 동시에 수행하여 걸린 이동 거리 중 최소 이동 거리를 구하는 문제**  
+<br>
 
 # 풀이
 이동거리를 구할 때 고려할 점은 배달/수거 시 어느 한 쪽이 더 멀다면 거기까지 반드시 수행해야 한다는 점이다. 그리고 효율적으로 일의 양을 줄이기 위해서는 가장 먼 지점의 할당량부터 처리해야 한다.  
@@ -44,6 +45,7 @@ answer = 현재 지점이 가장 먼 거리이므로 (idx + 1) * 2
 [3] 지점을 배달하여 dC = -1, pC = 0 0보다 크지 않으므로 pass  
 
 이처럼 미리 할당량을 먼저 빌린 다음에 차감 방식으로 접근을 한다면 해당 문제를 풀 수 있다.  
+<br>
 
 # 코드
 ```

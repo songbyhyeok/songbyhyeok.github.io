@@ -17,6 +17,8 @@ categories: programmers
     abcabcdede -> abcabc2de(2개 단위 압축)  
     abcabcdede -> 2abcdede(3개 단위 압축)  
 
+<br>
+
 # 풀이
 투포인터 방법을 사용하면 풀 수 있겠다고 생각했다. 입출력 예시를 투포인터 알고리즘을 통해 분석을 해보며 로직을 그려나갔다.  
 
@@ -45,6 +47,7 @@ categories: programmers
 1. 두 비교 지점이 같다면 cnt를 누적시킨다.  
 2. 같지 않다면 StringBuilder = cnt + 현재지점, cnt = 1, 선택지점 = 목표지점  
 3. 모든 비교가 끝났다면 (StringBuilder + 나머지 문자열).length 값과 answer 값을 비교하여 최소값을 answer에 넣는다.  
+<br>
 
 # 이슈
 ![다운로드 (6)](https://github.com/user-attachments/assets/ce2526d4-e106-4301-96fb-ad944ed7a643)  
@@ -56,6 +59,7 @@ categories: programmers
 ![다운로드 (7)](https://github.com/user-attachments/assets/691a2730-c6ce-492f-a87a-1fbabcf1c515)  
 
 테스트 5 실패 이유는 길이 1개의 처리를 해 주지 못해서이다.  
+<br>
 
 # 코드
 ```

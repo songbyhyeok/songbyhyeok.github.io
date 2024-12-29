@@ -4,7 +4,8 @@ categories: network
 ---
 
 # 정의
-**두 용어 모두 클라이언트 요청에 대한 서버의 URL 처리 기술 방식을 말한다.**  
+**두 용어 모두 클라이언트 요청에 대한 서버의 URL 처리 기술 방식을 말한다.**   
+<br>
   
 ## Redirect
 사용자 요청에 대해 서버는 기존 URL이 아닌 새 URL을 발급한다.  
@@ -50,11 +51,13 @@ Hello, henry!
 ![image](https://github.com/user-attachments/assets/2e2cc116-27a8-44b8-864c-0a44ee8b190a)
 
 ![image](https://github.com/user-attachments/assets/ad77c9ed-acbf-4ef6-8ef4-5b2b2f07f788)  
-PRG 패턴은 redirect를 왜 사용해야 하는가를 납득시킬 수 있게 해준다. 첫 그림과 같이 forward 방식으로 post 처리를 하게될 경우 같은 물건을 또 주문을 하게 되는 불상사가 발생하게 된다. 그러나 두 번째 그림처럼 redirect 방식을 사용하면 주문 건에 대해 처리 후 주문 완료에 대한 페이지 부분 url만 발급시키기 때문에 새로고침 시 중복 건수가 발생할 수 없는 시스템을 만들게 된다.
+PRG 패턴은 redirect를 왜 사용해야 하는가를 납득시킬 수 있게 해준다. 첫 그림과 같이 forward 방식으로 post 처리를 하게될 경우 같은 물건을 또 주문을 하게 되는 불상사가 발생하게 된다. 그러나 두 번째 그림처럼 redirect 방식을 사용하면 주문 건에 대해 처리 후 주문 완료에 대한 페이지 부분 url만 발급시키기 때문에 새로고침 시 중복 건수가 발생할 수 없는 시스템을 만들게 된다.  
+<br>
 
 # 정리
 두 개념의 차이점은 다음과 같이 정리할 수 있다.
-redirect는 url을 새로 발급 및 상태 값을 저장하지 않고, 반면 forward는 기존 url을 사용하고 상태 또한 저장하여 재사용이 가능하다. 두 개념을 학습 시 각기 목적에 따라 적합한 기술 방식을 채택할 수 있게 해 준다.
+redirect는 url을 새로 발급 및 상태 값을 저장하지 않고, 반면 forward는 기존 url을 사용하고 상태 또한 저장하여 재사용이 가능하다. 두 개념을 학습 시 각기 목적에 따라 적합한 기술 방식을 채택할 수 있게 해 준다.  
+<br>
 
 # 참고
 - [https://doublesprogramming.tistory.com/63](https://doublesprogramming.tistory.com/63)

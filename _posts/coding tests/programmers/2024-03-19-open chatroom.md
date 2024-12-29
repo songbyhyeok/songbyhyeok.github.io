@@ -8,7 +8,8 @@ categories: programmers
   
 * 오픈채팅방 개설  
 * 명령어 ENTER, LEAVE, CHANGE
-* 들어갈 때, 변경할 때 기존 ID 변경될 경우 이전 LOG의 ID도 변경 
+* 들어갈 때, 변경할 때 기존 ID 변경될 경우 이전 LOG의 ID도 변경  
+<br>
 
 # 풀이
 ## record의 data를 가공하여 nick + command 조합으로 출력하기  
@@ -16,6 +17,7 @@ categories: programmers
 -> hash 삽입 과정에서 leave 명령어는 변동을 줄ㄴ 수 없으므로 넘어가기.  
 2. **result 형식으로 조정하여 출력 방법은?**  
 -> 출력 과정에서 change 명령어의 Log는 요구하지 않으므로 넘어가기.  
+<br>
 
 # 코드
 ```

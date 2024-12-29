@@ -17,6 +17,7 @@ categories: data_analysis
 ## 모든 편차 합의 평균
 ![모든 편차 합의 평균](https://github.com/user-attachments/assets/defceae3-60de-492d-8c50-aa20e3c2f158)  
 -> 양 끝부분뿐만 아니라 각각 부분 지점의 편차도 포함하여 분석해야 한다.  
+<br>
 
 # 산포도
 산포도는 데이터의 흩어진 정도를 말하며, 범위라고 말할 수 있다.  
