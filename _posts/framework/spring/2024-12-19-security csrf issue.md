@@ -47,7 +47,7 @@ Security는 CSRF Token이라는 난수 값을 만들어서 사용자에게 제�
 그러니까, **'증명 도구'**로 쓰인다는 것이다. 이제는 **'증명 방법'**들을 모색할 차례이다.  
 <br>
 
-# CSRF 방어 방법 [How]
+# CSRF 방어 방법 [Solutions]
 공격에 대한 방어는 클라이언트와 서버에서 각각 다른 방식으로 처리된다.  
 
 ## 서버 토큰 관리
@@ -324,7 +324,7 @@ Meta 태그에 csrf를 발급하여 method 'GET'을 제외한 모든 요청을 h
 휴대폰 인증 기능 구현 도중 403 에러를 맞닥뜨리고, CSRF 보안이 문제가 된다는 것을 파악하였다. 그리고 이를 해결하기 위한 사용자 인증 도구는 CSRF Token이었고, 인증 방법은 서버에서 토큰 저장 관리 방법과 클라이언트에서는 동기 방식에 따라 요청 시 토큰을 어떻게 포함시켜야 할지에 대해 다루어보았다. 전체 기능 구현 중에 CSRF란 ISSUE는 정말 보잘 것 없고 왜 이런 용어도 생소한 걸 넣어놨지란 의문이 들었지만, 실상은 정말 중요한 보안 기술이고 이를 개발자가 적합한 방법을 채택해서 토큰 제어 및 관리를 할 수 있다는 점에서 나름 의미가 있었고, Security 구조 및 동작원리에 있어 내용이 방대하지만, 그 중에 일부인 CSRF 필터 구조 및 동작 원리에 대해 조금이나마 이해할 수 있는 시간이어서 많은 공부가 되었다고 생각한다.  
 <br>
 
-# 참고
+# 참고 [References]
 * [크로스 사이트 요청 위조(CSRF)](https://docs.spring.io/spring-security/reference/servlet/exploits/csrf.html)
 * [[스프링 Security] CSRF 토큰 이야기 - 그래서 개발자는 뭘 하면 되죠](https://binchoo.tistory.com/46)
 * [[개발] SPA vs. MPA: 단일 페이지 앱과 다중 페이지 앱 비교](https://dailybit.co.kr/entry/%EA%B0%9C%EB%B0%9C-SPA-vs-MPA-%EB%8B%A8%EC%9D%BC-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%95%B1%EA%B3%BC-%EB%8B%A4%EC%A4%91-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%95%B1-%EB%B9%84%EA%B5%90)
