@@ -1,25 +1,25 @@
 ---
-title: JSON 역직렬화 시 Java 객체 주소값 불일치로 일부 필드 값 null 처리 문제
+title: MVC DispatcherServlet을 통한 JSON 역직렬화 과정
 categories: spring
 ---
 
-# [Intro]
-프로젝트 진행 도중, JSON 데이터를 Java 객체로 변환하는 역직렬화 과정에서 일부 필드가 "Null" 처리되는 현상이 발생하였다. 해당 이슈는 대게 흔히 발생할 수 있는 상황이지만, 역직렬화 과정에서 필드가 제대로 매핑되지 않는 이유는 다양하다. 따라서 **직렬/역직렬화** 개념이 무엇인지, 그리고 **Spring**에서 이 과정을 어떻게 매핑 및 변환하는지에 대해 살펴보기 위해 **구조 및 동작 과정**을 이해할 필요가 있다. 이번 학습을 통해 향후 비슷한 사건이 발생할 시 이를 해결할 수 있는 방법을 찾을 수 있을 것이다.
+# 개요
+MVC 아키텍처와 직렬화/역직렬화 과정을 기반으로, 객체 변환 및 생성의 동작을 학습한다.
 
-# [Issue]
-![image](https://github.com/user-attachments/assets/82414af5-9f57-49ec-851d-7f3365215618)  
-![image](https://github.com/user-attachments/assets/5085a983-06f3-4032-8120-1f81871a369b)  
+# MVC 구조와 동작 처리 과정 분석
+Spring MVC Pattern의 구조와 동작 처리 과정을 분석하고, 직렬/역직렬화 변환을 통해 데이터가 생성될 수 있는지 살펴봄으로써 "null"이 발생한 원인을 분석할 수 있는 토대를 마련하고자 한다.
 
-휴대폰 인증을 하기 위해 비동기 방식으로 서버의 @RequestBody에 신상 정보를 넘겨줄 때, 다음과 같이 일부 필드가 "Null" 인 즉, 매핑 처리가 되지 않는 현상이 발생했다. 이는, 서버에 요청된 Http header의 content-type = "**application/json**"이 역직렬화 변환 과정에서 일부 필드가 매핑이 되지 않았단 소리다.  
-
-**직렬화/역직렬화?**  
-기록이 필요한 객체 유형의 속성을 외부 형식으로 저장했다가, 필요 시 이를 다시 복구하는 기술을 뜻하는데, 각각의 개념은 다음과 같다.  
-**직렬화** -> 객체(필드)의 속성과 데이터를 파일화하여 외부에 저장한다. 직렬화 가능한 클래스들은 기본 생성자가 default여야 하다.  
-**역직렬화** -> 직렬화로 저장된 외부 파일을 다시 이전 객체로 만드는 것, 생성자를 거치지 않고 **리플렉션**을 통해 객체를 구성한다.
-
-# [Analysis]
 ## 필드 매핑은 어떻게 처리되는 것인가?  
 @RequestBody는 비동기 통신으로 요청된 Http 본문 body의 포맷 데이터에 따라 적절하게 역직렬화 처리를 목적으로 Controller의 파라미터 메소드에 Http 본문을 전달한다. 이는 곧, HttpMessageConverter가 처리하게 되는데, 더 내부적으로는 Object Mapper가 이를 수행하게 된다. 하지만 해당 정보만으로는 원인 파악을 할 수 없기 때문에 내부적으로 구조 형식이 어떻게 처리가 되는지 접근해야 한다.
+
+**-개념 파악-**  
+기록이 필요한 객체 유형의 속성을 외부 형식으로 저장했다가, 필요 시 이를 다시 복구하는 기술을 뜻한다.  
+
+**직렬화**  
+객체(필드)의 속성과 데이터를 파일화하여 외부에 저장한다. 직렬화 가능한 클래스들은 기본 생성자가 default여야 하다.  
+
+**역직렬화**  
+직렬화로 저장된 외부 파일을 다시 이전 객체로 만드는 것, 생성자를 거치지 않고 **리플렉션**을 통해 객체를 구성한다.
 
 ## DispatcherServlet 설계
 ![image](https://github.com/user-attachments/assets/adcf4a02-01e3-40db-ae71-97040f66644c)  
@@ -134,26 +134,22 @@ void hello(@RequestBody Object data) {}
 
 ### 요청(can)과 응답(read) 
 공통적으로 canRead or canWrite를 호출해서 Converter가 메시지(classType, MediaType)를 읽거나 작성할 수 있는지 확인한다.  
-만약 조건 수행이 가능하다면, read or write 메서드를 통해 읽고 쓰는 즉, 객체 생성 반환 동작을 수행한다.  
+만약 조건 수행이 가능하다면, read or write 메서드를 통해 읽고 쓰는 즉, 객체 생성 반환 동작을 수행한다. 
 
-* **요청(can)**  
+**요청(can)**  
 **ArgumentResolver** 요청에 대한 다양한 타입의 인자 값 변환, 필요 객체를 생성한다.  
 requestResponseBodyMethodProcessor 객체에서 수행되며 우선순위에 따라, canRead()로 클래스 타입, 미디어 타입이 일치하는지를, Converter가 읽어 올 수 있는지 확인한다. true일 경우 read() 호출해서 객체 생성 및 반환하며, 
-false일 경우 우선순위에 따라 다음 객체를 확인한다.  
-* **응답(read)**   
+false일 경우 우선순위에 따라 다음 객체를 확인한다.   
+
+**응답(read)**   
 **ReturnValueHandler** 응답에 대한 다양한 타입의 인자 값 변환을 제공한다.  
 우선순위에 따라, canWrite()로 클래스 타입, 미디어 타입이 일치하는지를, Converter가 작성할 수 있는지 확인한다. true일 경우 write() 호출해서 응답 메시지 바디에 데이터 생성을 하며, false일 경우 다음 우선순위로 넘어가서 다시 확인한다.  
-
-* **차이점**  
+ 
 요청은 Content-Type의 미디어 타입을 확인했다면, 응답은 Accept의 미디어 타입을 확인한다.
 
 ## 실질적인 객체 생성은 ObjectMapper
 Jackson 라이브러리에서 제공하는 객체로서, 직렬/역직렬화 기능을 제공한다.  
 Java 객체를 Json 데이터 직렬화는 writeValue()를 호출하고, Json 데이터를 Java 객체로 변환인 역직렬화는 readValue()를 호출한다.
-
-**Jackson ?**  
-Json, XML, YAML, CSV 등 다양한 포맷 확장자를 지원 및 데이터 처리를 지원하는 라이브러리이다. 전송 방식은 스트림 방식을 사용하기에 빠르고, 다양한 매핑 방식을 제공하기 때문에 유연하다. 
-매핑 방법에는 프로퍼티 (g.s)etter 방식, @JsonProperty, @JsonIgnore, @JsonAutoDetect 등이 있다.
 
 ### Jackson2Converter을 통해 생성되는 ObjectMapper
 HttpMessageConverter는 포맷 방식에 따라 적절한 구현체를 호출하게 된다. 이 중, Json 포맷 형식으로 요청이 들어오면 MappingJackson2HttpMessageConverter 구현체를 통해 ObjectMapper를 사용하여 직렬/역직렬화를 수행한다.
@@ -162,52 +158,21 @@ HttpMessageConverter는 포맷 방식에 따라 적절한 구현체를 호출하
 ObjectMapper는 기본 생성자를 통해 DTO를 생성하고, Reflection을 통해 필드 정보를 확인하여 필요한 데이터를 할당하는 방식으로 자바 객체를 형성한다. 
 만약, 기본 생성자가 없는 경우 deserializeFromObjectUsingNonDefault 라는 메서드를 호출하여 이에 대응하고자 하지만, 클래스 정보를 파악할 수 있는 특정 조건에 해당되지 않는 경우, 자바 객체를 매핑하는 것을 실패할 수 있으므로, @RequestBody에 해당하는 DTO는 일반적으로 기본 생성자가 있는 것이 좋다.  
 
-**Reflection ?**  
+**-개념 파악-**  
+**Jackson**   
+Json, XML, YAML, CSV 등 다양한 포맷 확장자를 지원 및 데이터 처리를 지원하는 라이브러리이다. 전송 방식은 스트림 방식을 사용하기에 빠르고, 다양한 매핑 방식을 제공하기 때문에 유연하다. 
+매핑 방법에는 프로퍼티 (g.s)etter 방식, @JsonProperty, @JsonIgnore, @JsonAutoDetect 등이 있다.  
+
+**Reflection**  
 구체적인 Class Type을 알지 못하더라도 해당 Class의 method, type, variable들에 접근할 수 있도록 해주는 자바 API이며, 컴파일된 바이트 코드를 통해 
 Runtime에 동적으로 특정 Class의 정보를 추출할 수 있는 프로그래밍 기법이다. 투영, 반사 라는 사전적인 의미를 가지고 있다.
 
-## 요청한 Json 역직렬화 과정 정리
+## Json 역직렬화 동작 과정 정리
 Client 요청 -> DispatcherServlet -> RequestMapping -> HandlerMapping -> DispatcherServlet -> HandlerAdapter -> ArgumentResolver -> HttpMessageConverter ->
 canRead → contentType(json) → MappingJackson2HttpMessageConverter → ArgumentResolver → read → ObjectMapper → Reflection -> Java Object(DTO) -> ArgumentResolver -> HandlerAdapter
 
-# [Problem]
-해당 객체가 내부적으로 어떻게 동작해서 변환이 일어나는 건지 알아보려고 한다.
-내부적으로 어떻게 대응 관계를 맺고 변환이 일어나는지 로직을 파악하면 문제를 파악할 수 있다.
-
-대조
-기본적으로 속성을 클래스 구조정보의 해시코드로 비교
-"구조 정보"만을 가지고 해시코드를 만들어 비교하기 때문에 
-메소드의 내용이 변경되는 것은 상관없지만 메소드 이름이라던가 필드의 이름이 한글자만 바껴도 
-역직렬화 시 예외를 뱉어냅니다. 
-
-## 양 객체 필드명 일치 확인
-``` 
--js-
-const smsAuthRequest = {
-                        name: name.value,
-                        fPhoneN: fPhoneN.value,
-                        mPhoneN: mPhoneN.value,
-                        bPhoneN: bPhoneN.value,
-                    };
-
--java-
-@Getter
-@ToString
-public class SmsAuthRequest {
-    private String name;
-    private String fPhoneN;
-    private String mPhoneN;
-    private String bPhoneN;
-}
-```
-
-양 객체의 각 변수명끼리 불일치는 없는 것으로 보인다.  
-
-# [Solutions]
-# [Solution]
-# [Conclusion]
-# [References]
-* [](https://tecoble.techcourse.co.kr/post/2021-05-11-requestbody-modelattribute/)
+# 참고
+* [@RequestBody vs @ModelAttribute](https://tecoble.techcourse.co.kr/post/2021-05-11-requestbody-modelattribute/)
 * [Reflection API 간단히 알아보자.](https://tecoble.techcourse.co.kr/post/2020-07-16-reflection-api/)  
 * [[Spring] @RequestBody - Spring의 JSON-Java Object 변환 원리](https://velog.io/@beberiche/Spring-RequestBody-Spring-Object-Mapping-%EC%9B%90%EB%A6%AC)  
 * [[Spring] Jackson 라이브러리 이해하기.](https://mommoo.tistory.com/83)  
