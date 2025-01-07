@@ -62,20 +62,21 @@ JS to Json = {fPhoneN, mPhoneN, bPhoneN}은 역직렬화 과정에서 네이밍 
 
 # 해결 방법
 상황에 맞게 네이밍 전략을 잘짜는 것이 중요하다.  
-1. Lombok과 Json네이밍 규칙을 고려한 변수명 생성
-2. Getter/Setter 임의 생성
+1. **Lombok과 Json**   
+    네이밍 규칙을 고려한 변수명 생성  
+2. **Getter/Setter 임의 생성**    
    아래의 @JsonProperty와 같다.
-3. public 변수
-   정보은닉 위배
-4. @JsonProperty
-   모든 변수명마다 직접 매핑할 프로퍼티명을 기입하는 방법
-5. @JsonIgnore
-6. @JsonNaming 전략 변경
-    KEBAB_CASE : 이름 요소는 하이픈으로 구분됩니다(예: kebab-case ) .
-    LOWER_CASE : 모든 문자는 구분 기호 없이 소문자입니다. 예: 소문자 .
-    SNAKE_CASE : 모든 문자는 소문자이며 이름 요소 사이에는 밑줄을 구분자로 사용합니다(예: snake_case) .
-    UPPER_CAMEL_CASE : 첫 번째 요소를 포함한 모든 이름 요소는 대문자로 시작하고 그 뒤에 소문자가 오며 구분 기호가 없습니다(예:  UpperCamelCase)(default 전략)      
-7. 등등...
+3. **public 변수로 접근제한자 변경**  
+   정보은닉 위배  
+4. **@JsonProperty**    
+   모든 변수명마다 직접 매핑할 프로퍼티명을 기입하는 방법  
+5. **@JsonIgnore**    
+6. **@JsonNaming 전략 변경**    
+    KEBAB_CASE : 이름 요소는 하이픈으로 구분(예: kebab-case )  
+    LOWER_CASE : 모든 문자는 구분 기호 없이 소문자 예: 소문자  
+    SNAKE_CASE : 모든 문자는 소문자이며, 이름 요소 사이에는 밑줄을 구분자로 사용(예: snake_case)  
+    UPPER_CAMEL_CASE : 첫 번째 요소를 포함한 모든 이름 요소는 대문자로 시작하고 그 뒤에 소문자가 오며 구분 기호가 없다.(예:  UpperCamelCase)(default 전략)  
+7. 등등...  
 
 # 결국엔 Lombok과 Jackson 네이밍 규칙을 고려한 변수명 생성 방식을 사용
 ```JavaScript
