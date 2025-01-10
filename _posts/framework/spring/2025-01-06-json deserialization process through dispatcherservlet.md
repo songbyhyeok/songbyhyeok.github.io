@@ -4,10 +4,11 @@ categories: spring
 ---
 
 # 개요
-MVC 아키텍처와 직렬화/역직렬화 과정을 기반으로, 객체 변환 및 생성의 동작을 학습한다.
+MVC 아키텍처와 직렬화/역직렬화 과정을 기반으로, 객체 변환 및 생성의 동작을 학습한다.  
+<br>
 
 # MVC 구조와 동작 처리 과정 분석
-Spring MVC Pattern의 구조와 동작 처리 과정을 분석하고, 직렬/역직렬화 변환을 통해 데이터가 생성될 수 있는지 살펴봄으로써 "null"이 발생한 원인을 분석할 수 있는 토대를 마련하고자 한다.
+Spring MVC Pattern의 구조와 동작 처리 과정을 분석하고, 직렬/역직렬화 변환을 통해 데이터가 생성될 수 있는지 살펴봄으로써 "null"이 발생한 원인을 분석할 수 있는 토대를 마련하고자 한다.  
 
 ## 필드 매핑은 어떻게 처리되는 것인가?  
 @RequestBody는 비동기 통신으로 요청된 Http 본문 body의 포맷 데이터에 따라 적절하게 역직렬화 처리를 목적으로 Controller의 파라미터 메소드에 Http 본문을 전달한다. 이는 곧, HttpMessageConverter가 처리하게 되는데, 더 내부적으로는 Object Mapper가 이를 수행하게 된다. 하지만 해당 정보만으로는 원인 파악을 할 수 없기 때문에 내부적으로 구조 형식이 어떻게 처리가 되는지 접근해야 한다.
@@ -29,12 +30,13 @@ MVC, RESTful 패턴에서의 중앙 배차 시스템의 기점이다. Front Cont
 즉, DispatcherServlet은 요청에 따라 적절한 컨트롤러를 찾고, 내부 처리 메서드를 호출시켜 비즈니스 로직을 수행한다. 바로 여기까지의 구조 및 동장 방식이 @RequestBody와 관련되어 있다.  
 
 ### Dispatcher 컨트롤러 처리 설계
-![image](https://github.com/user-attachments/assets/87603a26-43eb-4c9c-8bc1-8ad844f01185)
+<img src="https://github.com/user-attachments/assets/87603a26-43eb-4c9c-8bc1-8ad844f01185" style="width: 90%; height: auto">
 
 ### HandlerMapping(핸들러 결정)
 ```
 @PostMapping("/signup/verification/phones/auth")
-    public ResponseEntity<Boolean> generatePhoneAuthCode(HttpSession session, HttpServletRequest request, @RequestBody SmsAuthRequest smsAuthRequest) {
+    public ResponseEntity<Boolean> generatePhoneAuthCode(HttpSession session, HttpServletRequest request, 
+    @RequestBody SmsAuthRequest smsAuthRequest) {
 
 
         System.out.println(smsAuthRequest);
@@ -169,7 +171,8 @@ Runtime에 동적으로 특정 Class의 정보를 추출할 수 있는 프로그
 
 ## Json 역직렬화 동작 과정 정리
 Client 요청 -> DispatcherServlet -> RequestMapping -> HandlerMapping -> DispatcherServlet -> HandlerAdapter -> ArgumentResolver -> HttpMessageConverter ->
-canRead → contentType(json) → MappingJackson2HttpMessageConverter → ArgumentResolver → read → ObjectMapper → Reflection -> Java Object(DTO) -> ArgumentResolver -> HandlerAdapter
+canRead → contentType(json) → MappingJackson2HttpMessageConverter → ArgumentResolver → read → ObjectMapper → Reflection -> Java Object(DTO) -> ArgumentResolver -> HandlerAdapter  
+<br>
 
 # 참고
 * [@RequestBody vs @ModelAttribute](https://tecoble.techcourse.co.kr/post/2021-05-11-requestbody-modelattribute/)
