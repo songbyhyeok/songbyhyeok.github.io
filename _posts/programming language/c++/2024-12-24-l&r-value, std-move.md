@@ -279,10 +279,6 @@ int main() {
 pass by value 방식은 전달된 인자 값의 복사본을 만들어 매개변수에 전달하게 된다. r-value는 복사 가능한 값이기 때문에, 함수 내에서 매개변수는 r-value의 복사본을 받으며, 그 복사본은 함수 종료 시 정상적으로 소멸되고 이 과정에서 소유권 이동이 일어나기 때문에 가능하다. 해당 과정은 Copy Elision에 따라 처리된다.  
 <br>
 
-# 정리
-
-<br>
-
 # 참고
 * [참조자](https://www.tcpschool.com/cpp/cpp_cppFunction_reference)
 * [C++에서 임시 객체와 l-value, r-value의 이해](https://f-lab.kr/insight/understanding-temporary-objects-and-lvalue-rvalue-in-cpp-20240608)

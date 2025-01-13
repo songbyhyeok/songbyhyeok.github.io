@@ -9,7 +9,6 @@
                     style="font-family:'Coming Soon';">{{sum}}</style> <span
                         style="font-family:'Cafe24Oneprettynight';">posts</style>
         </li>
-
         <li>
             <span class="nav__sub-title">Framework</span>
             <ul>
@@ -20,7 +19,6 @@
                 {% endfor %}
             </ul>
         </li>
-
         <li>
             <span class="nav__sub-title">CS</span>
             <ul>
@@ -31,7 +29,6 @@
                 {% endfor %}
             </ul>
         </li>
-
         <li>
             <span class="nav__sub-title">Etc</span>
             <ul>
@@ -66,6 +63,16 @@
                 {% for category in site.categories %}
                 {% if category[0] == "data_analysis" %}
                 <li><a href="/categories/data_analysis" id="nav__sub-item">DataAnalysis ({{category[1].size}})</a></li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </li>
+        <li>
+            <span class="nav__sub-title">Algorithm</span>
+            <ul>
+                {% for category in site.categories %}
+                {% if category[0] == "algorithm" %}
+                <li><a href="/categories/algorithm" id="nav__sub-item">Algorithm ({{category[1].size}})</a></li>
                 {% endif %}
                 {% endfor %}
             </ul>
