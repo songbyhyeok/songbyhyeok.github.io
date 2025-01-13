@@ -41,9 +41,9 @@ public class SmsAuthRequest {
 코드 상에서 Json 데이터의 키는 카멜 표기법을 사용하고, DTO 객체의 필드도 동일하게 카멜 표기법을 따르기 때문에 문제가 될 것으로 보이진 않는다. 그렇다면 왜 ObjectMapper가 이들을 올바르게 매핑하지 못하는 것일까?
 
 ## 네이밍 규칙에 따른 필드 검증 과정
-![image](https://github.com/user-attachments/assets/b48e3d17-41ca-4671-a54e-743e9ebe3e89)
+![image](https://github.com/user-attachments/assets/b48e3d17-41ca-4671-a54e-743e9ebe3e89)  
 
-기본적으로 Jackson는 역직렬화 과정에서 setter와 기본 생성자를 통해 검증 목적의 Json key를 생성하는데, 만약 setter가 없다면 getter와 리플렉션을 활용한다. 이 과정에서는 빈 네이밍 규칙에 따라 프로퍼티 메소드 명이 변경될 수 있으며, 이후 변환된 프로퍼티 명을 다시 @JacksonNaming 규칙에 따라 다시 한 번 더 변환 과정이 일어난다. 그렇게 마지막으로 변환된 값을 Json key에 저장 후, Json 객체와 일치하는지 검증 이후 Java 필드 값에 저장된다.
+프로퍼티 메소드 명은 빈 네이밍 규칙에 따라 변경될 수 있으며, 이후 @JacksonNaming 규칙에 따라 한 번 더 변환이 일어나게 된다. 변환된 값은 Json Key에 저장하게 되는데, Jackson은 역직렬화 과정에서 객체의 프로퍼티 setter와 기본 생성자를 사용해 필드를 생성하려고 시도한다. 만약 이를 사용할 수 없다면, reflection을 통해 getter 명을 가져온다. Json Key 값은 Java 객체 필드와 매핑하여 Json 객체를 생성할지 여부를 결정하게 된다.
 
 ### BeanNaming
 * 모든 케이스에서는 가장 맨 앞 하나만 소문자로 변경한다.

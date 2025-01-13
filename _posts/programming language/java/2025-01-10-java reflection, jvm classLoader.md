@@ -14,7 +14,7 @@ categories: java
 ![reflection](https://github.com/user-attachments/assets/05b76a99-6969-4aa4-a051-c4b7b9ce970e)  
 출처: [https://www.geeksforgeeks.org/reflection-in-java](https://www.geeksforgeeks.org/reflection-in-java)  
 
-리플렉션은 클래스 로더에서 읽어들인 클래스들을 바탕으로 런타임 때, 객체 정보를 활용해서 클래스를 분석하고 조작하는 Java 기법API다.  
+리플렉션은 클래스 로더에서 읽어들인 클래스들을 바탕으로 런타임 때, 객체 정보를 활용해서 클래스를 분석하고 조작하는 Java 기법 API다.  
 
 ## 어떻게 분석하고 조작하는 것일까? 
 런타임 시점에 클래스가 존재하고 객체명을 알고 있다면, 그 클래스의 메타데이터인 메서드, 타입, 변수들에 접근 및 조작이 가능하다. 좀 더 구체적으로 호출.조회.생성.수정과 같은 행위들을 할 수 있게 된다. 
@@ -27,18 +27,21 @@ Spring은 리플렉션을 사용해서 JavaBeans을 조작할 수 있다. JavaBe
 ### Serialization, Deserialization
 객체를 직렬화/역직렬화할 때, 리플렉션을 사용하여 객체의 상태를 저장하거나 복원한다. 이는, 자바의 직렬화 메커니즘이 내부적으로 리플렉션을 사용하기 때문이다.
 
+### Logging
+로그는 로그 레벨, 메시지, 클래스명, 메소드명 등 다양한 정보를 함께 출력할 수 있도록 돕는다. 이러한 기능은 모두 Reflection을 통해 가능하다. Reflection을 활용하면 프로그램의 구조를 동적으로 탐색하고, 클래스나 메소드 정보를 실시간으로 추출할 수 있어 더욱 유연하고 상세한 로깅이 가능하다.
+
 ## 어떻게 객체를 가져올 수 있을까?
 결론적으로 말하자면, 리플렉션에서 가져오는 클래스는 Application ClassLoader에서 가져오게 된다. 그렇다면, 클래스 로더와 그 작동 방식을 구체적으로 학습하면서 어떻게 가져올 수 있었던 건지 알아보려고 한다.  
 
 ### ClassLoader란?
 ![image](https://github.com/user-attachments/assets/c4b5ea8c-0868-431d-8f49-a80c8b67d1cc)  
-**JVM(Java Virtual Machine)**의 구성 요소로서, 런타임에 필요 클래스들을 로딩, 링킹, 초기화 과정을 거쳐 이를 메모리 영역인 **Runtime Data Areas**에 배치하는 역할을 수행한다. 그리고 Java Byte를 JVM으로 로드하는 **JRE(Java Runtime Environment)**의 일부이기도 하다. 클래스로더는 .class 파일을 한 번에 모두 읽어들인다. 때문에, JVM은 기본 파일이나 파일 시스템에 대해 알 필요가 없으며, 런타임의 특성을 고려해 클래스를 한 번에 불러들이지 않고, 필요할 때 불러들인다. 즉, 클래스 로더는 런타임 때, 클래스를 메모리에 적재하는 역할을 수행하는 JVM 구성요소이다.  
+**JVM(Java Virtual Machine)**의 구성 요소로서, 런타임에 필요 클래스들을 로딩, 링킹, 초기화 과정을 거쳐 이를 메모리 영역인 **Runtime Data Area**에 배치하는 역할을 수행한다. 그리고 Java Byte를 JVM으로 로드하는 **JRE(Java Runtime Environment)**의 일부이기도 하다. 클래스로더는 .class 파일을 한 번에 모두 읽어들인다. 때문에, JVM은 기본 파일이나 파일 시스템에 대해 알 필요가 없으며, 런타임의 특성을 고려해 클래스를 한 번에 불러들이지 않고, 필요할 때 불러들인다. 즉, 클래스 로더는 런타임 때, 클래스를 메모리에 적재하는 역할을 수행하는 JVM 구성요소이다.  
 
 ### 구조
 ![jvmclassloader](https://github.com/user-attachments/assets/3aba8972-846a-47fb-b11e-705bc663a7f2)  
 출처:[https://www.geeksforgeeks.org/classloader-in-java](https://www.geeksforgeeks.org/classloader-in-java)  
 
-클래스로더는 계층구조로 설계되어 있으며, 각 세 개의 클래스로더로 유형적으로 분류되며, 역할이 정해져 있다. 이들은 필요 시 위임을 통해 작업을 수행하게 된다.  
+클래스 로더는 계층 구조로 설계되어 있으며, 세 가지 유형으로 분류됩니다. 각 유형은 특정 역할을 맡고 있으며, 필요에 따라 작업을 위임하여 수행하게 된다.
  
 1. **Bootstrap ClassLoader(원시 ClassLoader)**  
 JVM의 기본 시스템을 로드하는 인스턴스 로더로서, JVM의 일부다. 부트스트랩 클래스 로더는 Java 8 까지는 rt.jar에서 로드했으나, 9 이후부터는 JRT(Java Runtime Image)에서 로드한다. 가장 상위에 위치해 있기 때문에, 독립적으로 작동한다.  
@@ -116,7 +119,7 @@ java.lang.Object에서 상속받은 getClass() 메서드를 호출하면 실제 
 
 # 정리
 지금까지 리플렉션 개념과 객체를 런타임에 어떻게 가져올 수 있는지에 대한 핵심 개념인 ClassLoader의 구조와 동작 원리를 학습하였다. 
-특히 역직렬화 이슈를 해결하는 방법을 다루면서, Json 키가 생성되지 않은 Java 객체와 어떻게 매핑을 비교할 수 있었는지에 대한 의문이 있었는데, 이번 시간을 통해 그 궁금증을 해소할 수 있었다.  
+이번에 역직렬화 이슈를 해결하는 방법을 다루면서, 생성되지 않은 JSON 키와 Java 객체 간의 매핑을 어떻게 비교할 수 있었는지에 대한 의문을 해소할 수 있었다.  
 <br>
 
 # 참고
