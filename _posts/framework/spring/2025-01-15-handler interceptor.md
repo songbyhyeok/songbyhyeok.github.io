@@ -14,11 +14,15 @@ categories: spring
 변경 사항이 투명하고 자동화 이점 때문에 프레임워크에서 일반적으로 사용한다.  
 
 ## 특징
-핸들러 인터셉터는 구조 특성상 요청 핸들러 전후에 다양한 기능을 개입시킬 수 있다. 즉, 요청이 핸들러에 도달하기 전이나 응답이 클라이언트로 돌아가기 전, 후에 추가적인 작업을 할 수 있게 해 준다. 
-이를 통해 미리 필요한 설정을 적용하거나 특정 로직을 추가 및 변경함으로써 핸들러의 실행 환경을 효과적으로 관리할 수 있다.  
-
-핸들러 인터셉터 여러 핸들러에서 공통적으로 필요한 로직(예: 인증, 권한 체크, 로깅, 세션 처리 등)을 각각의 핸들러에서 직접 작성하는 대신, 인터셉터를 통해 일괄 처리할 수 있다. 이렇게 함으로써 
-코드를 간결하게 유지하고 재사용성을 높이며, 유지보수가 용이해진다. 또한, 다양한 인터셉터를 조합하여 요청 처리 흐름을 세밀하게 제어할 수 있기 때문에 유연하다.
+1. **요청 전.후로 다양한 기능들을 Interceptor**  
+   * 인터셉터는 요청이 핸들러에 도달하기 전이나 응답이 클라이언트로 돌아가기 전, 후에 추가적인 작업을 할 수 있게해 준다.
+   * 미리 필요한 설정을 적용하거나 특정 로직을 추가 및 변경함으로써 핸들러의 실행 환경을 효과적으로 관리할 수 있다.  
+2. **공통적인 로직을 일괄 처리**  
+   * 여러 핸들러에서 공통적으로 필요한 로직(예: 인증, 권한 체크, 로깅, 세션 처리 등)을 각 핸들러에서 처리하는 것이 아닌, 인터셉터와 구성시켜 일괄 처리할 수 있다.
+   * 코드를 간결하게 만들어 유지보수와 재사용성을 높인다.  
+3. **다양한 인터셉터의 조합을 통한 세밀한 요청 처리 흐름 제어**  
+   * 여러 개의 인터셉터를 유연하게 조합하여 요청 처리 흐름을 세밀하게 제어할 수 있다.
+   * 이렇게 구성된 구조는 더욱 유연하고 확장성 있는 애플리케이션을 만들 수 있다.  
 
 ## 주의
 Spring 5.3 이전까지는 HandlerInterceptorAdapter 클래스를 사용하여 간편하게 인터셉터를 생성할 수 있었지만, 
@@ -40,9 +44,8 @@ Spring 인터셉터가 어떻게 작동하는지 이해하기 위해서는 Handl
 ## 구성과 등록
 ### 인터셉터 구성
 ```Java
-@RestController
-@RequestMapping("/api/v1")
-public class InterceptorController implements HandlerInterceptor {
+@Component
+public class MyInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, 
     Object handler) throws Exception {
@@ -60,16 +63,6 @@ public class InterceptorController implements HandlerInterceptor {
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, 
     Object handler, Exception ex) throws Exception {
         System.out.println("After the complete request and response");
-    }
-
-    @GetMapping("/hello")
-    public String sayHello() {
-        return "Hello, World!";
-    }
-
-    @PostMapping("/hello")
-    public String postHello(@RequestBody String message) {
-        return "Received message: " + message;
     }
 }
 ```
@@ -94,7 +87,7 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new InterceptorController())
+        registry.addInterceptor(new MyInterceptor())
                 .addPathPatterns("/**")  // 인터셉터를 적용할 URL 패턴 지정
                 .excludePathPatterns("/login", "/register");  // 특정 URL은 제외
     }
@@ -146,14 +139,14 @@ public class WebConfig implements WebMvcConfigurer {
 ```
 
 ## 비동기 처리
-비동기 처리 환경에서는 비동기 처리를 위한 인터셉터 AsyncHandlerInterceptor 인터페이스를 구현해야 한다.  
-
-요청을 처리하는 핸들러가 별도의 스레드에서 실행되는데, 이 스레드는 요청 처리를 담당하는 동시에 메인 스레드는 요청을 완료하지 않고 빠르게 반환될 가능성이 높다. 
-따라서 비동기 요청에서는 후처리 단계인 렌더링(view rendering)이나 (postHandle, afterCompletion) 인터셉터가 즉시 호출되지 않고, 
-비동기 처리가 완료된 후에 요청이 다시 반환되어 모델을 렌더링하고 최종적으로 응답을 생성하는 과정이 계속 처리된다. 
-이때, 비동기 요청의 후처리 단계인 postHandle과 afterCompletion 메서드들이 호출된다. 즉, 비동기 요청이 완료된 후 이 메서드들이 호출되어 후처리가 이루어지게 된다.
+비동기 처리 환경에서는 요청을 처리하는 핸들러가 별도의 스레드에서 실행되며, 메인 스레드는 요청을 빠르게 반환할 수 있다. 이때 후처리 단계인 postHandle과 afterCompletion 메서드는 비동기 처리가 완료된 후에 호출된다. 비동기 처리를 위한 인터셉터는 AsyncHandlerInterceptor 인터페이스를 구현하여 후처리를 담당한다.  
   
 **API**: [org.springframework.web.servlet.AsyncHandlerInterceptor](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/servlet/AsyncHandlerInterceptor.html)  
+
+## 보안 계층으로 인터셉터를 사용하지 말 것
+Spring에서는 보안 처리를 위해 **Spring Security**와 **Servlet Filter** 조합을 권장한다. 그 이유는 **인터셉터**가 보안 계층으로 적합하지 않기 때문이다. 왜? 적합하지 않는 걸까??  
+
+인터셉터는 핸들러 URL 경로 불일치나 예기치 않은 변수 오류 등으로 인해 예상대로 작동하지 않을 수 있기 때문이다. 따라서 Spring은 이미 인증, 인가, CSRF 보호 등 다양한 보안 기능을 제공하는 Spring Security와, 요청이 서버에 전달되기 전에 실행되어 더 넓은 제어 범위를 가진 Servlet Filter를 사용하라고 권장한다. 이를 통해 보안 문제를 보다 안전하고 효과적으로 처리할 수 있다.  
 <br>
 
 # 참고
