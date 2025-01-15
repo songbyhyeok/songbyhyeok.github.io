@@ -4,13 +4,13 @@ categories: spring
 ---
 
 # HandlerInterceptor
-클라이언트의 요청을 처리할 핸들러가 실행되기 전에 **(Interceptor 하여)**, 특정 작업을 수행할 수 있도록 서버에 제공하는 인터페이스다 
+클라이언트의 요청을 처리할 핸들러가 실행되기 전에 **(Interceptor 하여)**, 특정 작업을 수행할 수 있도록 서버에 제공하는 인터페이스다. 
 
 ## Interceptor?
 ![Interceptor VSD_Example](https://github.com/user-attachments/assets/9e725c1d-c511-46ea-b940-f84cf7ae7cbe)  
 출처: [위키피디아](https://en.wikipedia.org/wiki/Interceptor_pattern)  
 
-사전 의미상 "가로채는" 라는 뜻을 가진 인터셉터는 처리 주기를 변경하거나 증강하는 방법을 제공하고자 할 때 사용되는 디자인패턴을 말하며,  
+사전 의미상 "가로채는" 라는 뜻을 가진 인터셉터는 처리 주기를 변경하거나 증강하는 방법을 제공하고자 할 때 사용되는 디자인패턴을 말하며, 
 변경 사항이 투명하고 자동화 이점 때문에 프레임워크에서 일반적으로 사용한다.  
 
 ## 특징
@@ -153,7 +153,7 @@ public class WebConfig implements WebMvcConfigurer {
 비동기 처리가 완료된 후에 요청이 다시 반환되어 모델을 렌더링하고 최종적으로 응답을 생성하는 과정이 계속 처리된다. 
 이때, 비동기 요청의 후처리 단계인 postHandle과 afterCompletion 메서드들이 호출된다. 즉, 비동기 요청이 완료된 후 이 메서드들이 호출되어 후처리가 이루어지게 된다.
   
-**API**: [org.springframework.web.servlet.AsyncHandlerInterceptor](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/servlet/AsyncHandlerInterceptor.html)
+**API**: [org.springframework.web.servlet.AsyncHandlerInterceptor](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/servlet/AsyncHandlerInterceptor.html)  
 <br>
 
 # 참고
