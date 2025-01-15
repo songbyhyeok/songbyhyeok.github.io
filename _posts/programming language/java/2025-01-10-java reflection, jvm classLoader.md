@@ -41,7 +41,7 @@ Spring은 리플렉션을 사용해서 JavaBeans을 조작할 수 있다. JavaBe
 ![jvmclassloader](https://github.com/user-attachments/assets/3aba8972-846a-47fb-b11e-705bc663a7f2)  
 출처:[https://www.geeksforgeeks.org/classloader-in-java](https://www.geeksforgeeks.org/classloader-in-java)  
 
-클래스 로더는 계층 구조로 설계되어 있으며, 세 가지 유형으로 분류됩니다. 각 유형은 특정 역할을 맡고 있으며, 필요에 따라 작업을 위임하여 수행하게 된다.
+클래스 로더는 계층 구조로 설계되어 있으며, 세 가지 유형으로 분류된다. 각 유형은 특정 역할을 맡고 있으며, 필요에 따라 작업을 위임하여 수행하게 된다.
  
 1. **Bootstrap ClassLoader(원시 ClassLoader)**  
 JVM의 기본 시스템을 로드하는 인스턴스 로더로서, JVM의 일부다. 부트스트랩 클래스 로더는 Java 8 까지는 rt.jar에서 로드했으나, 9 이후부터는 JRT(Java Runtime Image)에서 로드한다. 가장 상위에 위치해 있기 때문에, 독립적으로 작동한다.  

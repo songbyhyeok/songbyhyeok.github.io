@@ -82,7 +82,7 @@ google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
 # SEO Related
-google_site_verification :
+google_site_verification : "googlecfeedff12e6eccf0"
 bing_site_verification   :
 naver_site_verification  : "7bc9cc6f6f94561b1e13745cc2817f31734630a3"
 yandex_site_verification :
@@ -291,15 +291,15 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
       read_time: false
       comments: true
-      share: true
-      related: true
+      share: false
+      related: false
       show_date: true
       toc: true
       toc_sticky: false
       toc_label: 목차
+      author_profile: true
       sidebar_main: true
 
 date_format: "%Y-%m-%d"
