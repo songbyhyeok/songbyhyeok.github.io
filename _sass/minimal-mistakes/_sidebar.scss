@@ -73,7 +73,7 @@
 
 .sidebar__right {
   margin-bottom: 1em;
-
+  
   @include breakpoint($large) {
     position: absolute;
     top: 0;
@@ -83,7 +83,7 @@
     padding-inline-start: 1em;
     z-index: 10;
 
-    &.sticky {
+    &.sticky {      
       @include clearfix();
       position: -webkit-sticky;
       position: sticky;
@@ -348,7 +348,14 @@
   }
 
   @include breakpoint($x-large) {
-    width: initial;
+    //width: initial;
+    width: 90%;
+    margin-left: 5%;
     margin-inline-end: initial;
+    font-size: large;
   }
 }
+
+#check-btn { display: none; }
+#check-btn:checked ~ .menubars { display: block; } 
+.menubars { display: none; }

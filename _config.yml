@@ -299,7 +299,8 @@ defaults:
       toc: true
       toc_sticky: false
       toc_label: 목차
-      author_profile: true
-      sidebar_main: true
+      author_profile: false
+      sidebar_main: false
+      classes: wide
 
 date_format: "%Y-%m-%d"

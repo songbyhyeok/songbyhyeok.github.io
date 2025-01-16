@@ -41,7 +41,7 @@ body {
   }
 
   @include breakpoint($x-large) {
-    width: calc(100% - #{$right-sidebar-width});
+    //width: calc(100% - #{$right-sidebar-width});
     padding-inline-end: $right-sidebar-width;
   }
 
@@ -60,7 +60,7 @@ body {
       position: relative;
       float: inline-start;
       margin-inline: 0;
-      width: 100%;
+      width: 80%;
       clear: both;
     }
   }
