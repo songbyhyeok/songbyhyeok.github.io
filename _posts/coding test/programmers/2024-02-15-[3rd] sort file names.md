@@ -1,5 +1,5 @@
 ---
-title: 3차 파일명 정렬 2 - Java
+title: 3차 파일명 정렬 레벨 2 - Java
 categories: programmers
 ---
 
