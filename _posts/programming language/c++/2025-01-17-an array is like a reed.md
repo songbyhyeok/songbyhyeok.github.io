@@ -1,5 +1,5 @@
 ---
-title: 배열은 갈대 같다.
+title: 배열은 포인터인가?
 categories: cpp
 ---
 
