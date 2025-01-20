@@ -129,6 +129,13 @@
             <span class="nav__sub-title">Writing</span>
             <ul>
                 {% for category in site.categories %}
+                {% if category[0] == "book_report" %}
+                <li><a href="/categories/book_report" id="nav__sub-item">BookReport ({{category[1].size}})</a></li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
                 {% if category[0] == "retrospective" %}
                 <li><a href="/categories/retrospective" id="nav__sub-item">Retrospective ({{category[1].size}})</a></li>
                 {% endif %}
