@@ -150,4 +150,4 @@ CREATE TABLE Addr (
 - [프론트엔드 개발에서의 명령형과 선언형 프로그래밍 비교](https://f-lab.kr/insight/imperative-vs-declarative-programming-in-frontend-development)
 - [패러다임](https://ko.wikipedia.org/wiki/%ED%8C%A8%EB%9F%AC%EB%8B%A4%EC%9E%84)
 - [데이터 기반 프로그래밍](https://appmaster.io/ko/glossary/deiteo-giban-peurogeuraeming)
-- - [논리 프로그래밍](https://appmaster.io/ko/glossary/nonri-peurogeuraeming)
+- [논리 프로그래밍](https://appmaster.io/ko/glossary/nonri-peurogeuraeming)

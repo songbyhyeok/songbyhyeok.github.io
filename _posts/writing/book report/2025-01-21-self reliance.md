@@ -1,5 +1,5 @@
 ---
-title: 자기 신뢰 - 랄프 왈도 에머슨
+title: 자기 신뢰
 categories: book_report
 ---
 
