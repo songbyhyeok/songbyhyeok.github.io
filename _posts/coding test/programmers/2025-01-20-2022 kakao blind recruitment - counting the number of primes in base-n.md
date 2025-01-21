@@ -46,11 +46,38 @@ P처럼 소수 양쪽에 아무것도 없는 경우
 # Approach
 ## 진법 변환 알고리즘
 ```Java
+private String convertToBaseK(final int n, final int k) {
+        StringBuilder cN = new StringBuilder();
+        int copiedDecimal = n;
+        while(copiedDecimal != 0) {
+            cN.append(copiedDecimal % k);
+            copiedDecimal /= k;
+        }
+        
+        return cN.reverse().toString();
+    }
 ```
 변환된 숫자들은 문자열로 순차적으로 저장한 후, 다시 역으로 변환한다.
 
 ## 소수 판별 알고리즘
 ```Java
+private boolean isPrime(final Long n) {
+        if (n == 1) {
+            return false;
+        }
+            
+        if (n == 2 || n == 3 || n == 5 || n == 7 || n == 11) {
+            return true;
+        }
+            
+        for(int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        
+        return true;
+    }
 ```
 제곱근을 이용하여 끝까지 판별하지 않고, 효율적으로 일정 범위까지만 판별한다.
 
@@ -62,4 +89,73 @@ P처럼 소수 양쪽에 아무것도 없는 경우
 
 ## 코드
 ```Java
+class Solution {
+    private String convertToBaseK(final int n, final int k) {
+        StringBuilder cN = new StringBuilder();
+        int copiedDecimal = n;
+        while(copiedDecimal != 0) {
+            cN.append(copiedDecimal % k);
+            copiedDecimal /= k;
+        }
+        
+        return cN.reverse().toString();
+    }
+    
+    private boolean isPrime(final Long n) {
+        if (n == 1) {
+            return false;
+        }
+            
+        if (n == 2 || n == 3 || n == 5 || n == 7 || n == 11) {
+            return true;
+        }
+            
+        for(int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        
+        return true;
+    }
+    
+    private int countPrimes(final String cvtN) {
+        StringBuilder cN = new StringBuilder();
+        int answer = 0;
+        int i = 0;
+        boolean isPrimeCheckNecessary = false;
+        while(!(i >= cvtN.length() && cN.length() == 0)) {
+            if (i < cvtN.length()) {
+                final char selectedN = cvtN.charAt(i);
+                ++i;
+                                
+                if (selectedN != '0') {
+                    cN.append(selectedN);
+                    isPrimeCheckNecessary = false;
+                } else {
+                    isPrimeCheckNecessary = true;
+                }                                     
+            } else {
+                isPrimeCheckNecessary = true;
+            }
+            
+            if (isPrimeCheckNecessary) {
+                if (cN.length() != 0) {
+                    if (isPrime(Long.parseLong(cN.toString()))) {
+                        ++answer; 
+                    }
+                }                
+
+                cN.setLength(0);
+                isPrimeCheckNecessary = false;
+            }
+        }   
+        
+        return answer;
+    }
+    
+    public int solution(int n, int k) {
+        return countPrimes(convertToBaseK(n, k));
+    }
+}
 ```
