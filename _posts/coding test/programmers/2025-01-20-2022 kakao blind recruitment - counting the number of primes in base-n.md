@@ -6,7 +6,7 @@ categories: programmers
 # Description
 ## [KAKAO BLIND RECRUITMENT - k진수에서 소수 개수 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/92335)  
 
-### 문제 설명:
+### 문제 설명
 양의 정수 n이 주어집니다. 이 숫자를 k진수로 바꿨을 때, 변환된 수 안에 아래 조건에 맞는 소수(Prime number)가 몇 개인지 알아보려 합니다.
 
 0P0처럼 소수 양쪽에 0이 있는 경우
@@ -21,11 +21,11 @@ P처럼 소수 양쪽에 아무것도 없는 경우
 
 -> **10진법 n을 k진수로 변환 이후, 주어진 조건에 맞는 소수를 찾아 그 개수를 반환하는 문제.**  
 
-### 제한사항:
+### 제한사항
 * 1 ≤ n ≤ 1,000,000  
 * 3 ≤ k ≤ 10  
 
-### 입출력 예:
+### 입출력 예
 ![Image](https://github.com/user-attachments/assets/d7fea4d2-c450-40ba-a6aa-ced7c53852ea)  
 
 * **예제 #1**  

@@ -1,9 +1,9 @@
 ---
-title: ProxyServer 
+title: Proxy Server 
 categories: network
 ---
 
-# ProxyServer란?
+# Proxy Server란?
 ![Image](https://github.com/user-attachments/assets/55525dce-eb32-46bd-8b48-752d2a572180)  
 프록시 서버는 장치의 고유한 인터넷 프로토콜(IP) 주소를 이용하여 사용자와 웹 서버 간의 요청과 응답 흐름을 중개하는 게이트웨이다.
 
@@ -18,7 +18,7 @@ categories: network
 * 다른 국가의 IP 주소를 설정해서, 다른 지역.국가에 우회.접근 가능한 비즈니스 서비스를 제공한다.  
 * 요청.응답 중간에서 제어 및 관리를 통해 보안 측면에서 약 or 독이 될 수 있다.  
 * 사용자 IP 은닉 및 자체 IP 접근을 통해 데이터 수집.광고를 원천 차단한다.  
-* 프록시 유형, 프로토콜 설정에 따라 제공되는 시스템.기능이 달라진다.  
+* 프록시 유형, 프로토콜 설정에 따라 제공되는 시스템 기능이 달라진다.  
 * 무료로 제공되는 비즈니스 프록시들이 많지만, 성능과 보안이 기대에 못 미치다.
 
 ## 장점
@@ -44,30 +44,40 @@ categories: network
 일반적으로 공개 포트로 서버 운영을 하기 때문에 이를 악용할 여지가 있다.
 4. **취약한 네트워크**  
 IP 주소 익명 기능을 제공하지만, 대개는 웹 요청에만 한정적이다. 무료 프록시들은 대부분 네트워크 공격에 취약하며, 광고 기반으로 수익을 창출하는 구조로 되어 있다.
-5. **성능 불안정성**  
+5. **성능 불완정성**  
 무료로 배포된 상용 프록시는 비교적 많은 트래픽을 감당할 수 없다.
 6. **제한적인 기능**  
 프록시 프로그램은 개별적 작동 및 설정을 해야 하기 때문에, 기능이 제한적이다.  
 
 ## 프록시 유형
-1. **Forward Proxies**  
-![Image](https://github.com/user-attachments/assets/1169b4f0-4bf9-489e-aa77-2a8d4b3d673d)
-* 프록시는 클라이언트를 대신하여 클라이언트의 요청을 웹 서버로 전달하는 역할을 수행한다.  
-* 포워드 프록시는 익명성, 콘텐츠 필터링, 캐싱, 위치 기반 브라우징 기능을 제공한다.  
+### Forward Proxy
+![Image](https://github.com/user-attachments/assets/1169b4f0-4bf9-489e-aa77-2a8d4b3d673d)  
+
+포워드 프록시는 클라이언트와 웹 서버 간의 중개자 역할을 수행하는 서버로, 일반적으로 웹 프록시와 동일한 의미로 사용된다. 
+이 서버는 IP 익명성, 콘텐츠 필터링, 캐싱 등의 기능을 제공한다.  
 <br>
 
-2. **Reverse Proxies**  
-![Image](https://github.com/user-attachments/assets/fa5e24b6-61e5-439b-9d47-e6660911e0b4)
-* 서버 앞에 위치하여 클라이언트로부터 오는 요청에 대한 중계 역할을 수행한다. 클라이언트가 서버에 요청을 보내면, 요청은 먼저 리버스 프록시로 전달되어, 
-리버스가 프록시가 요청들을 적절하게 서버에 분배하게 된다. 이후에 서버로부터 응답 값이 들어오면 클라이언트에게 다시 전달까지 과정을 수행한다.  
-* 리버스 프록시는 서버 익명성 보호, 캐싱, 로드 밸런싱, DDoS 공격 보호, 그리고 콘텐츠 스트리밍에 사용된다.  
-<br>
+### Reverse Proxy
+![Image](https://github.com/user-attachments/assets/fa5e24b6-61e5-439b-9d47-e6660911e0b4)  
 
-3. **Transparent Proxies**  
-일반적으로 기업의 내부 네트워크 환경에서 네트워크 트래픽을 중앙 집중화하여 이를 모니터링하고 제어하는 역할을 하며, 사용자 익명성은 제공하지 않는다.  
+여러 웹 서버 앞에 위치하므로 서버 측 프록시라고 불리며, 클라이언트로부터 오는 요청을 적절한 서버로 전달하는 중개 역할을 한다. 이 서버는 네트워크 트래픽 흐름을 관리하고 웹 서비스의 성능과 안정성을 최적화한다.  
 
-4. **Anonymous Proxies**  
-익명 프록시 서버는 클라이언트의 IP 주소를 숨기고 프라이버시를 강화하며, 차단된 콘텐츠에 접근할 수 있게 해준다. 그러나 여전히 탐지될 수 있는 가능성이 있다.  
+**how does it work**  
+1 - 클라이언트가 웹 서비스에 요청을 보낸다.  
+2 - 리버스 프록시 서버가 이를 가로채고, 서버의 구조, 부하, 라우팅 규칙 등을 고려하여 요청을 처리할 백엔드 서버를 결정하고 분배한다.  
+3 - 백엔드 서버가 요청을 처리하여 응답을 프록시로 보낸다.  
+4 - 프록시는 응답을 클라이언트에게 전달한다.  
+
+**structural benefits**  
+리버스 프록시는 클라이언트 요청을 고르게 각 서버에 분배함으로써 부하 분산과 더 많은 제어 권한을 부여할 수 있다. 이를 통해 시스템이 더 빠르고 안정적으로 운영될 수 있다.
+또한, 원본 서버의 세부 정보를 숨기고 서버의 상태를 모니터링하여 트래픽을 필요에 따라 재조정함으로써 보안을 강화한다. 리버스 프록시는 서버 익명성 보호, 캐싱, 로드 밸런싱, DDoS 공격 보호, 그리고 콘텐츠 스트리밍에 사용된다.
+
+### different between forward and reverse
+포워드 프록시와 리버스 프록시는 모두 중개자 역할을 하지만, 구조적 및 기능적인 면에서 세부적으로 다르다.  
+**forwatd proxy**  
+프록시가 클라이언트 뒤에 위치하며, 클라이언트가 외부 서버에 접속할 때 개인정보 보호와 보안을 제공한다.  
+**reverse proxy**  
+프록시가 서버 앞에 위치하여 클라이언트의 요청을 관리한다. 이 서버는 웹 서비스의 보안과 트래픽을 관리하고 최적화하는 데 사용된다.  
 <br>
 
 # 참고
@@ -75,3 +85,4 @@ IP 주소 익명 기능을 제공하지만, 대개는 웹 요청에만 한정적
 * [What Is A Proxy Server? How does It Work?](https://www.fortinet.com/resources/cyberglossary/proxy-server)
 * [Difference between Forward Proxy and Reverse Proxy](https://www.geeksforgeeks.org/difference-between-forward-proxy-and-reverse-proxy/)
 * [Forward vs Reverse Proxies: Understanding Their Role in Network Architecture](https://medium.com/ortigan/forward-vs-reverse-proxies-understanding-their-role-in-network-architecture-63b6f22ad6cf)
+* [What is a reverse proxy? Understanding proxy servers](https://nordvpn.com/ko/blog/reverse-proxy/)
