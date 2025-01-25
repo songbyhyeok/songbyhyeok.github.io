@@ -1,5 +1,5 @@
 ---
-title: Redirect vs Foward
+title: Redirect vs Forward
 categories: network
 ---
 
