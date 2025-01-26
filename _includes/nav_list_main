@@ -1,13 +1,16 @@
 {% assign sum = site.posts | size %}
+{% assign temp_count = site.posts | where: "categories", "temp" | size %}
+{% assign total = sum | minus: temp_count %}
 
 <nav class="nav__list">
     <input id="ac-toc" name="accordion-toc" type="checkbox" />
     <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>
     <ul class="nav__items" id="category_tag_menu">
         <li>
-            <span id="nav__sub-total" style="font-family:'Cafe24Oneprettynight';">total</style> <span
-                    style="font-family:'Coming Soon';">{{sum}}</style> <span
-                        style="font-family:'Cafe24Oneprettynight';">posts</style>
+            <span id="nav__sub-total" style="font-family:'Cafe24Oneprettynight';">total</style> 
+                <span style="font-family:'Coming Soon';">
+                    {{total}} </style> 
+                    <span style="font-family:'Cafe24Oneprettynight';">posts</style>
         </li>
         <li>
             <span class="nav__sub-title" onclick="toggle('blogSubMenu')">framework</span>
