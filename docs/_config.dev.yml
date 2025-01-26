@@ -2,7 +2,7 @@
 
 theme: minimal-mistakes-jekyll
 remote_theme: null
-url: http://localhost:4000
+url: http://songbyhyeok.github.io
 
 analytics:
   provider: false
