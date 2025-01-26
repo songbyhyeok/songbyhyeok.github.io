@@ -1,0 +1,80 @@
+---
+title: 819 Most Common Word
+categories: leet-code
+---
+
+# 문제
+## [819 Most Common Word](https://leetcode.com/problems/most-common-word/description/)
+level easy, lang java  
+   
+**입력된 문자열에서 가장 많은 빈도를 차지하는 단어를 출력하는 문제다.**  
+-> 요구조건으로 대소문자와 구두점(쉼표, 마침표)를 무시해야 한다.  
+
+    ex 
+    input = "ball, cat, cat, ball, cat, !!, hit, hit, ball"  
+    banned = ["cat"]  
+    output = "ball  
+
+
+<br>
+
+# 풀이
+## 1. 구조화 및 효율적 처리를 위해 사용될 자료구조 선언
+* map 각 단어의 빈도 수를 체크하기 위함  
+* set banned 단어들을 set에 저장시켜, o(1)에 처리하기 위함    
+
+## 2. paragraph 문자열 값을 정제시키기
+* 대소문자 구별x -> 모두 소문자로  
+* 구두점은 정규식 사용해 " " 대체  
+* 정제된 문자열을 각 단어별 배열 구조로 변경  
+
+## 3. 정제된 paragraph 각 단어를 꺼내 set banned key에 있는 단어가 아니라면 map에 집어넣기
+**replaceAll("[\\W+]", " ")**  
+* replaceAll 메소드에는 \을 하나 더 추가해야 함  
+* 정규식[\W+]는 문자가 아닌 요소들을 + 연속적으로 처리  
+
+**getOrDefault**  
+기존 map.get 메서드는 key가 없다면 null을 반환하지만 해당 메서드는 null 대신 지정 값으로 대체할 수 있어, value 값이 Integer일 경우 유용함  
+
+**Collections.max(answer.entrySet(), Map.Entry.comparingByValue()).getKey();**  
+* entrySet() 메서드는 key, value 구성 각각으로 만든다.  
+* Entry.comparingByValue()는 entry 구성에서 value기준 정렬을 시킨다.  
+<br>
+
+# 알고리즘 특징
+* 문자열 메서드 활용: 다양한 문자열 메서드를 활용하여 입력값을 정제하고 조건에 맞게 처리할 수 있다.  
+* 자료구조 활용: Map과 Set과 같은 자료구조를 사용하여 데이터를 효율적으로 구조화할 수 있다.  
+* 효율적인 구조화: 문자열 메서드와 자료구조를 적절히 활용하여 알고리즘을 효율적으로 구조화할 수 있다.  
+<br>
+
+# 시간복잡도
+o(n)  
+<br>  
+
+# 코드  
+```
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+class Solution {
+    public String mostCommonWord(String paragraph, String[] banned) { 
+        Map<String, Integer> answer = new HashMap<>();
+        Set<String> bannedSet = new HashSet<>(Arrays.asList(banned));
+        
+        String[] words = paragraph.replaceAll("\\W+", " ").toLowerCase().split(" ");        
+        for(String word : words) {
+            if (bannedSet.contains(word)) {
+                continue;
+            }
+
+            answer.put(word, answer.getOrDefault(word, 0) + 1);
+        }
+        
+        return Collections.max(answer.entrySet(), Map.Entry.comparingByValue()).getKey();
+    }
+}
+```

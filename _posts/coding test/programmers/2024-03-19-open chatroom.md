@@ -1,10 +1,11 @@
 ---
-title: 오픈채팅방 레벨 2 - Java
+title: 오픈채팅방
 categories: programmers
 ---
 
 # 문제
-[https://school.programmers.co.kr/learn/courses/30/lessons/42888](https://school.programmers.co.kr/learn/courses/30/lessons/42888)  
+## [오픈채팅방 레벨 2](https://school.programmers.co.kr/learn/courses/30/lessons/42888)
+level 2, lang java  
   
 * 오픈채팅방 개설  
 * 명령어 ENTER, LEAVE, CHANGE

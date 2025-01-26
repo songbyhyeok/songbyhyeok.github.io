@@ -1,0 +1,109 @@
+---
+title: 33 Search in Rotated Sorted Array
+categories: leet-code
+---
+
+# Description
+## [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/)
+level medium, lang java  
+
+### 문제 설명
+There is an integer array nums sorted in ascending order (with distinct values).
+
+Prior to being passed to your function, nums is possibly rotated at an unknown pivot index k (1 <= k < nums.length) such that the resulting array is [nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]] (0-indexed). For example, [0,1,2,4,5,6,7] might be rotated at pivot index 3 and become [4,5,6,7,0,1,2].
+
+Given the array nums after the possible rotation and an integer target, return the index of target if it is in nums, or -1 if it is not in nums.
+
+You must write an algorithm with O(log n) runtime complexity.  
+
+-> **특정 피벗을 기준으로 회전하여 정렬된 배열에서 target 값의 인덱스를 출력하라.**  
+
+### 제한사항
+* 1 <= nums.length <= 5000  
+* -10^4 <= nums[i] <= 10^4  
+* All values of nums are unique.  
+* nums is an ascending array that is possibly rotated.  
+* -10^4 <= target <= 10^4  
+
+### 입출력 예
+* **Example 1:**  
+Input: nums = [4,5,6,7,0,1,2], target = 0  
+Output: 4  
+
+* **Example 2:**  
+Input: nums = [4,5,6,7,0,1,2], target = 3  
+Output: -1  
+
+* **Example 3:**  
+Input: nums = [1], target = 0  
+Output: -1  
+
+<br>
+
+# Analysis
+피봇에 따라 회전 정렬된 배열을 이진 탐색 알고리즘으로 푸는 문제이다.  
+1. left, right, mid 계산하기
+   * left와 right는 탐색 범위의 양 끝 인덱스
+   * mid는 left와 right의 중간 지점으로 계산
+2. mid를 기준으로 연속적으로 연결된 left 또는 right 찾기
+   * mid를 기준으로 한 번에 이어지는 left 혹은 right로 탐색을 확장
+3. 기준에서 target 값 위치 추측하기
+   * target 값이 mid의 왼쪽에 있다면 right를 mid - 1로 조정하고, 오른쪽에 있다면 left를 mid + 1로 조정
+4. mid가 target을 찾았다면 mid 반환, 못 찾았다면 -1 반환하기
+<br>
+
+# Approach
+![Image](https://github.com/user-attachments/assets/8785cc73-8625-4fbf-903f-bc0047de53af)  
+
+ex nums = [3,4,5,6,0,1,2], t = 1  
+
+## step 1: 라인 이어주기 및 target 값 추측
+1. m은 3보다 크거나 같으므로, 두 값은 정렬된 상태일 가능성이 높다.  
+2. 3부터 6까지의 범위는 하나의 연속된 구간으로 이어질 수 있다.  
+3. 이 범위(3 ~ 6)에 t값이 포함되는지 확인한다.  
+  1. 만약 t가 3 ~ 6 범위 내에 있으면, 그 구간에서 t의 위치를 추측할 수 있다.  
+  2. t가 이 범위에 포함되지 않는다면, t는 0 ~ 2 범위 안에 있을 가능성이 있으므로 이 구간을 다시 확인해야 한다.  
+
+## Step 2: 다시 left, right, mid 나누어 탐색
+* 만약 t가 0 ~ 2 범위에 포함되는 것이 확인되면, 이제 이 범위만을 대상으로 left, right, mid를 다시 나누어 탐색한다. 
+이진 탐색을 적용하여 t가 해당 구간 안에 있을지 없을지를 확인하고, mid를 기준으로 범위를 좁혀가며 반복적으로 탐색한다.  
+  * t는 0 ~ 2 사이에 있는 것이 확인 됐으므로, 0 ~ 2 영역만 다시 left, right, mid를 나누어 아까의 계산 과정을 반복해서 찾는다.  
+
+## 코드
+```Java
+class Solution {
+    public int search(int[] nums, int target) {
+        int left = 0;
+        int right = nums.length - 1;
+        
+        while(left <= right){
+            final int mid = left + (right - left) / 2;
+            final int midVal = nums[mid];
+
+            if (midVal == target) {
+                return mid;
+            }
+
+            if (nums[left] <= midVal) {
+                if (nums[left] <= target && target < midVal) {
+                    right = mid - 1;    
+                } else {
+                    left = mid + 1;
+                }
+            } else {
+                if (midVal < target && target <= nums[right]) {
+                    left = mid + 1;
+                } else {
+                    right = mid - 1;
+                }
+            }
+        }
+        
+        return -1;
+    }
+}
+```
+<br>
+
+# Reference
+- [[LeetCode] 33-Search in Rotated Sorted Array](https://www.youtube.com/watch?v=CBZdVdOZvy8&ab_channel=%EB%A1%B1%EC%BD%94%EB%94%A9%EC%9D%98CodingTogether)

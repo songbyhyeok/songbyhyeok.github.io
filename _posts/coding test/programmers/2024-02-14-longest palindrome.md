@@ -1,10 +1,11 @@
 ---
-title: 가장 긴 팰린드롬 레벨 3 - Java
+title: 가장 긴 팰린드롬
 categories: programmers
 ---
 
 # 문제
-[https://school.programmers.co.kr/learn/courses/30/lessons/12904](https://school.programmers.co.kr/learn/courses/30/lessons/12904)  
+## [가장 긴 팰린드롬](https://school.programmers.co.kr/learn/courses/30/lessons/12904)
+level 3, lang java  
   
 ![팰린드롬 문제](https://github.com/user-attachments/assets/242dcfda-9c11-4b29-8d87-8e7dc651ae7c)  
 <br>

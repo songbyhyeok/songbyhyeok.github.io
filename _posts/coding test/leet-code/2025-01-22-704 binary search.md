@@ -1,0 +1,165 @@
+---
+title: 704 Binary Search
+categories: leet-code
+---
+
+# Description
+## [704. Binary Search](https://leetcode.com/problems/binary-search/description/)  
+level easy, lang java  
+
+### 문제 설명
+Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.  
+
+You must write an algorithm with O(log n) runtime complexity.  
+
+-> **정렬된 nums를 입력받아 이진 검색으로 target에 해당하는 인덱스를 찾아라.**  
+
+### 제한사항
+* 1 <= nums.length <= 10^4  
+* -10^4 < nums[i], target < 10^4  
+* All the integers in nums are unique.  
+* nums is sorted in ascending order.  
+
+### 입출력 예
+* **Example 1:**  
+Input: nums = [-1,0,3,5,9,12], target = 9  
+Output: 4  
+Explanation: 9 exists in nums and its index is 4  
+
+* **Example 2:**  
+Input: nums = [-1,0,3,5,9,12], target = 2  
+Output: -1  
+Explanation: 2 does not exist in nums so return -1  
+
+<br>
+
+# Analysis
+이 문제는 이진 탐색 유형의 문제이다. 몇 가지 고려사항을 확인한 후 문제에 접근할 것.  
+1. **정렬된 배열**  
+이진 탐색은 반드시 정렬된 배열에서만 올바르게 동작한다.  
+2. **검색 범위**  
+탐색할 범위의 시작과 끝을 명확히 정의할 것.  
+3. **중간값 계산**  
+```Java
+mid = (low + high) / 2
+```
+4. **찾지 못했을 때**  
+```Java
+return -1
+```
+5. **변경 범위**  
+mid 값이 목표값보다 크면 right 값을, 작으면 left 값을 조정하기.
+6. **풀이 방식**  
+재귀 방식, 반복문 방식 두 개의 방법을 사용할 것.  
+<br>
+
+# Approach
+## recursive approach
+```Java
+if (left <= right) {
+            final int mid = left + (right - left) / 2;
+            final int midN = nums[mid];
+            if (midN < target) {
+                return binarySearch(nums, target, mid + 1, right);
+            } else if (midN > target) {
+                return binarySearch(nums, target, left, mid - 1);
+            } else {
+                return mid;
+            }
+        }
+        
+        return -1;
+```
+## iterative approach
+```Java
+int left = 0;
+        int right = nums.length - 1;                
+        while(left <= right) {
+        final int mid = left + (right - left) / 2;
+        final int midN = nums[mid];
+        if (midN < target) {
+            left = mid + 1;
+        } else if (midN > target) {
+            right = mid - 1;
+        } else {
+            return mid;
+        }
+        }
+
+        return -1;
+```
+## Issue
+### 연산 식 (left + right) / 2 대신 left + (right - left) / 2를 사용해야 하는 이유
+(left + right) / 2를 사용하여 중간값을 계산할 때, left와 right 가 매우 큰 정수일 경우, 두 합은 최대값(INT_MAX)을 초과하여 stack overflow가 발생하게 된다.  
+
+* **오버플로우 발생 예시**  
+```Java
+int left = 2147483646;
+int right = 2147483647;
+int mid = (left + right) / 2; // 오버플로우 발생 가능
+``` 
+left + right 결괏값은 4,294,967,293 이고, INT_MAX = 2,147,483,647 이므로 stack overflow가 발생하게 되고, 잘못된 결괏값이 도출된다.  
+
+* **대체 공식 / 이 방법이 유효한 이유**  
+```Java
+int left = 2147483646;
+int right = 2147483647;
+int mid = left + (right - left) / 2;
+```
+이 연산 식은 동일한 중간값을 도출하면서도 stack overflow를 방지하는 안전한 방식으로 계산된다.
+  * **(right - left)**  
+    항상 표현 가능한 정수 범위 내의 음이 아닌 값이므로 오버플로우가 발생하지 않는다.  
+  * **(right - left) / 2 + left**  
+    (right - left) / 2의 결과에 left를 더해도 left와 right가 표현 가능한 정수 범위 내에 있으면 오버플로우가 발생하지 않는다.
+
+## 코드
+```Java
+// recursive approach
+class Solution {
+    private int binarySearch(final int[] nums, final int target, int left, int right) {
+        if (left <= right) {
+            final int mid = left + (right - left) / 2;
+            final int midN = nums[mid];
+            if (midN < target) {
+                return binarySearch(nums, target, mid + 1, right);
+            } else if (midN > target) {
+                return binarySearch(nums, target, left, mid - 1);
+            } else {
+                return mid;
+            }
+        }
+        
+        return -1;
+    }
+
+    public int search(int[] nums, int target) {
+        return binarySearch(nums, target, 0, nums.length - 1);
+    }
+}
+
+// iterative approach
+class Solution {
+    public int search(int[] nums, int target) {
+        int left = 0;
+        int right = nums.length - 1;                
+        while(left <= right) {
+        final int mid = left + (right - left) / 2;
+        final int midN = nums[mid];
+        if (midN < target) {
+            left = mid + 1;
+        } else if (midN > target) {
+            right = mid - 1;
+        } else {
+            return mid;
+        }
+        }
+
+        return -1;
+    }
+}
+```
+<br>
+
+# Reference
+- 자바 알고리즘 인터뷰 - 70 이진 검색
+- [Why Use mid = left + (right-left) / 2 Instead of mid = (left+right) / 2 to Calculate the Midpoint in Binary Search](https://devakinandan.medium.com/why-use-mid-left-right-left-2-instead-of-mid-left-right-2-to-calculate-the-midpoint-1a947e37f78a)  

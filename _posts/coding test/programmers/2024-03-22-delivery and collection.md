@@ -1,10 +1,11 @@
 ---
-title: 택배 배달과 수거하기 레벨 2 - Java
+title: 택배 배달과 수거하기
 categories: programmers
 ---
 
 # 문제
-[https://school.programmers.co.kr/learn/courses/30/lessons/150369](https://school.programmers.co.kr/learn/courses/30/lessons/150369)  
+## [택배 배달과 수거하기](https://school.programmers.co.kr/learn/courses/30/lessons/150369)
+level 2, lang java  
   
 **트럭에 상자를 실을 수 있는 크기 Cap개 만큼 싣고 n개의 집을 왕복하여 배달과 수거를 동시에 수행하여 걸린 이동 거리 중 최소 이동 거리를 구하는 문제**  
 <br>

@@ -1,10 +1,11 @@
 ---
-title: 문자열 압축 레벨 2 - Java
+title: 문자열 압축
 categories: programmers
 ---
 
 # 문제
-[https://school.programmers.co.kr/learn/courses/30/lessons/60057](https://school.programmers.co.kr/learn/courses/30/lessons/60057)  
+## [문자열 압축](https://school.programmers.co.kr/learn/courses/30/lessons/60057)
+level 2, lang java  
   
 **같은 값이 연속해서 나타나는 문자열은 앞의 개수와 반복되는 값으로 변환시켜 짧은 문자열로 압축시키는 알고리즘 구현 문제**  
 
