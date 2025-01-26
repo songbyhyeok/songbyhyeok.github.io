@@ -1,6 +1,6 @@
 ---
 title: structure, bitfield, union 작성중
-categories: c
+categories: temp
 ---
 
 # 개요
