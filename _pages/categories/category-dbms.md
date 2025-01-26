@@ -1,5 +1,5 @@
 ---
-title: "DBMS"
+title: "dbms"
 layout: archive
 permalink: /categories/dbms
 author_profile: true

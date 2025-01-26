@@ -1,5 +1,5 @@
 ---
-title: "BookReport"
+title: "bookReport"
 layout: archive
 permalink: /categories/book_report
 author_profile: true

@@ -1,5 +1,5 @@
 ---
-title: "LanguageTheory"
+title: "langTheory"
 layout: archive
 permalink: /categories/lang_theory
 author_profile: true

@@ -1,5 +1,5 @@
 ---
-title: "GithubActions"
+title: "githubActions"
 layout: archive
 permalink: /categories/github_actions
 author_profile: true

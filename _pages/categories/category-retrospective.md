@@ -1,5 +1,5 @@
 ---
-title: "Retrospective"
+title: "retrospective"
 layout: archive
 permalink: /categories/retrospective
 author_profile: true

@@ -1,5 +1,5 @@
 ---
-title: "DataAnalysis"
+title: "dataAnalysis"
 layout: archive
 permalink: /categories/data_analysis
 author_profile: true

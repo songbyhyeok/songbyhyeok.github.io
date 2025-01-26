@@ -28,7 +28,7 @@ repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-m
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-breadcrumbs              : true   # true, false (default)
+breadcrumbs              : false   # true, false (default)
 words_per_minute         : 200
 enable_copy_code_button  : # true, false (default)
 copyright                : # "copyright" name, defaults to site.title
@@ -123,7 +123,7 @@ author:
     # - label: ''
     #   icon: "fas fa-fw fa-envelope-square"
     #   url: "mailto:songbyhyeok@gmail.com"
-    - label: "https://github.com/songbyhyeok"
+    - label: "github.com/songbyhyeok"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/songbyhyeok"
 
@@ -299,8 +299,8 @@ defaults:
       toc: true
       toc_sticky: false
       toc_label: 목차
-      author_profile: false
-      sidebar_main: false
+      author_profile: true
+      sidebar_main: true
       classes: wide
 
 date_format: "%Y-%m-%d"

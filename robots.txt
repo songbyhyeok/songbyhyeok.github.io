@@ -1,4 +1,1 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://songbyhyeok.github.io/sitemap.xml
+Sitemap: http://songbyhyeok.github.io/sitemap.xml

@@ -1,5 +1,5 @@
 ---
-title: "Algorithm"
+title: "algorithm"
 layout: archive
 permalink: /categories/algorithm
 author_profile: true

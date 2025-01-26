@@ -1,5 +1,5 @@
 ---
-title: "LeetCode"
+title: "leetCode"
 layout: archive
 permalink: /categories/leetcode
 author_profile: true
