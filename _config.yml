@@ -21,14 +21,14 @@ title                    : "티끌모아 코딩"
 title_separator          :  # "|"
 subtitle                 : # "Songbyhyeok`s history blog"
 name                     : "songbyhyeok"
-description              : "코딩 기술 블로그"
+description              : "학습한 지식 기록과 기술을 공유하는 블로그"
 url                      : # "https://songbyhyeok.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-breadcrumbs              : false   # true, false (default)
+breadcrumbs              : true   # true, false (default)
 words_per_minute         : 200
 enable_copy_code_button  : # true, false (default)
 copyright                : # "copyright" name, defaults to site.title

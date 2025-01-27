@@ -34,6 +34,8 @@
     @include breakpoint($x-large) {
       width: calc(100% - #{$right-sidebar-width});
     }
+
+    margin-right: 4.5em;
   }
 
   li {
@@ -531,7 +533,7 @@
      ========================================================================== */
 
 .toc {
-  width: 80%;
+  width: 100%;
   font-family: $sans-serif-narrow;
   color: $gray;
   border: 1px solid $border-color;
@@ -539,11 +541,13 @@
   -webkit-box-shadow: $box-shadow;
   box-shadow: $box-shadow;
   margin-top: 0.5em;
-  margin-bottom: 2em;
+  // margin-bottom: 2em;
+  margin-left: 1.6em;
 
   .nav__title {
     color: #fff;
-    font-size: $type-size-6;
+    // font-size: $type-size-6;
+    font-size: medium;
     background: $primary-color;
     border-start-start-radius: $border-radius;
     border-start-end-radius: $border-radius;
