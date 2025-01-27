@@ -51,7 +51,7 @@ body {
     margin-inline: 0;
     // margin-left: 20px;
     margin-left: 2.5em;
-    width: 80%;
+    width: 110%;
     clear: both;
     font-size: medium;
 
@@ -67,11 +67,16 @@ body {
   }
 }
 
+.sidebar__right.sticky > .toc {
+  margin-left: 2.5em;
+}
+
 .page__title {
-  font-size: xx-large;
+  color: #000;
+  font-size: medium;
   margin-top: 0.7em;
 
-  line-height: 1;
+  line-height: 1.5;
 
   a {
     color: $text-color;
