@@ -34,7 +34,7 @@ DelegatingfilterProxy는 servletFilterProxy이다. 이 필터는 ServletContaine
 **ApplicationContext**는 spring 컨테이너 IOC의 구현체이다. 클래스로부터 bean 생성을 요청하고, 생성된 bean을 반환하는 역할을 수행한다.  
 
 ### DelegatingFilterProxy는 필터 요청을 빈에 위임한다
-ServletContainer는 자체 표준을 사용해 filter 인스턴스를 등록할 수 있지만, spring에서 정의한 빈은 인식하지 못하여 사용할 수 없다. 바로 이때, DelegatingFilterProxy가 중간에서 역할을 수행하여, Spring 빈을 표준 방식으로 등록하고 사용할 수 있게 해준다. 즉, 스프링에서 필터를 사용하려면 빈 객체를 사용해야 하는데, DelegatingFilterProxy가 ApplicationContext에서 빈을 찾아 요청 처리를 위임하는 방식으로 동작한다.  
+ServletContainer는 자체 표준을 사용해 filter 인스턴스를 등록할 수 있지만, spring에서 정의한 빈은 인식하지 못하여 사용할 수 없다. 바로 이때, DelegatingFilterProxy가 중간에서 역할을 수행하여, Spring 빈을 표준 방식으로 등록하고 사용할 수 있게 해준다. 즉, 스프링에서 필터를 사용하려면 빈 객체를 사용해야 하는데, DelegatingFilterProxy가 ApplicationContext에서 빈을 찾아 요청 처리를 위임하는 방식으로 동작한다. 
 
 ```Java
 // DelegatingFilterProxy Pseudo Code
@@ -48,6 +48,8 @@ public void dofilter(ServletRequest request, ServletResponse response, filterCha
 
 ### DelegatingfilterProxy의 지연로딩
 DelegatingFilterProxy는 필터 등록과 Spring Bean 로딩 사이의 시점 차이를 해결한다. 필터는 서블릿 컨테이너에 먼저 등록되지만, 실제 필터 Bean은 Spring 컨텍스트가 ContextLoaderListener를 사용하여 준비된 후에 로딩하게 된다. 즉, 필터와 Spring Bean의 초기화 시점이 충돌하지 않도록 이를 조정한다.  
+
+![Image](https://github.com/user-attachments/assets/c174acc7-9925-4f25-bb7e-65d632ae49d6)  
 <br>
 
 # 참고
