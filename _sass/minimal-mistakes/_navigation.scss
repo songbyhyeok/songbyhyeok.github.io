@@ -563,7 +563,6 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  font-size: small;
 
   @include breakpoint($large) {
     font-size: small;
@@ -576,6 +575,7 @@
     font-weight: bold;
     line-height: 1.5;
     border-bottom: 1px solid $border-color;
+    font-size: small;
 
     &:hover {
       color: $text-color;
