@@ -1,5 +1,6 @@
 ---
 title: "resume"
+layout: null
 permalink: /resume
 ---
 
