@@ -1,7 +1,9 @@
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;  
+    min-height: 200vh;
+    width: 100%;
+    height: 200vh;
 }
 
 body {    
@@ -10,7 +12,6 @@ body {
     font-weight: 300;
     font-style: normal;
 
-    height: 100vh;
     display: flex;              
     justify-content: center;    
     background-color: rgb(241, 243, 245);
@@ -20,30 +21,88 @@ h1, h2, h3 {
     margin: 0;
 }
 
-h1 {
-    margin-top: 0.5em;
-}
-
 h2 {
-    margin-top: 0.8em;
-    margin-bottom: 0.5em;
-    padding-bottom: 0.3em;
+    font-weight: 500;    
+    color: rgba(0, 0, 0, 0.7);
+
+    margin-top: 1em;
+    padding-bottom: 0.2em;
     border-bottom: 1px solid silver;    
 }
 
 h3 {
+    font-weight: 400;
+
     margin-top: 0.5em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    padding-bottom: 0.4em;
 }
 
 li, ul {
     margin:0%;
     margin-left: 3%;
+    padding: 0;
 }
 
 li {
-    padding-bottom: 0.6em;
+    font-size: 15px;
+
+    padding-bottom: 0.3em;
+}
+
+p {
+    font-size: 15px;
+
+    margin: 0;
+    padding-top: 0.2em;
+    padding-bottom: 0.4em;
+}
+
+table {
+    border-collapse: separate; 
+    border-spacing: 5;         
+}
+  
+th, td {
+    background-color: rgb(156, 156, 166);
+    color: white;
+
+    font-size: small;
+    text-align: center;       
+    
+    padding: 0 0.3em 0.2em 0.3em;
+    border-radius: 5px;        
+}
+
+.period {
+    color: rgb(156, 156, 166);
+    font-size: small;
+    font-weight: 400;
+}
+
+.desc {
+    color: rgb(156, 156, 166);
+    font-size: small;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+.desc a {
+    text-decoration: none;  
+    color: blue;         
+}
+
+.q-item {
+    font-size: medium;
+    font-weight: 400;
+
+    margin-top: 0.4em;
+}
+
+.features {
+    margin: 0;
+    margin-top: 0.3em;
+    padding: 0;
 }
 
 .divider {
@@ -61,7 +120,7 @@ li {
     max-width: 800px;
     width: 100%;
     height: 100%;
-    overflow-y: auto;
+
     border-radius: 3px;
     padding: 4% 5%;
     box-sizing: border-box; /* 패딩 포함하여 계산 */
@@ -77,17 +136,52 @@ li {
 }
 
 .name {
-    font-size: 32px;       
+    font-size: 32px;  
+    font-weight: 400;       
     font-weight: bold;     
+
+    margin: 0;
     margin-bottom: 0.2em;
+    padding: 0;
 }
 
 .job-title {
     font-size: 23px;       
-    font-weight: normal;   
-    color: #555;           
+    font-weight: 300;   
+    color: #555;        
+
+    margin: 0;
     margin-top: 0;         
     margin-bottom: 0.3em;   
+    padding: 0;
+}
+
+.info .list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    margin: 0;
+    margin-top: 1em;
+    padding: 0;
+}
+
+.info .list .item p > a{
+    text-decoration: none; 
+    color: blue;
+}
+
+.info .list .item:nth-child(odd) {
+    width: 15%;
+}
+
+.info .list .item:nth-child(odd) p{
+    font-weight: 500;
+}
+
+.info .list .item:nth-child(even) {
+    width: 75%;
+    margin-right: 2.3em;
 }
 
 .profile .photo {
@@ -106,7 +200,24 @@ li {
     height: 100%;
     
     border: 1px solid;
-    border-color: rgba(233, 220, 190, 0.8);
+    border-color: rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     object-fit: cover;
+}
+
+.introduction {
+    margin-top: 0.5em;
+}
+
+.skill-item {    
+    display: flex; /* flexbox로 가로로 나열 */
+    flex-wrap: wrap; 
+    margin: 0;
+    padding: 0;
+    width:auto;
+}
+
+.skill-item li {
+    width: 30%;
+    box-sizing: border-box;
 }
