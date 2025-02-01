@@ -14,7 +14,7 @@ body {
 
     display: flex;              
     justify-content: center;    
-    background-color: rgb(241, 243, 245);
+    background-color: #f1f1f1;
 }
 
 h1, h2, h3 {
@@ -106,13 +106,13 @@ th, td {
 }
 
 .divider {
-    border: none;              /* 기본 테두리 제거 */
-    border-top: 2px solid #000000; /* 구분선 스타일 (회색 2px 실선) */
+    border: none;              
+    border-top: 2px solid #000000; 
     margin: 20px 0;           
 }
 
 .child-list {
-    list-style-type: circle; /* 비워진 원 */
+    list-style-type: circle; 
 }
 
 .container {
@@ -123,7 +123,7 @@ th, td {
 
     border-radius: 3px;
     padding: 4% 5%;
-    box-sizing: border-box; /* 패딩 포함하여 계산 */
+    box-sizing: border-box; 
 }
 
 .profile {
@@ -145,7 +145,7 @@ th, td {
     padding: 0;
 }
 
-.job-title {
+.dev-role {
     font-size: 23px;       
     font-weight: 300;   
     color: #555;        
@@ -181,7 +181,7 @@ th, td {
 
 .info .list .item:nth-child(even) {
     width: 75%;
-    margin-right: 2.3em;
+    margin-right: 1.8em;
 }
 
 .profile .photo {
@@ -207,17 +207,4 @@ th, td {
 
 .introduction {
     margin-top: 0.5em;
-}
-
-.skill-item {    
-    display: flex; /* flexbox로 가로로 나열 */
-    flex-wrap: wrap; 
-    margin: 0;
-    padding: 0;
-    width:auto;
-}
-
-.skill-item li {
-    width: 30%;
-    box-sizing: border-box;
 }
