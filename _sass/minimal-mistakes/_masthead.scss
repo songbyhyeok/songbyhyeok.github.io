@@ -4,12 +4,13 @@
 
 .masthead {
   position: relative;
-  border-bottom: 1px solid $border-color;
+  // border-bottom: 1px solid $border-color;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
   z-index: 20;
+  //box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
 
   &__inner-wrap {
     @include clearfix;
@@ -84,6 +85,7 @@
   list-style-type: none;
   white-space: nowrap;
   font-size: large;
+  font-weight: 500;
 
   &--lg {
     padding-inline-end: 2em;

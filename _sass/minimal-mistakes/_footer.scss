@@ -7,14 +7,15 @@
   float: inline-start;
   margin-inline: 0;
   width: 100%;
-  margin-top: 3em;
+  
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.45s;
   animation-delay: 0.45s;
   color: white;
   //background-color: rgb(243, 243, 243);
-  background-color: rgb(34, 34, 34);
+  background-color: #383838;
+  box-shadow: 0 -4px 8px rgb(6, 4, 0);  
 
   footer {
     @include clearfix;

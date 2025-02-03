@@ -16,111 +16,184 @@
 
 <body>
     <header>
-        <div>home</div>
-        <div>project</div>
-        <div>resume</div>
-        <div>blog</div>
-        <div>github</div>
+        <div class="logobar">
+            <img src="/assets/logo.ico/favicon-portfolio-48x48.png" alt="logo">
+            <span>portfolio</span>
+        </div>
+
+        <nav class="navbar">
+            <a href="/portfolio" class="nav-item">home</a>
+            <a href="/resume" class="nav-item">resume</a>
+            <a href="/projects" class="nav-item">projects</a>
+            <a href="/" class="nav-item">blog</a>
+        </nav>
     </header>
 
     <div class="container">
-        <div class="contents">
-            <div class="section">
-                <h2>Introduction</h2>
+        <div class="section">
+            <div class="introduction">
+                클라이언트 게임 및 웹 풀스택까지 여러 가지의 도구 및 재료로 사람들과 다양한 레시피를 만들어 보면서 도구 활용 능력, A부터 Z까지의 코드 분석 및 개발 그리고 에러 처리를 통해
+                문제
+                해결 역량을 길러왔습니다. 문제는 호기심에 대한 탐구, 해결은 창의적 예술, 성장은 근성과 수용이라는 프로그래밍 철학적 근간을 가진 한 명의 프로그래머로써 사명감을 갖고 모두가
+                만족하는
+                소프트웨어 제작을 하고 싶습니다.
             </div>
+        </div>
 
-            <div class="section">
-                <h2>Contact</h2>
-            </div>
+        <!-- <div class="section">
+            <div class="profile">
+                <div class="contact">
+                    <div class="item title">
+                        <p>birth:</p>
+                    </div>
 
-            <div class="section">
-                <h2>Education</h2>
-            </div>
+                    <div class="item">1994.04.18</div>
 
-            <div class="section">
-                <h2>Profile</h2>
+                    <div class="item title">
+                        <p>email:</p>
+                    </div>
 
-                <div class="photo">
+                    <div class="item">songbyhyeok@knou.ac.kr</div>
+
+                    <div class="item title">
+                        <p>phone:</p>
+                    </div>
+
+                    <div class="item">010-5013-9542</div>
+
+                    <div class="item title">
+                        <p>github:</p>
+                    </div>
+
+                    <div class="item">
+                        <p><a href="https://github.com/songbyhyeok" target="_blank">github.com/songbyhyeok</a></p>
+                    </div>
+                </div>
+
+                <div class="id-photo">
                     <img src="assets/avatar/bio-photo.jpg" alt="id-photo">
                 </div>
             </div>
+        </div> -->
 
-            <div class="section">
-                <h2>Projects</h2>
+        <!-- <div class="section">
+            <h2>Skills</h2>
+            <div class="skill">
+                <div class="skill-title">
+                    <h3>Languages</h3>
+                </div>
+
+                <div class="skill-item">
+                    <li>Java</li>
+                    <li>C++</li>
+                    <li>HTML/CSS</li>
+                </div>
+
+                <div class="skill-title">
+                    <h3>Fameworks/Libraries</h3>
+                </div>
+
+                <div class="skill-item">
+                    <li>SpringBoot</li>
+                    <li>MyBatis</li>
+                    <li>JPA</li>
+                    <li>RESTFul</li>
+                </div>
+
+                <div class="skill-title">
+                    <h3>DBMS</h3>
+                </div>
+
+                <div class="skill-item">
+                    <li>MySQL</li>
+                    <li>Oracle</li>
+                    <li>Redis</li>
+                </div>
+
+                <div class="skill-title">
+                    <h3>DevOps</h3>
+                </div>
+
+                <div class="skill-item">
+                    <li>Github Actions</li>
+                    <li>AWS</li>
+                    <li>Docker</li>
+                    <li>Ubuntu</li>
+                    <li>Gradle</li>
+                    <li>IntelliJ</li>
+                    <li>VSCode</li>
+                </div>
+
+                <div class="skill-title">
+                    <h3>ETC</h3>
+                </div>
+
+                <div class="skill-item">
+                    <li>Git</li>
+                    <li>PostMan</li>
+                    <li>DA#Modeler</li>
+                    <li>Workbench</li>
+                    <li>SQL Developer</li>
+                    <li>Figma</li>
+                    <li>Slack</li>
+                </div>
             </div>
+        </div>
 
-            <div class="section">
-                <h2>Skills</h2>
-                <div class="skill">
-                    <div class="skill-title">
-                        <h3>Languages</h3>
+        <div class="section">
+            <h2>Education</h2>
+            <p class="q-item">방송 통신 대학교 <span class="period">2022.07 ~ 2025.02</span> </p>
+            <p class="desc">3학년 편입, 컴퓨터 과학 3.4 / 4.5</p>
+
+            <p class="q-item">하이미디어 아카데미 <span class="period">2023.07 ~ 2023.12</span> </p>
+            <p class="desc">SpringBoot Mvc Model & MyBatis & RestAPI & React</p>
+        </div>
+
+        <div class="section">
+            <h2>Certificate</h2>
+            <p class="q-item">정보처리기사 <span class="period">2024.12.11</span> </p>
+            <p class="q-item">SQLD <span class="period">2024.09.06</span> </p>
+        </div>
+
+        <div class="section">
+            <h2>Other</h2>
+            <p class="q-item">CS 기상 스터디 <span class="period">2024.12.29 ~ </span> </p>
+            <p class="desc">매주 새로 배정된 파트너와 주 2~3회 학습한 주제에 대해 발표하는 스터디로, 발표했던 자료는 블로그와 GitHub에 업로드하고 있습니다.</p>
+            <p class="desc"><a href="https://gaan.notion.site/CS-12bfbb391d798090bd49f6bfe5ff41c1"
+                    target="_blank">link</a></p>
+        </div>
+
+        <div class="section">
+            <h2>projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>hicoding-groupware <span class="period">2023.11 ~ 2023.12</span> </h3>
+                    <p class="desc"><a
+                            href="https://github.com/songbyhyeok/hicoding-groupware">github.com/songbyhyeok/hicoding-groupware</a>
+                    </p>
+                    <p class="desc">팀 프로젝트</p>
+                    <div class="features">
+                        <p>IT 학원 업무 통합 관리 그룹웨어</p>
                     </div>
+                </div>
 
-                    <div class="skill-item">
-                        <li>Java</li>
-                        <li>C++</li>
-                        <li>HTML/CSS</li>
-                    </div>
+                <div class="project">
+                    <h3>gibuhagae <span class="period">2023.09 ~ 2023.10</span> </h3>
+                    <p class="desc"><a
+                            href="https://github.com/songbyhyeok/gibuhagae">github.com/songbyhyeok/gibuhagae</a>
+                    </p>
+                    <p class="desc">팀 프로젝트</p>
 
-                    <div class="skill-title">
-                        <h3>Fameworks/Libraries</h3>
-                    </div>
-
-                    <div class="skill-item">
-                        <li>SpringBoot</li>
-                        <li>MyBatis</li>
-                        <li>JPA</li>
-                        <li>RESTFul</li>
-                    </div>
-
-                    <div class="skill-title">
-                        <h3>DBMS</h3>
-                    </div>
-
-                    <div class="skill-item">
-                        <li>MySQL</li>
-                        <li>Oracle</li>
-                        <li>Redis</li>
-                    </div>
-
-                    <div class="skill-title">
-                        <h3>DevOps</h3>
-                    </div>
-
-                    <div class="skill-item">
-                        <li>Github Actions</li>
-                        <li>AWS</li>
-                        <li>Docker</li>
-                        <li>Ubuntu</li>
-                        <li>Gradle</li>
-                        <li>IntelliJ</li>
-                        <li>VSCode</li>
-                    </div>
-
-                    <div class="skill-title">
-                        <h3>ETC</h3>
-                    </div>
-
-                    <div class="skill-item">
-                        <li>Git</li>
-                        <li>PostMan</li>
-                        <li>DA#Modeler</li>
-                        <li>Workbench</li>
-                        <li>SQL Developer</li>
-                        <li>Figma</li>
-                        <li>Slack</li>
+                    <div class="features">
+                        <p>적립금 기능 탑재된 반려동물 용품 쇼핑몰</p>
                     </div>
                 </div>
             </div>
-
-            <div class="section">
-                <h2>Other</h2>
-            </div>
-        </div>
-    </div>
+        </div> -->
+    </div> 
 
     <footer>
-        b
+        <p id="copyright">© 2025 Hyeok Namgung. all rights reserved</p>
     </footer>
 </body>
 

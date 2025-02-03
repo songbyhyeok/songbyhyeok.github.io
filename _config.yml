@@ -113,16 +113,16 @@ analytics:
 
 # Site Author
 author:
-  name             : "Hyeok NamGung"
+  name             : "Hyeok Namgung"
   # avatar           : "https://songbyhyeok.github.io/assets/avatar/bio-photo.jpg"
   avatar           : "assets/avatar/bio-photo.jpg"
   bio              : "'오늘도' 기꺼이 받아들이고 주어진 일에 최선을 다할 것"
   location         : 
-  email            : "songbyhyeok@gmail.com"
+  email            : "songbyhyeok@knou.ac.kr"
   links:
     # - label: ''
     #   icon: "fas fa-fw fa-envelope-square"
-    #   url: "mailto:songbyhyeok@gmail.com"
+    #   url: "mailto:songbyhyeok@knou.ac.kr"
     - label: "github.com/songbyhyeok"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/songbyhyeok"
@@ -132,7 +132,7 @@ footer:
   links:
     - label: ''
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:songbyhyeok@gmail.com"
+      url: "mailto:songbyhyeok@knou.ac.kr"
     - label: ''
       icon: "fab fa-fw fa-github"
       url: "https://github.com/songbyhyeok"
