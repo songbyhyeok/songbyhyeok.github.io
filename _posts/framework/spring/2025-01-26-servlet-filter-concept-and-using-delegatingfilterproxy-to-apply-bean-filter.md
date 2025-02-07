@@ -1,5 +1,5 @@
 ---
-title: Servlet Filter 개념과 그리고 DelegatingFilterProxy를 사용한 Bean 필터 적용 과정
+title: Servlet Filter 개념, DelegatingFilterProxy를 사용한 Bean 필터 적용 과정
 categories: spring
 ---
 

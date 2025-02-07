@@ -36,7 +36,7 @@ body {
 .page {
   @include breakpoint($large) {
     float: inline-end;
-    width: calc(95% - #{$right-sidebar-width-narrow});
+    // width: calc(95% - #{$right-sidebar-width-narrow});
     padding-inline-end: $right-sidebar-width-narrow;
   }
 
@@ -50,8 +50,9 @@ body {
     margin-top: 1.5em;
     margin-inline: 0;
     // margin-left: 20px;
-    margin-left: 0;
-    width: 140%;
+    // margin-left: 1em;
+    // margin-right: ;
+    width: 120%;
     clear: both;
     font-size: medium;
 
@@ -64,12 +65,25 @@ body {
       width: 100%;
       clear: both;
     }
-  }  
+  }
+
+  @media (max-width: 1200px) {
+    .page__inner-wrap {
+      width: 110%;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .page__inner-wrap {
+      width: 100%;
+    }
+  }
 }
 
 .page__title {
   color: #000;
-  font-size: x-large;  
+  font-size: large;  
+  font-weight: 400;
 
   line-height: 1.5;
 

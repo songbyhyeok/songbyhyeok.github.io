@@ -7,51 +7,6 @@ html {
     height: 2080px;
 }
 
-header {
-    display: flex;
-    justify-content: center;
-    
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    
-    width: 100%;
-    min-height: 100px;
-    max-height: 100px;
-    height: 100px;
-    background-color: #f1f1f1;
-
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: top 0.3s;
-}
-
-header > .logobar img{
-    width: 48px;
-    height: 48px;
-    max-width: 48px; 
-    max-height: 48px; 
-    
-    margin-right: 0.5em;
-}
-
-header > .navbar {
-    display: flex;
-    justify-content: center;
-    gap: 2em;
-    align-items: center;
-    margin-left: 55%;
-    min-height: 85px;
-}
-
-header > .navbar > .nav-item {
-    text-decoration: none;
-    text-align: center;
-    font-size: x-large;
-    font-weight: 500;
-    color: #000000;
-}
-
 body {    
     font-family: "Noto Sans KR", serif;
     font-optical-sizing: auto;
@@ -62,26 +17,6 @@ body {
     padding: 0;
 
     background-color: #f1f1f1;
-}
-
-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-    width: 100%;    
-    min-height: 100px;
-    max-height: 100px;
-
-    background-color: #383838;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
-}
-
-footer > #copyright {
-    color: white;
-    font-size: medium;
-    font-weight: 300;
 }
 
 h1, h2, h3 {
@@ -140,19 +75,26 @@ th, td {
     border-radius: 5px;        
 }
 
-.container {   
+header {
+    display: flex;
+    justify-content: center;
     
-    height: 100%;
-    margin-top: 85px;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    min-height: 100px;
+    max-height: 100px;
+    height: 100px;
     background-color: #f1f1f1;
 
-    display: flex;              
-    justify-content: center;
-    padding: 4% 5%;
-    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s;
 }
 
-.logobar {
+header > .logobar {
     display: flex;
     justify-content: center;  
     align-items: center;   
@@ -161,6 +103,102 @@ th, td {
     font-size: xx-large;
     font-weight: 500;
     color: #000000;
+}
+
+header > .logobar img {
+    width: 48px;
+    height: 48px;
+    max-width: 48px; 
+    max-height: 48px; 
+    
+    margin-right: 0.5em;
+}
+
+header > .navbar {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    align-items: center;
+    margin-left: 55%;
+    min-height: 85px;
+}
+
+header > .navbar > .nav-item {
+    text-decoration: none;
+    text-align: center;
+    font-size: x-large;
+    font-weight: 500;
+    color: #000000;
+}
+
+@media (max-width: 1400px) {
+    header > .navbar {
+        background-color: rgb(11, 217, 221);
+        margin-left: calc(50%);
+    }
+}
+
+@media (max-width: 1200px) {
+    header > .navbar {
+        background-color: rgb(172, 187, 99);
+        margin-left: calc(40%);
+    }
+}
+
+@media (max-width: 992px) {
+    header > .navbar {
+        background-color: red;
+        margin-left: calc(25%);
+    }
+}
+
+@media (max-width: 768px) {
+    header > .navbar {
+        background-color: rgb(22, 99, 214);
+        margin-left: calc(10%);
+    }
+}
+
+@media (max-width: 576px) {
+    header > .navbar {
+        display: none;  
+    }
+
+    header > .logobar {
+        margin-left: 20%;
+        background-color: rgb(47, 173, 31);
+    }
+}
+
+.container {
+    width: 100%;   
+    height: 100%;
+    background-color: #ffffff;
+
+    margin-top: 100px;
+
+    /* display: flex;              
+    justify-content: center;
+    box-sizing: border-box; */
+}
+
+.introduction {
+    width: 100%;
+    height: 600px;
+    background-color: bisque;
+
+    display: flex;    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile {
+    height: 650px;
+
+    display: flex;    
+    justify-content: center;
+    align-items: center;
 }
 
 .skill-item {    
@@ -176,13 +214,47 @@ th, td {
     box-sizing: border-box;
 }
 
-.projects {
-    display: flex; 
-    flex-wrap: wrap; 
-    margin: 0;
-    padding: 0;
+/* 1. #title (상단 중앙 정렬된 제목) */
+#title {
+    text-align: center; /* 제목을 가운데 정렬 */
+    margin-bottom: 30px; /* 제목과 프로젝트들 사이에 간격 */
+    font-size: 36px; /* 제목 폰트 크기 */
+    font-weight: bold; /* 제목을 볼드체로 설정 */
 }
 
+/* 2. .projects (프로젝트 목록 컨테이너) */
+.projects {
+    display: flex; /* 프로젝트들을 flex로 나누기 */
+    justify-content: center; /* 프로젝트들을 가로로 가운데 정렬 */
+    flex-wrap: wrap; /* 내용이 넘치면 새로운 줄로 넘어가도록 설정 */
+    gap: 20px; /* 프로젝트들 간의 간격 설정 */
+}
+
+/* 3. .project (각각의 프로젝트 스타일) */
 .project {
-    border: 1px solid #000000;
+    width: 45%; /* 각 프로젝트의 너비 설정 */
+    padding: 20px; /* 프로젝트 내용 안의 패딩 */
+    background-color: #f0f0f0; /* 프로젝트의 배경색 */
+    border-radius: 10px; /* 모서리 둥글게 처리 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;    
+    min-height: 100px;
+    max-height: 100px;
+
+    background-color: #383838;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer > #copyright {
+    color: white;
+    font-size: medium;
+    font-weight: 300;
 }
