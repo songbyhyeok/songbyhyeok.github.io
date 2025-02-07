@@ -35,9 +35,9 @@ body {
 
 .page {
   @include breakpoint($large) {
-    float: inline-end;
+    //float: inline-end;
     //width: calc(100% - #{$right-sidebar-width-narrow});
-    padding-inline-end: $right-sidebar-width-narrow;
+    //padding-inline-end: $right-sidebar-width-narrow;
   }
 
   @include breakpoint($x-large) {
@@ -52,6 +52,7 @@ body {
     // margin-left: 20px;
     // margin-left: 1em;
     // margin-right: ;
+    margin-bottom: 4em;
     width: 100%;
     clear: both;
     font-size: medium;

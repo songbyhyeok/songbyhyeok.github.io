@@ -103,6 +103,13 @@
             <ul id="blogSubMenu5" style="display: none;">
                 <ul>
                     {% for category in site.categories %}
+                    {% if category[0] == "programmers" %}
+                    <li><a href="/programmers" id="nav__sub-item">programmers ({{category[1].size}})</a></li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+                <ul>
+                    {% for category in site.categories %}
                     {% if category[0] == "leet-code" %}
                     <li><a href="/leet-code" id="nav__sub-item">leetCode ({{category[1].size}})</a></li>
                     {% endif %}
@@ -110,8 +117,8 @@
                 </ul>
                 <ul>
                     {% for category in site.categories %}
-                    {% if category[0] == "programmers" %}
-                    <li><a href="/programmers" id="nav__sub-item">programmers ({{category[1].size}})</a></li>
+                    {% if category[0] == "baekjoon" %}
+                    <li><a href="/baekjoon" id="nav__sub-item">baekjoon ({{category[1].size}})</a></li>
                     {% endif %}
                     {% endfor %}
                 </ul>
