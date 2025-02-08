@@ -348,9 +348,9 @@
   }
 
   @include breakpoint($x-large) {
-    //width: initial;
-    width: 90%;
-    margin-left: 5%;
+    width: initial;
+    //width: 90%;
+    //margin-left: 5%;
     margin-inline-end: initial;
     font-size: large;
   }
