@@ -1,0 +1,12 @@
+html, body {
+    font-family: "Noto Sans KR", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    background-color: #f1f1f1;
+    width: 100%;
+    min-height: 200vh;
+    height: 2095px;
+    margin: 0;
+    padding: 0;
+}

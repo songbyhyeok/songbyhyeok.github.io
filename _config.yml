@@ -299,9 +299,9 @@ defaults:
       show_date: true
       toc: true
       toc_sticky: true
-      # toc_label: contents
+      toc_label: Table of Contents
       author_profile: false
       sidebar_main: false
-      # classes: wide
+      classes: wide
 
 date_format: "%Y-%m-%d"

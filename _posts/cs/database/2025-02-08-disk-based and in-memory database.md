@@ -1,6 +1,6 @@
 ---
 title: 디스크 기반과 인 메모리 데이터베이스
-categories: dbms
+categories: database
 ---
 
 ## 디스크 기반 데이터베이스
@@ -64,5 +64,5 @@ HW와 SW가 나날이 발전함에 따라 애플리케이션은 복잡성을 띄
 인메모리 데이터베이스의 종류는 유형에 따라 다양하다. 그중에 일반적으로 알려진 **Redis와 Memcached**가 있다.
 
 ## 참고:
-- [인메모리 데이터베이스의 이해와 활용](https://f-lab.kr/insight/understanding-in-memory-databases)
-- [In-Memory DB vs. Disk-Based DB](https://velog.io/@semoon/In-Memory-DB-vs.-Disk-Based-DB)
+### 1. [인메모리 데이터베이스의 이해와 활용](https://f-lab.kr/insight/understanding-in-memory-databases)
+### 2. [In-Memory DB vs. Disk-Based DB](https://velog.io/@semoon/In-Memory-DB-vs.-Disk-Based-DB)

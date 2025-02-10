@@ -1,6 +1,6 @@
 ---
 title: 환경 변수와 secrets
-categories: github-actions
+categories: ci-cd
 ---
 
 # 개요

@@ -1,79 +1,3 @@
-html {
-    margin: 0;
-    padding: 0;
-    
-    width: 100%;
-    min-height: 200vh;
-    height: 2080px;
-}
-
-body {    
-    font-family: "Noto Sans KR", serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-
-    margin: 0;
-    padding: 0;
-
-    background-color: #f1f1f1;
-}
-
-h1, h2, h3 {
-    margin: 0;
-}
-
-h2 {
-    font-weight: 500;    
-    color: rgba(0, 0, 0, 0.7);
-
-    margin-top: 1em;
-    padding-bottom: 0.2em;
-    border-bottom: 1px solid silver;    
-}
-
-h3 {
-    font-weight: 400;
-
-    margin-top: 0.5em;
-    padding-bottom: 0.4em;
-}
-
-li, ul {
-    margin:0%;
-    margin-left: 3%;
-    padding: 0;
-}
-
-li {
-    font-size: 15px;
-
-    padding-bottom: 0.3em;
-}
-
-p {
-    font-size: 15px;
-
-    margin: 0;
-    padding-top: 0.2em;
-    padding-bottom: 0.4em;
-}
-
-table {
-    border-collapse: separate; 
-    border-spacing: 5;         
-}
-  
-th, td {
-    background-color: rgb(156, 156, 166);
-    color: white;
-
-    font-size: small;
-    text-align: center;       
-    
-    padding: 0 0.3em 0.2em 0.3em;
-    border-radius: 5px;        
-}
 
 header {
     display: flex;
@@ -170,35 +94,150 @@ header > .navbar > .nav-item {
     }
 }
 
-.container {
+main {
     width: 100%;   
     height: 100%;
     background-color: #ffffff;
-
-    margin-top: 100px;
-
-    /* display: flex;              
-    justify-content: center;
-    box-sizing: border-box; */
+    margin-top: 110px;
 }
 
-.introduction {
-    width: 100%;
-    height: 600px;
-    background-color: bisque;
+.portfolio-cover {
+    width: 100%;   
+    min-height: 970px;
+    height: 970px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
-    display: flex;    
+.cover-left {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(172, 187, 99);
+}
+
+.cover-header {
+    margin-top: 20%;
+    margin-left: 10%;
+}
+
+.cover-title {
+    font-size: 45;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.cover-desc {
+    font-size: 15;    
+    margin: 0;
+    padding: 0;
+    padding-left: 2%;
+}
+
+.cover-right {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(187, 189, 174);
+}
+
+.portfolio-profile {
+    width: 100%;
+    height: 100%;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
 }
 
-.profile {
-    height: 650px;
-
-    display: flex;    
+.profile-header {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 3%;
+}
+
+.id-photo {
+    max-width: 117px;
+    max-height: 156px;
+    width: 100%;
+    height: 100%;
+}
+
+.id-photo img{
+    width: 100%;
+    height: 100%;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    box-sizing: border-box;
+    object-fit: cover;    
+}
+
+.profile-info {
+    width: 100%;
+}
+
+.user-name{
+    font-size: xx-large;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.secondary-name {
+    font-size: large;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+.user-job {
+    font-size: medium;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-info {
+    width: 50%;
+}
+
+.entry {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.entry > .label {
+    font-weight: 400;
+}
+
+.entry > .value {
+    font-size: 20;
+    font-weight: 300;
+}
+
+.entry.name > .label {
+    font-size: 55;
+    font-weight: 500;
+}
+
+.skill {
+    margin-left: 15%;
+}
+
+.skill > #title {
+    font-size: 40;
+    font-weight: 500;
+    text-align: center;
+
+    margin-right: 15%;
+
+    margin-top: 5%;
+    padding: 0;
 }
 
 .skill-item {    

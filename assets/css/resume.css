@@ -1,76 +1,7 @@
-html, body {
-    width: 100%;
-    min-height: 200vh;
-    height: 2095px;
-    margin: 0;
-    padding: 0;
-}
 
 body {    
-    font-family: "Noto Sans KR", serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-
     display: flex;              
     justify-content: center;    
-    background-color: #f1f1f1;
-}
-
-h1, h2, h3 {
-    margin: 0;
-}
-
-h2 {
-    font-weight: 500;    
-    color: rgba(0, 0, 0, 0.7);
-
-    margin-top: 1em;
-    padding-bottom: 0.2em;
-    border-bottom: 1px solid silver;    
-}
-
-h3 {
-    font-weight: 400;
-
-    margin-top: 0.5em;
-    padding-bottom: 0.4em;
-}
-
-li, ul {
-    margin:0%;
-    margin-left: 3%;
-    padding: 0;
-}
-
-li {
-    font-size: 15px;
-
-    padding-bottom: 0.3em;
-}
-
-p {
-    font-size: 15px;
-
-    margin: 0;
-    padding-top: 0.2em;
-    padding-bottom: 0.4em;
-}
-
-table {
-    border-collapse: separate; 
-    border-spacing: 5;         
-}
-  
-th, td {
-    background-color: rgb(156, 156, 166);
-    color: white;
-
-    font-size: small;
-    text-align: center;       
-    
-    padding: 0 0.3em 0.2em 0.3em;
-    border-radius: 5px;        
 }
 
 .period {

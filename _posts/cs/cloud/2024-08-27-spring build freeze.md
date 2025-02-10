@@ -1,6 +1,6 @@
 ---
 title: EC2 스프링 빌드 시 먹통 현상
-categories: aws
+categories: cloud
 ---
 
 # 이슈

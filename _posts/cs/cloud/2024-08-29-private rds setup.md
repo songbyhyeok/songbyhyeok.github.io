@@ -1,6 +1,6 @@
 ---
 title: AWS RDS IP 과금 이슈 및 로컬 포트 포워딩 RDS연동과 Github Action Workflow Build
-categories: aws
+categories: cloud
 ---
 
 # 개요

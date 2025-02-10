@@ -1,6 +1,6 @@
 ---
 title: 자기 신뢰
-categories: book-report
+categories: book-review
 ---
 
 ![Image](https://github.com/user-attachments/assets/adfccffc-d40d-474e-80dd-0c7b19dbd3e6)  

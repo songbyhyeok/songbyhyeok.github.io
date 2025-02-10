@@ -1,6 +1,6 @@
 ---
 title: Github Actions CI/CD Review
-categories: github-actions
+categories: ci-cd
 ---
 
 ![image](https://github.com/user-attachments/assets/817594f2-afe3-4ed9-a49a-1f8bec26e7d4)
