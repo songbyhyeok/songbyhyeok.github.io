@@ -135,7 +135,7 @@
                 <ul>
                     {% for category in site.categories %}
                     {% if category[0] == "ci-cd" %}
-                    <li><a href="/ci-cd" id="nav__sub-item">CI/CD ({{category[1].size}})</a>
+                    <li><a href="/ci-cd" id="nav__sub-item">ci/cd ({{category[1].size}})</a>
                     </li>
                     {% endif %}
                     {% endfor %}

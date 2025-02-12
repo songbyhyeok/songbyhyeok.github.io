@@ -72,14 +72,14 @@
 }
 
 .sidebar__right {
-  margin-bottom: 1em;
-  
+  margin-left: 0%;
+
   @include breakpoint($large) {
     position: absolute;
     top: 0;
     inset-inline-end: 0;
-    width: $right-sidebar-width-narrow;
-    margin-inline-end: -1 * $right-sidebar-width-narrow;
+    //width: $right-sidebar-width-narrow;
+    //margin-inline-end: -1 * $right-sidebar-width-narrow;
     //padding-inline-start: 1em;
     z-index: 10;
 
@@ -87,13 +87,13 @@
       @include clearfix();
       position: -webkit-sticky;
       position: sticky;
-      top: 2em;
+      top: 7%;
       float: inline-end;
 
-      .toc {
+      .toc {        
         .toc__menu {
           overflow-y: auto;
-          max-height: calc(100vh - 7em);       
+          max-height: calc(100vh);       
         }
       }
     }

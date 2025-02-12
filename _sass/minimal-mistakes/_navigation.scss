@@ -531,20 +531,22 @@
      ========================================================================== */
 
 .toc {
-  width: 100%;
-  font-family: $sans-serif-narrow;
+  width: 67%;
+  //font-family: $sans-serif-narrow;
   color: $gray;
-  border: 1px solid $border-color;
+  // border: 1px solid $border-color;
   border-radius: $border-radius;
   -webkit-box-shadow: $box-shadow;  
   box-shadow: $box-shadow;
-  background-color: rgba($color: #c70606, $alpha: 0.5);
   //margin-top: 0.5em;
   // margin-bottom: 2em;
-  //margin-left: 1.6em;
+
+  header > .nav__title {
+    background-color: rgba($color: #ffffff, $alpha: 0.5)
+  }
 
   .nav__title {
-    color: #fff;
+    color: #000000;
     // font-size: $type-size-6;
     font-size: medium;
     background: $primary-color;
@@ -560,9 +562,11 @@
 
 .toc__menu {
   margin: 0;
+  margin-left: 7%;
   padding: 0;
   list-style: none;
   background-color: white;
+  border: 1px solid rgba($color: #484747, $alpha: 0.2);
 
   @include breakpoint($large) {
     font-size: small;
@@ -572,12 +576,10 @@
     display: block;
     padding: 0.25rem 0.75rem;
     // color: $muted-text-color;
-    //font-weight: bold;
-    font-weight: 600;
+    font-weight: bold;
     line-height: 1.5;
-    //border-bottom: 1px solid $border-color;
-    //font-size: medium;
-    font-size: medium;
+    border-bottom: 1px solid $border-color;
+    font-size: small;
 
     &:hover {
       color: $text-color;
