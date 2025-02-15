@@ -1,5 +1,6 @@
 
 body {    
+    background-color: #f1f1f1;
     display: flex;              
     justify-content: center;    
 }
@@ -28,6 +29,13 @@ body {
     font-weight: 400;
 
     margin-top: 0.4em;
+}
+
+.study-link {
+    display: inline-block;
+    margin: 0;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
 }
 
 .features {

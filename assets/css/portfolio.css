@@ -55,106 +55,100 @@ header > .navbar > .nav-item {
     color: #000000;
 }
 
-@media (max-width: 1400px) {
-    header > .navbar {
-        background-color: rgb(11, 217, 221);
-        margin-left: calc(50%);
-    }
-}
-
-@media (max-width: 1200px) {
-    header > .navbar {
-        background-color: rgb(172, 187, 99);
-        margin-left: calc(40%);
-    }
-}
-
-@media (max-width: 992px) {
-    header > .navbar {
-        background-color: red;
-        margin-left: calc(25%);
-    }
-}
-
-@media (max-width: 768px) {
-    header > .navbar {
-        background-color: rgb(22, 99, 214);
-        margin-left: calc(10%);
-    }
-}
-
-@media (max-width: 576px) {
-    header > .navbar {
-        display: block;  
-    }
-
-    header > .logobar {
-        margin-left: 20%;
-        background-color: rgb(47, 173, 31);
-    }
+header > .navbar > .nav-item:hover {
+    border-bottom: 4px solid rgba(0, 0, 0, 0.5);
 }
 
 main {
-    width: 100%;  
-    height: 100%; 
+    max-width: 100%;
     background-color: #ffffff;
-    margin-top: 110px;
     display: flex;  
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    object-fit: contain;
+    align-items: center;     
+}
+
+.container {
+    width: 75%;
+    max-width: 75%;  
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;  
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.section-title {
+    margin: 0;
+    margin-right: 92%;
+    padding: 0;
+    padding-top: 2%;
+    border-bottom: 5px solid lightslategrey;
+}
+
+.section-title p {    
+    font-size: clamp(30px, 1.4vw, 35px);
+    font-weight: 500;
+    text-align: left;
+    margin: 0; 
+    padding: 0;
+}
+
+.item-container {
+    width: 100%;
+    height: 100%;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 .portfolio-cover {
-    max-width: 100%;
     width: 100%;
-    min-height: 970px;
-    height: 970px;    
-    background: linear-gradient(-45deg, #ffffff, #e6e6e6);
+    max-width: 100%;      
+    background: linear-gradient(-60deg, #F5F5F5, #D3D3D3);
+    padding-bottom: 12%;
     display: flex;  
     justify-content: center;
     align-items: start;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .cover-left {
-    flex: 6; 
+    flex: 6.3; 
 }
 
 .cover-header {
     max-width: 100%;
     max-height: 100%;
     margin: 0;
-    padding: 10% 0 0 15%;
+    padding: 20% 0 0 15%;
     object-fit: contain;
 }
 
 .cover-title {
-    font-size: 4.5vw;
+    font-size: clamp(40px, 5vw, 65px);
     font-weight: 500;
     margin: 0;
     padding: 0;
 }
 
 .cover-desc {
-    font-size: 1.3vw;    
+    font-size: clamp(1px, 3vw, 25px);
     margin: 0;
     padding: 0;
     padding-left: 1%;
 }
 
 .cover-right {
-    flex: 4;
+    flex: 3.7;
 }
 
 .portfolio-profile {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:start;
+    align-items: start;
     gap: 5%;
-    margin-top: 40%;
+    margin-top: 65%;
 }
 
 .profile-header {
@@ -164,11 +158,7 @@ main {
     flex-direction: row;
     justify-content: center;
     align-items:end;
-    gap: 2%;
-    border: 1px solid;
-    border-color: rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    box-sizing: border-box;   
+    gap: 2%;  
     object-fit: contain;  
 }
 
@@ -182,56 +172,58 @@ main {
     max-width: 100%; 
     max-height: 100%;    
     object-fit: contain;  
-    border: 1px solid;
-    border-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);    
     border-radius: 5px;
     box-sizing: border-box;      
 }
 
 .profile-info {
+    padding-top: 5%;
     flex: 1 1 auto;
-    border: 1px solid;
-    border-color: rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    box-sizing: border-box;  
     object-fit: contain;    
 }
 
-.user-name{
-    font-size: 2.8vw;
+.user-name{    
+    font-size: clamp(25px, 3vw, 55px);
     font-weight: 500;
     margin: 0;
     padding: 0;
 }
 
 .secondary-name {
-    font-size: 1.3vw;
+    font-size: clamp(14px, 2vw, 25px);
     font-weight: 400;
     margin: 0;
     padding: 0;
 }
 
 .user-job {
-    font-size: 1vw;
+    font-size: clamp(12px, 1vw, 18px);
     font-weight: 300;
     margin: 0;
     padding: 0;
 }
 
 .contact-info {
+    width: 100%;
+    margin-top: 1%;
     padding: 0;
-    border: 1px solid;
-    border-color: rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    box-sizing: border-box;  
     object-fit: contain; 
 }
 
+.contact-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+}
+
 .contact-item span {
-    font-size: 1.1vw;
+    font-size: clamp(14px, 2vw, 20px);
     padding: 0;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
     display: inline-block;
 }
 
@@ -240,10 +232,12 @@ main {
 }
 
 .contact-label {
+    flex: 1.3;
     font-weight: 400;
 }
 
 .contact-detail {
+    flex: 8.7;
     font-weight: 300;
 }
 
@@ -252,36 +246,8 @@ main {
     color: #000000;
 }
 
-.skill-stack-container {
-    width: 75%;
-    min-height: 550px;
-    height: 550px;   
-    border: 1px solid;
-    display: flex;  
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    object-fit: contain;
-}
-
-.skill-stack.section-title {
-    margin-right: 92%;
-}
-
-.skill-stack.section-title p{
-    border: 1px solid;
-    font-size: 2.5vw;
-    font-weight: 500;
-    text-align: center;
-    margin: 0; 
-    padding: 0;
-}
-
 .skill-stack.item-container {
-    border: 1px solid;
-    width: 100%;
-    height: 100%;
-    margin-top: 5%;
+    margin-left: 2%;
     display: flex;  
     flex-direction: column;
     justify-content: start;
@@ -291,11 +257,8 @@ main {
 
 .skill-set {
     width: 100%;
-    border: 1px solid;
     margin: 0;    
     padding: 0;
-    padding-top: 2%;
-    padding-bottom: 2%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -303,18 +266,12 @@ main {
     position: relative;
 }
 
-.skill-title {
-    border: 1px solid;
-    margin-left: 5%;
-}
-
 .skill-title p{
-    font-size: 2vw;
-    font-weight: 300;
+    font-size: clamp(16px, 2vw, 24px);
+    font-weight: 500;
 }
 
-.skill-item {    
-    border: 1px solid;
+.skill-item-list {    
     margin: 0;
     padding: 0;
     display: flex; 
@@ -323,52 +280,188 @@ main {
     left: 30%;
 }
 
-.skill-item li {
-    width: 30%;
-    box-sizing: border-box;
+.skill-item-list td{    
+    font-size: clamp(14px, 1vw, 18px);
 }
 
-/* 1. #title (상단 중앙 정렬된 제목) */
-#title {
-    text-align: center; /* 제목을 가운데 정렬 */
-    margin-bottom: 30px; /* 제목과 프로젝트들 사이에 간격 */
-    font-size: 36px; /* 제목 폰트 크기 */
-    font-weight: bold; /* 제목을 볼드체로 설정 */
+.project.item-container {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: start; 
+    align-items: start;
+    object-fit: contain; 
+    flex-wrap: wrap;
+    gap: 5%; 
 }
 
-/* 2. .projects (프로젝트 목록 컨테이너) */
-.projects {
-    display: flex; /* 프로젝트들을 flex로 나누기 */
-    justify-content: center; /* 프로젝트들을 가로로 가운데 정렬 */
-    flex-wrap: wrap; /* 내용이 넘치면 새로운 줄로 넘어가도록 설정 */
-    gap: 20px; /* 프로젝트들 간의 간격 설정 */
+.project-item {
+    padding: 20px; 
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
-/* 3. .project (각각의 프로젝트 스타일) */
-.project {
-    width: 45%; /* 각 프로젝트의 너비 설정 */
-    padding: 20px; /* 프로젝트 내용 안의 패딩 */
-    background-color: #f0f0f0; /* 프로젝트의 배경색 */
-    border-radius: 10px; /* 모서리 둥글게 처리 */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+.project-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); 
+}
+
+.project-item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    object-fit: contain;
+}
+
+.project-title p {
+    font-size: clamp(21px, 1.2vw, 26px);
+    font-weight: 400;
+}
+
+.project-title p > span {
+    font-size: clamp(16px, 0.7vw, 21px);
+    font-weight: 300;
+}
+
+.project-imgbox {       
+    width: 100%;
+    height: 150px;
+    max-width: 330px;     
+    max-height: 150px;
+    padding-top: 10%; 
+    padding-bottom: 10%;
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-imgbox img {
+    width: 100%;
+    object-fit: contain;    
+}
+
+.project-type {
+    font-size: clamp(18px, 1.2vw, 23px);
+    font-weight: 400;
+}
+
+.project-desc {
+    font-size: clamp(14px, 1vw, 19px);
+    font-weight: 350;
+}
+
+.project-stack {
+    font-size: clamp(14px, 0.9vw, 19px);
+    font-weight: 300;
+}
+
+.education.item-container {
+    margin-left: 2%;
+    display: flex;  
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    object-fit: contain;   
+}
+
+.certificate.item-container {
+    margin-left: 2%;
+    display: flex;  
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    object-fit: contain;   
+}
+
+.other.item-container {
+    margin-left: 2%;
+    display: flex;  
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    object-fit: contain;   
+}
+
+.item-title{
+    font-size: clamp(17px, 1vw, 22px);
+    font-weight: 500;
+}
+
+.item-title span {
+    font-size: clamp(13px, 0.6vw, 18px);
+    font-weight: 300;
+}
+
+.item-desc {
+    font-size: clamp(15px, 0.8vw, 20px);
+    font-weight: 350;
+}
+
+.other.itme {
+    height: 100%;
+}
+
+.other-link {
+    display: block;
+    text-decoration: none;
+    color: blue;
+    object-fit: contain;
 }
 
 footer {
+    width: 100%;    
+    height: 100%;
+    min-height: 80px;
+    max-height: 80px;
+    margin: 0;
+    padding: 0;
+    background-color: #383838;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    width: 100%;    
-    min-height: 100px;
-    max-height: 100px;
-
-    background-color: #383838;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
 
 footer > #copyright {
     color: white;
     font-size: medium;
     font-weight: 300;
+}
+
+@media (max-width: 1400px) {
+    header > .navbar {        
+        margin-left: calc(50%);
+    }
+}
+
+@media (max-width: 1200px) {
+    header > .navbar {        
+        margin-left: calc(35%);
+    }
+}
+
+@media (max-width: 992px) {
+    header {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        display: none;
+    }
 }
