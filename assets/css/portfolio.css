@@ -9,9 +9,8 @@ header {
     left: 0;
     
     width: 100%;
-    min-height: 100px;
-    max-height: 100px;
     height: 100px;
+    max-height: 100px;
     background-color: #f1f1f1;
 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -447,19 +446,25 @@ footer > #copyright {
 }
 
 @media (max-width: 992px) {
+    header {
+        max-height: 90px;
+    }
     header > .navbar {
         display: none;
     }
 }
 
 @media (max-width: 768px) {
+    header {
+        max-height: 70px;
+    }
     header > .navbar {
         display: none;
     }
 }
 
 @media (max-width: 576px) {
-    header > .navbar {
+    header {
         display: none;
     }
 }
