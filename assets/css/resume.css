@@ -1,8 +1,11 @@
 
 body {    
-    background-color: #f1f1f1;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
     display: flex;              
-    justify-content: center;    
+    justify-content: center; 
+    align-items: start;   
 }
 
 .period {
@@ -56,15 +59,14 @@ body {
 
 .container {
     background-color: white;
-    max-width: 800px;
-    width: 100%;  
-    min-height: 2095px;  
-    height: 2095px;
+    width: 100%; 
+    max-width: 800px; 
+    height: 2095px; 
     
     padding: 4% 5%;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 3px;
-    box-sizing: border-box; 
+    /* border: 1px solid rgba(0, 0, 0, 0.2); */
+    /* border-radius: 3px;
+    box-sizing: border-box;  */
 }
 
 .profile {
