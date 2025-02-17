@@ -164,7 +164,7 @@ main {
 
 .id-photo {
     max-width: 30%;
-    max-height: 30%;
+    max-height: auto;
     object-fit: contain; 
 }
 
@@ -184,21 +184,21 @@ main {
 }
 
 .user-name{    
-    font-size: clamp(25px, 3vw, 55px);
+    font-size: clamp(15px, 3vw, 55px);
     font-weight: 500;
     margin: 0;
     padding: 0;
 }
 
 .secondary-name {
-    font-size: clamp(14px, 2vw, 25px);
+    font-size: clamp(11px, 2vw, 25px);
     font-weight: 400;
     margin: 0;
     padding: 0;
 }
 
 .user-job {
-    font-size: clamp(12px, 1vw, 18px);
+    font-size: clamp(9px, 1.5vw, 18px);
     font-weight: 300;
     margin: 0;
     padding: 0;
