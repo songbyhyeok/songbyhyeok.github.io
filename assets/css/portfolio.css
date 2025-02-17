@@ -447,19 +447,19 @@ footer > #copyright {
 }
 
 @media (max-width: 992px) {
-    header {
+    header > .navbar {
         display: none;
     }
 }
 
 @media (max-width: 768px) {
-    header {
+    header > .navbar {
         display: none;
     }
 }
 
 @media (max-width: 576px) {
-    header {
+    header > .navbar {
         display: none;
     }
 }
