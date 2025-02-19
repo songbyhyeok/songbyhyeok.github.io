@@ -59,7 +59,9 @@ header > .navbar > .nav-item:hover {
 }
 
 main {
-    max-width: 100%;
+    min-width: 375px;
+    min-height: 667px;
+    max-width: 100%;    
     background-color: #ffffff;
     display: flex;  
     flex-direction: column;
@@ -68,8 +70,8 @@ main {
 }
 
 .container {
-    width: 75%;
-    max-width: 75%;  
+    width: 80%;
+    max-width: 80%;  
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     display: flex;  
     flex-direction: column;
@@ -85,8 +87,8 @@ main {
     border-bottom: 5px solid lightslategrey;
 }
 
-.section-title p {    
-    font-size: clamp(15px, 1.7vw, 30px);
+.section-title p {
+    font-size: clamp(13px, 1.5vw, 23px);
     font-weight: 500;
     text-align: left;
     margin: 0; 
@@ -387,17 +389,17 @@ main {
 }
 
 .item-title{
-    font-size: clamp(12px, 1vw, 20px);
+    font-size: clamp(11px, 1vw, 21px);
     font-weight: 500;
 }
 
 .item-title span {
-    font-size: clamp(9px, 0.6vw, 18px);
+    font-size: clamp(9px, 0.8vw, 18px);
     font-weight: 300;
 }
 
 .item-desc {
-    font-size: clamp(12px, 0.8vw, 18px);
+    font-size: clamp(10px, 0.9vw, 20px);
     font-weight: 350;
 }
 
@@ -434,6 +436,26 @@ footer > p {
     font-weight: 300;
 }
 
+@media print {
+    header {
+      display: none;
+    }
+
+    .section-title {
+        width: 19%;
+        border-bottom: none;
+    }
+
+    .project-item {
+        width: 23%;
+        height: auto;
+    }
+
+    .education.container {
+        margin-top: 2%;
+    }
+}
+  
 @media (max-width: 1400px) {
     header > .navbar {        
         margin-left: calc(50%);
@@ -471,6 +493,11 @@ footer > p {
 @media (max-width: 576px) {
     header {
         display: none;
+    }
+
+    .section-title {
+        width: 19%;
+        border-bottom: none;
     }
 
     .skill-set {

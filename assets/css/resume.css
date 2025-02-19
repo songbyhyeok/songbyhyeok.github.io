@@ -67,7 +67,7 @@ td {
     max-width: 800px;
     max-height: 200vh;
        
-    padding: 4% 4%;
+    padding: 2% 4%;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 3px;
     box-sizing: border-box; 
@@ -153,6 +153,12 @@ td {
 }
 
 .introduction {
-    font-size: clamp(12px, 1vw, 15px);
+    font-size: clamp(12px, 1vw, 16px);
     margin-top: 0.5em;
+}
+
+@media print {
+    .education.section {
+        margin-top: 10%;
+    }
 }
