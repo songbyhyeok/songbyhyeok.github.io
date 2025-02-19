@@ -394,12 +394,12 @@ main {
 }
 
 .item-title span {
-    font-size: clamp(9px, 0.8vw, 18px);
+    font-size: clamp(8px, 0.7vw, 18px);
     font-weight: 300;
 }
 
 .item-desc {
-    font-size: clamp(10px, 0.9vw, 20px);
+    font-size: clamp(8px, 0.8vw, 18px);
     font-weight: 350;
 }
 
@@ -407,13 +407,26 @@ main {
     height: 100%;
 }
 
-.other-link {
-    font-size: clamp(12px, 0.8vw, 18px);
+.other-related-link {
+    font-size: clamp(10px, 0.8vw, 18px);
     font-weight: 300;
-    display: block;
     text-decoration: none;
     color: blue;
-    object-fit: contain;
+}
+
+.other-related-link:visited {
+    color: blue;
+}
+
+.other-link {
+    font-size: clamp(10px, 0.8vw, 18px);
+    font-weight: 300;
+    text-decoration: none;   
+    color: blue;
+}
+
+.other-link:visited {
+    color: blue;
 }
 
 footer {

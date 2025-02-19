@@ -10,6 +10,11 @@ td {
     font-size: clamp(10px, 1.5vw, 15px);
 }
 
+li > a {
+    background-color: #555;
+    font-size: clamp(10px, 1.5vw, 15px);
+}
+
 .period {
     color: rgb(156, 156, 166);
     font-size: small;
