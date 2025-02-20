@@ -118,11 +118,11 @@ author:
   avatar           : "assets/avatar/bio-photo.jpg"
   bio              : "'오늘도' 기꺼이 받아들이고 주어진 일에 최선을 다할 것"
   location         : 
-  email            : "songbyhyeok@knou.ac.kr"
+  email            : "songbyhyeok@gmail.com"
   links:
     # - label: ''
     #   icon: "fas fa-fw fa-envelope-square"
-    #   url: "mailto:songbyhyeok@knou.ac.kr"
+    #   url: "mailto:songbyhyeok@gmail.com"
     - label: "github.com/songbyhyeok"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/songbyhyeok"
@@ -132,7 +132,7 @@ footer:
   links:
     - label: ''
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:songbyhyeok@knou.ac.kr"
+      url: "mailto:songbyhyeok@gmail.com"
     - label: ''
       icon: "fab fa-fw fa-github"
       url: "https://github.com/songbyhyeok"
