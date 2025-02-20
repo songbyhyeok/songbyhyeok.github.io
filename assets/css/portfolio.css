@@ -84,7 +84,7 @@ main {
     margin-right: 92%;
     padding: 0;
     padding-top: 2%;
-    border-bottom: 5px solid lightslategrey;
+    border-bottom: 4px solid lightslategrey;
 }
 
 .section-title p {
@@ -386,6 +386,10 @@ main {
     justify-content: start;
     align-items: start;
     object-fit: contain;   
+}
+
+.other.item {
+    width: 100%;
 }
 
 .item-title{
