@@ -38,8 +38,8 @@
                 </ul>
                 <ul>
                     {% for category in site.categories %}
-                    {% if category[0] == "lang-theory" %}
-                    <li><a href="/lang-theory" id="nav__sub-item">langTheory ({{category[1].size}})</a>
+                    {% if category[0] == "sw-development" %}
+                    <li><a href="/sw-development" id="nav__sub-item">softwareDevelopment ({{category[1].size}})</a>
                     </li>
                     {% endif %}
                     {% endfor %}

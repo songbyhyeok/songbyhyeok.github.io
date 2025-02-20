@@ -1,6 +1,6 @@
 ---
 title: 프로그래밍 패러다임
-categories: lang-theory
+categories: sw-development
 ---
 
 # 패러다임
