@@ -1,10 +1,10 @@
 ---
-title: "softwareDevelopment"
+title: "softwareEngineering"
 layout: archive
-permalink: /sw-development
+permalink: /software-engineering
 author_profile: true
 sidebar_main: true
 ---
 
-{% assign posts = site.categories.sw-development %}
+{% assign posts = site.categories.software-engineering %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}

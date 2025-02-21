@@ -1,6 +1,6 @@
 ---
 title: 프로그래밍 패러다임
-categories: sw-development
+categories: software-engineering
 ---
 
 # 패러다임
