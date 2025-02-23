@@ -13,8 +13,8 @@
                     <span style="font-family:'Cafe24Oneprettynight';">posts</style>
         </li>
         <li>
-            <span class="nav__sub-title" onclick="toggle('blogSubMenu2')">cs</span>
-            <ul id="blogSubMenu2" style="display: none;">
+            <span class="nav__sub-title" onclick="toggle('blogSubMenu')">cs</span>
+            <ul id="blogSubMenu" style="display: none;">
                 <ul>
                     {% for category in site.categories %}
                     {% if category[0] == "network" %}
@@ -31,15 +31,8 @@
                 </ul>
                 <ul>
                     {% for category in site.categories %}
-                    {% if category[0] == "cloud" %}
-                    <li><a href="/cloud" id="nav__sub-item">cloud ({{category[1].size}})</a></li>
-                    {% endif %}
-                    {% endfor %}
-                </ul>
-                <ul>
-                    {% for category in site.categories %}
                     {% if category[0] == "software-engineering" %}
-                    <li><a href="/software-engineering" id="nav__sub-item">softwareEngineering ({{category[1].size}})</a>
+                    <li><a href="/software-engineering" id="nav__sub-item">software engineering ({{category[1].size}})</a>
                     </li>
                     {% endif %}
                     {% endfor %}
@@ -47,8 +40,8 @@
             </ul>
         </li>
         <li>
-            <span class="nav__sub-title" onclick="toggle('blogSubMenu6')">language</span>
-            <ul id="blogSubMenu6" style="display: none;">
+            <span class="nav__sub-title" onclick="toggle('blogSubMenu2')">language</span>
+            <ul id="blogSubMenu2" style="display: none;">
                 <ul>
                     {% for category in site.categories %}
                     {% if category[0] == "java" %}
@@ -73,8 +66,8 @@
             </ul>
         </li>
         <li>
-            <span class="nav__sub-title" onclick="toggle('blogSubMenu5')">codingTest</span>
-            <ul id="blogSubMenu5" style="display: none;">
+            <span class="nav__sub-title" onclick="toggle('blogSubMenu3')">coding test</span>
+            <ul id="blogSubMenu3" style="display: none;">
                 <ul>
                     {% for category in site.categories %}
                     {% if category[0] == "programmers" %}
@@ -85,7 +78,7 @@
                 <ul>
                     {% for category in site.categories %}
                     {% if category[0] == "leet-code" %}
-                    <li><a href="/leet-code" id="nav__sub-item">leetCode ({{category[1].size}})</a></li>
+                    <li><a href="/leet-code" id="nav__sub-item">leet code ({{category[1].size}})</a></li>
                     {% endif %}
                     {% endfor %}
                 </ul>
@@ -111,8 +104,8 @@
             </ul>
         </li>
         <li>
-            <span class="nav__sub-title" onclick="toggle('blogSubMenu')">framework</span>
-            <ul id="blogSubMenu" style="display: none;">
+            <span class="nav__sub-title" onclick="toggle('blogSubMenu5')">framework</span>
+            <ul id="blogSubMenu5" style="display: none;">
                 <ul>
                     {% for category in site.categories %}
                     {% if category[0] == "spring" %}
@@ -123,40 +116,53 @@
             </ul>
         </li>
         <li>
-            <span class="nav__sub-title" onclick="toggle('blogSubMenu3')">etc</span>
-            <ul id="blogSubMenu3" style="display: none;">
+            <span class="nav__sub-title" onclick="toggle('blogSubMenu6')">etc</span>
+            <ul id="blogSubMenu6" style="display: none;">
                 <ul>
                     {% for category in site.categories %}
-                    {% if category[0] == "scm" %}
-                    <li><a href="/scm" id="nav__sub-item">scm ({{category[1].size}})</a></li>
+                    {% if category[0] == "dev-ops" %}
+                    <li><a href="/dev-ops" id="nav__sub-item">dev ops ({{category[1].size}})</a></li>
                     {% endif %}
                     {% endfor %}
                 </ul>
                 <ul>
                     {% for category in site.categories %}
-                    {% if category[0] == "ci-cd" %}
-                    <li><a href="/ci-cd" id="nav__sub-item">ci/cd ({{category[1].size}})</a>
-                    </li>
+                    {% if category[0] == "git-hub" %}
+                    <li><a href="/git-hub" id="nav__sub-item">git hub ({{category[1].size}})</a></li>
                     {% endif %}
                     {% endfor %}
                 </ul>
                 <ul>
                     {% for category in site.categories %}
                     {% if category[0] == "data-analysis" %}
-                    <li><a href="/data-analysis" id="nav__sub-item">dataAnalysis ({{category[1].size}})</a>
+                    <li><a href="/data-analysis" id="nav__sub-item">data analysis ({{category[1].size}})</a>
                     </li>
                     {% endif %}
                     {% endfor %}
                 </ul>
             </ul>
         </li>
+
         <li>
-            <span class="nav__sub-title" onclick="toggle('blogSubMenu7')">writing</span>
+            <span class="nav__sub-title" onclick="toggle('blogSubMenu7')">development log</span>
             <ul id="blogSubMenu7" style="display: none;">
                 <ul>
                     {% for category in site.categories %}
+                    {% if category[0] == "ci-cd-auth-project" %}
+                    <li><a href="/ci-cd-auth-project" id="nav__sub-item">ci/cd auth project ({{category[1].size}})</a></li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </ul>
+        </li>
+
+        <li>
+            <span class="nav__sub-title" onclick="toggle('blogSubMenu8')">writing</span>
+            <ul id="blogSubMenu8" style="display: none;">
+                <ul>
+                    {% for category in site.categories %}
                     {% if category[0] == "book-review" %}
-                    <li><a href="/book-review" id="nav__sub-item">bookReview ({{category[1].size}})</a></li>
+                    <li><a href="/book-review" id="nav__sub-item">book review ({{category[1].size}})</a></li>
                     {% endif %}
                     {% endfor %}
                 </ul>

@@ -1,6 +1,6 @@
 ---
 title: Github page 이미지 엑박 현상
-categories: scm
+categories: git-hub
 ---
 
 # 이슈

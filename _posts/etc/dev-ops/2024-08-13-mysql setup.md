@@ -1,6 +1,6 @@
 ---
 title: Gradle CI MySQL 워크플로우 설정 및 연동 중 문제 해결
-categories: ci-cd
+categories: dev-ops
 ---
 
 # 개요

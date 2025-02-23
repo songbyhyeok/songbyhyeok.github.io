@@ -1,6 +1,6 @@
 ---
 title: Java with Gradle workflow denied issue 해결하기
-categories: ci-cd
+categories: dev-ops
 ---
 
 # 빌드 시도 시 denied 문제

@@ -503,10 +503,6 @@ footer > p {
         display: none;
     }
 
-    ul {
-        margin-left: 3%;
-    }
-
     footer {
         max-height: 60px;
     }
@@ -530,10 +526,6 @@ footer > p {
 
     .skill-item-list {    
         position: static;
-    }
-
-    ul {
-        margin-left: 3%;
     }
 
     footer {

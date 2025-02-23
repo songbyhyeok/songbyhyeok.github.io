@@ -1,6 +1,6 @@
 ---
 title: SSM port forwarding, ssh & 공개키없이 접속하기
-categories: cloud
+categories: dev-ops
 ---
 
 # 개요

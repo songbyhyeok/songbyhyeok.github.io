@@ -1,6 +1,6 @@
 ---
 title: 환경 변수와 secrets
-categories: ci-cd
+categories: dev-ops
 ---
 
 # 개요
