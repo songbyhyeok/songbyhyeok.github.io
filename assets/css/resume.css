@@ -58,6 +58,10 @@ td {
     padding-top: 0.2%;
 }
 
+.project-type.desc {
+    font-size: clamp(14px, 1vw, 15px);
+}
+
 .features {
     margin: 0;
     margin-top: 0.3em;
@@ -133,11 +137,16 @@ td {
 
 .info .contact .item:nth-child(odd) p{
     font-weight: 500;
+    font-size: clamp(15px, 1.1vw, 17px);
 }
 
 .info .contact .item:nth-child(even) {
     width: 75%;
     margin-right: 1.8em;
+}
+
+.info .contact .item:nth-child(even) p{
+    font-size: clamp(15px, 1.1vw, 17px);
 }
 
 .info > .contact > .item > p > a{
@@ -169,7 +178,7 @@ td {
 }
 
 .introduction {
-    font-size: clamp(13px, 0.8vw, 16px);
+    font-size: clamp(12px, 1.1vw, 16px);
     font-weight: 300;
     margin-top: 0.5em;
 }
