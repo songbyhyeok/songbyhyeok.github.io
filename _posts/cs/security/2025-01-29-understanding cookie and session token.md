@@ -1,6 +1,6 @@
 ---
-title: 쿠키 및 세션 토큰 이해하기
-categories: network
+title: 쿠키, 세션, 토큰 이해하기
+categories: security
 ---
 
 # 소개

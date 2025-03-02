@@ -1,6 +1,6 @@
 ---
 title: CSRF, XSS 정리
-categories: network
+categories: security
 ---
 
 # 개요
