@@ -53,8 +53,7 @@ spring:
 
 1. 시간적 비용을 줄이기 위해 **`actions/cache@v4`** 을 사용해서 gradle setup과 build 시간 단축을 시도하였다.
 2. 제공된 cache@v4 템플릿의 gradle 경로와 cache가 저장될 key 값을 지정하기 위해 실제 spring boot를 build 했을 때 생성되는 빌드 값과 관련 파일들의 경로가 어디로 생성되는지 분석하였다.
-3. gradle setup과 build 이전에 캐시 값이 먼저 부를 수 있게 순서를 맞추고
-로컬에 이미지가 없으면 자동으로 Docker Hub에서 이미지를 다운로드(`pull` 캐시 값을 성공적으로 불러들였다면, setup이 되지 않게 조건문을 넣어 캐싱 처리를 하였다.
+3. gradle setup과 build 이전에 캐시 값이 먼저 부를 수 있게 순서를 맞추고 캐시 값을 성공적으로 불러들였다면, setup이 되지 않게 조건문을 넣어 캐싱 처리를 하였다.
 
 <br>
 
