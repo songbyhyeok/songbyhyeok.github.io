@@ -634,3 +634,9 @@
 .toc__menu > li > ul > li > ul > li a {
   font-weight: 350;
 }
+
+@media (max-width: 1400px) {
+  .toc__menu {
+    display: none;
+  }
+}

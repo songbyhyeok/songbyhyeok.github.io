@@ -64,7 +64,6 @@ spring:
 <br>
 
 ## GitHub Actions에서 EC2 인스턴스에 SSH 연결을 허용하기
-
 ### dial tcp i/o timeout Issue
 1. EC2 인스턴스에 접근하기 위해 SSH 연결 시도 중 dial tcp i/o timeout 에러가 발생하였다.
 2. 이 오류는 GitHub Actions에서 특정 네트워크 요청이 시간 내에 완료되지 않아서 발생한 문제인데, 보통 외부에서 접근하는 IP를 허용하지 않는 서버 방화벽에 의해서 차단된 것이다.
