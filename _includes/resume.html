@@ -57,13 +57,13 @@
                         <p><a href="https://songbyhyeok.github.io" target="_blank">songbyhyeok.github.io</a></p>
                     </div>
 
-                    <div class="item title">
+                    <!-- <div class="item title">
                         <p>portfolio:</p>
                     </div>
 
                     <div class="item">
                         <p><a href="https://songbyhyeok.github.io/portfolio" target="_blank">songbyhyeok.github.io/portfolio</a></p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -84,24 +84,37 @@
                 컴퓨터 기술에 대한 깊은 관심과 자신감을 바탕으로, 사람들에게 실용적인 가치를 제공하는 개발자가 되는 것을 목표로 하고 있습니다.  
                 <br><br>
                 
-                ‘오늘도 기꺼이 받아들이고, 주어진 일에 최선을 다하자’는 가치관을 가지고, 실패를 밑거름 삼아 더 나은 방향으로 성장하고자 개발일지 스터디, 기술 서적 스터디, 포스팅 발표 스터디, 사이드 프로젝트 등을 꾸준히 진행하고 있습니다.
+                ‘오늘도 기꺼이 받아들이고, 주어진 일에 최선을 다하자’는 가치관을 가지고, 실패를 밑거름 삼아 더 나은 방향으로 성장하고자 개발일지 스터디, 사이드 프로젝트를 꾸준히 진행하고 있습니다.
             </p>
         </div>
 
         <div class="section">
+            <h2>기술 스택</h2>
+
+            <table class="skill-stack">
+                <tr>
+                    <td><p>Java</p></td>
+                    <td><p>C++</p></td>
+                    <td><p>Spring</p></td>
+                    <td><p>JPA</p></td>
+                    <td><p>MySQL</p></td>
+                    <td><p>Github</p></td>
+                    <td><p>Docker</p></td>
+                </tr>
+            </table>
+        </div>
+
+        <br>
+
+        <div class="section">
             <h2>프로젝트</h2>
 
-            <h3>ci-cd-authentication
+            <h3 class="project-name">CI/CD 구축과 인증/인가 시스템 구현을 목표로 한 개인 사이드 프로젝트 
                 <span class="period">2025.02.22 ~ </span></h3>
-            <p class="desc"><a href="https://github.com/songbyhyeok/ci-cd-authentication" target="_blank">github.com/songbyhyeok/ci-cd-authentication</a>
-            </p>
-            <p class="project-type desc">개인 사이드 프로젝트</p>
-            <div class="features">
-                <p>CI/CD 자동화와 로그인 인증 시스템 구축</p>
-
-                <li>GitHub Actions를 활용한 CI/CD 파이프라인 구축</li>
-                <li>Spring Security와 RESTful API를 이용하여 JWT(Json Web Token) 기반의 로그인 인증 시스템 구축 진행 중</li>                
-            </div>
+            <li class="desc"><b>포트폴리오 링크: </b><a
+                href="https://github.com/songbyhyeok/ci-cd-authentication" target="_blank">github.com/songbyhyeok/ci-cd-authentication</a>
+            </li>    
+            <li class="desc"><b>프로젝트 일지 링크:</b> <a href="https://songbyhyeok.github.io/ci-cd-auth-project">ci-cd-auth-project</a></li>
 
             <table>
                 <tr>
@@ -109,23 +122,44 @@
                     <td><p>CI/CD(GitHub Actions, AWS(EC2, RDS), Docker, Ubuntu)</p></td>                    
                     <td><p>JPA</p></td>
                     <td><p>MySQL</p></td>                    
-                    <td><p>Swagger</p></td>
+                    <td><p>Postman</p></td>
                     <td><p>RESTful API</p></td>
                 </tr>
             </table>
 
-            <h3>hicoding-groupware <span class="period">2023.11 ~ 2023.12</span></h3>
-            <p class="desc"><a href="https://github.com/songbyhyeok/hicoding-groupware" target="_blank">github.com/songbyhyeok/hicoding-groupware</a>
-            </p>
-            <p class="project-type desc">팀 프로젝트</p>
             <div class="features">
-                <p>IT 학원 업무 통합 관리 그룹웨어</p>
+                <li><b>프로젝트 소개:</b></li>
+                GitHub Actions를 활용한 CI/CD 파이프라인 구축과 Spring Security와 RESTful API를 이용하여 JWT(Json Web Token) 기반의 로그인 인증 시스템 구축을 목표로 진행 중입니다.
 
-                <li>M-aryTree 변환 및 DFS-Stack 활용한 답글/대댓글 구현</li>
-                <li>AWS (EC2, RDS, S3) 서비스 활용한 SpringBoot & React 배포</li>
-                <li>문자열 알고리즘을 활용한 부서별 사번 생성 자동화 시스템 구현 및 Criteria 모듈화 및 커스텀을 통한 사원 상세조회 구현</li>
-                <li>@LastModifiedDate를 활용한 조회수/좋아요 구현</li>
+                <img src="https://github.com/user-attachments/assets/8e8e47db-2637-4f80-915a-92631bdb2650" alt="empty" style="width: 60%; height: auto;">
+ 
+                <li><b>문제 정의:</b></li>
+                AWS VPC의 Public Subnet에 위치한 RDS 인스턴스를 보안 및 성능 개선을 위해 Private IP로 변경한 결과, 클라이언트가 Private Subnet에 위치한 RDS에 접근할 수 없어 데이터베이스 연결 오류가 발생하였습니다.
+
+                <li><b>문제 해결:</b></li> 
+                우회 접근 방법으로 SSM(Systems Manager)와 SSH 방식 중, 키 관리와 간단한 설정으로 터널을 생성할 수 있는 SSH 방식을 선택했습니다. 
+                그리고 SSH 터널을 통해 EC2 인스턴스를 중계점으로 설정한 후, VPC의 Private Subnet에 위치한 RDS에 접근하기 위해 로컬 포트 포워딩 방식을 사용하여 터널을 구축하였습니다.
+                
+                <li><b>결과:</b></li> 
+                로컬 환경에서 RDS 인스턴스로의 데이터베이스 연결이 성공적으로 이루어졌습니다.
             </div>
+
+            <br>
+
+            <h3 class="project-name">클라우드 기반의 그룹웨어 시스템 구축 팀 프로젝트 <span class="period">2023.11 ~ 2023.12</span></h3>
+            <li><b>팀 구성:</b> 풀스택 5명</li>
+            <li class="desc"><b>포트폴리오 링크: </b><a
+                href="https://github.com/songbyhyeok/hicoding-groupware" target="_blank">github.com/songbyhyeok/hicoding-groupware</a>
+            </li>   
+            <li class="desc"><b>깃허브 링크: </b><a
+                href="https://github.com/orgs/Hicoding-Groupware/repositories" target="_blank">github.com/orgs/Hicoding-Groupware/repositories</a>
+            </li>  
+            <li class="desc"><b>팀 PPT 링크: </b><a
+                href="https://www.canva.com/design/DAF3ZcDA4iM/TO9eUrtcnvxRw2wu6nG-Rw/edit" target="_blank">canva link</a>
+            </li>  
+            <li class="desc"><b>워크스페이스 링크: </b><a
+                href="https://songbyhyeok.notion.site/hook-7911c64b8d394009b49804a39a0d302c" target="_blank">notion link</a>
+            </li>  
 
             <table>
                 <tr>
@@ -136,17 +170,47 @@
                     <td><p>React</p></td>
                 </tr>
             </table>
-
-            <h3>enter the gungeon <span class="period">2021.06 ~ 2022.03</span> </h3>
-            <p class="desc"><a
-                    href="https://github.com/songbyhyeok/enter-the-gungeon" target="_blank">github.com/songbyhyeok/enter-the-gungeon</a>
-            </p>
-            <p class="project-type desc">개인 프로젝트</p>
-
+            
             <div class="features">
-                <p>2.5D 로그라이크 장르의 탄막 슈팅 게임</p>
+                <img src="https://github.com/user-attachments/assets/1ce465af-74dc-4681-bfc0-24420eb2ffd6" alt="empty" style="width: 80%; height: auto;">      
+
+                <li><b>프로젝트 소개:</b></li>
+                그룹웨어 도입으로 학원 시스템 관리 어려움을 해결하고, 효율적 업무 처리와 생산성을 목표로 프로젝트를 추진했습니다. 이를 통해 원활한 의사소통과 체계적인 정보 관리가 가능합니다. 
+
+                <br>
+                <br>
+
+                <li><b>답글/대댓글 기능 구현</b> </li>
+                답글/대댓글 기능 구현에는 크게 두 가지 방법이 있습니다. 1) 계층형 쿼리 처리, 2) 클라이언트에서 트리 구조로 변환 후 DFS 방식. 프로젝트 개발 당시 쿼리 처리 방식에 미숙했고, 
+                시간적 비용이 많이 소요될 가능성이 있어 후자를 선택했습니다. 이는 트리와 DFS 이론에 익숙했기 때문입니다. 구현 과정에서 발생한 두 가지 주요 이슈와 그 해결 방법을 설명하겠습니다.
+
+                <li><b>문제 정의:</b> </li>
+                답글이나 대댓글을 처리하기 위해서는 하나의 부모가 여러 개의 자식을 가질 수 있는 구조가 필요하고, 각 데이터에는 메타데이터가 있어야 했습니다. 
+                이에 따라 트리 구조로 데이터를 재구성해야 했습니다.
+
+                <li><b>문제 해결:</b> </li>
+                데이터를 처리할 때, 먼저 레벨이 가장 낮은 부모들을 리스트에 저장하고, 그 외의 자식들은 해당 부모의 자식 리스트에 저장하는 방식으로 해결했습니다. 
+
+                <br>
+                <br>
+                
+                <img src="https://github.com/user-attachments/assets/2d8cb844-85e2-4006-8264-e5fb9fb381da" alt="empty" style="width: 50%; height: auto;">
+                <img src="https://github.com/songbyhyeok/2023-HicodingGroupware/assets/63230518/f6d06b00-a520-4886-8ff6-f879226b33b0" alt="empty" style="width: 100%; height: auto;">  
+                
+                <li><b>문제 정의:</b></li>
+                레벨 0의 부모들을 게시판에 배치하는 과정에서, DFS 재귀 방식을 사용하면 등록일자 순으로 출력되는 문제가 발생했습니다. 
+                이를 해결하기 위해 등록일자를 역순으로 처리하려 했으나, depth 0의 배치만 역으로 바뀌는 문제가 생겼습니다.
+                <li><b>문제 해결:</b> </li>
+                DFS-스택 방식을 사용하여 자식들을 역순으로 먼저 삽입하고, 스택을 활용해 자식들을 먼저 처리한 후 부모를 출력하는 방식으로 문제를 해결했습니다.
             </div>
 
+            <br>
+
+            <h3 class="project-name">Enter the Gungeon을 모작한 개인 프로젝트 <span class="period">2021.06 ~ 2022.03</span> </h3>
+            <li class="desc"><b>포트폴리오 링크: </b><a
+                href="https://github.com/songbyhyeok/enter-the-gungeon" target="_blank">github.com/songbyhyeok/enter-the-gungeon</a>
+            </li>  
+            
             <table>
                 <tr>
                     <td><p>C</p></td>
@@ -154,34 +218,45 @@
                     <td><p>Window 32 API</p></td>
                 </tr>
             </table>
+
+            <div class="features">
+                <li><b>프로젝트 소개:</b></li>
+                2.5D 로그라이크 장르의 탄막 슈팅 게임, Enter the Gungeon을 모작한 프로젝트입니다. 
+            </div>
         </div>
+
+        <br>
 
         <div class="education section">
             <h2>교육</h2>
-            <p class="q-item">방송 통신 대학교 <span class="period">2022.07 ~ 2025.02</span> </p>
+            <h3 >방송 통신 대학교 <span class="period">2022.07 ~ 2025.02</span> </h3>
             <li class="edu desc">3학년 편입, 컴퓨터 과학 3.4 / 4.5</li>
 
-            <p class="q-item">하이미디어 아카데미 <span class="period">2023.07 ~ 2023.12</span> </p>
+            <h3>하이미디어 아카데미 <span class="period">2023.07 ~ 2023.12</span> </h3>
             <li class="edu desc">SpringBoot Mvc Model & MyBatis & RestAPI & React</li>
         </div>
 
+        <br>
+
         <div class="section">
             <h2>자격증</h2>
-            <p class="q-item">정보처리기사 <span class="period">2024.12.11</span> </p>
-            <p class="q-item">SQLD <span class="period">2024.09.06</span> </p>
+            <h3>정보처리기사 <span class="period">2024.12.11</span> </h3>
+            <h3>SQLD <span class="period">2024.09.06</span> </h3>
         </div>
+
+        <br>
 
         <div class="section">
             <h2>학습</h2>
             
-            <p class="q-item">개발 일지 공유 스터디 <span class="period">2025.03.03 ~ </span> </p>
-            <li>문제 해결 능력 향상과 학습 기록 공유를 통해 서로의 성장과 피드백을 촉진하는 것을 목표로 개최하였습니다.</li>
-            <li>주 1회, 4명이 작성한 개발 일지를 공유하고, 각자 발표 후 질문과 피드백을 통해 서로 성장하는 형식으로 진행됩니다.</li>
+            <h3>개발 일지 공유 스터디 <span class="period">2025.03.03 ~ </span> </h3>
+            <li>학습 일지 공유와 발표를 통해 상호 성장을 목표로 개설하였습니다.</li>
+            <li>매주 1회, 4명이 작성한 학습 일지를 공유하고 발표한 후, 질의응답 형식으로 진행됩니다.</li>
 
-            <p class="q-item">그림으로 배우는 HTTP & Network Basic 스터디 <span class="period">2025.02.04 ~ </span> </p>
+            <h3>그림으로 배우는 HTTP & Network Basic 스터디 <span class="period">2025.02.05 ~ 2025.03.13</span> </h3>
             <li><a href="https://github.com/songbyhyeok/Learning-HTTP-Network-Basics-through-Illustrations" target="_blank" class="study-link">github link</a></li>
-            <li>이 스터디는 웹과 인터넷 데이터 통신의 기초를 학습하기 위해 개최하였습니다.</li>
-            <li>주 4일 동안 4명이 함께 서적을 읽고, 각자 준비한 내용을 발표와 토의하는 방식으로 진행됩니다.</li>     
+            <li>이 스터디는 웹과 인터넷 데이터 통신의 기초를 학습하기 위해 개설하였습니다.</li>
+            <li>주 4일 동안 4명이 함께 서적을 읽고, 각자 준비한 내용을 발표와 토의하는 방식으로 진행됩니다.</li>
         </div>
 
     </div>
