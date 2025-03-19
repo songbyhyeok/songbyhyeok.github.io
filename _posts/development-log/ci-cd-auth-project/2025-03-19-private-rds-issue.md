@@ -126,7 +126,16 @@ SSH 터널에 정상적으로 접속이 되었다면, 위와 같이 나올 것�
 
 JSCH (Java Secure Channel)는 Java에서 SSH(Secure Shell) 연결을 관리하고 사용할 수 있도록 도와주는 라이브러리로서, 주로 원격 시스템에 안전하게 연결하고 파일을 전송하거나 명령을 실행할 때 사용된다. 현재는 오리지널 jcraft의 JSch는 더 이상 지원되지 않기 때문에, mwiede의 JSch 라이브러리를 사용하고 있다.  
 
-크게 세 단계를 나눠 각각을 구성 및 설정해 주어야 한다.  
+크게 네 단계를 나눠 각각을 구성 및 설정해 주어야 한다.  
+```
+--- build.gradle ---
+
+dependencies {
+	implementation 'com.github.mwiede:jsch:0.2.24'
+}
+```
+
+mwiede:jsch 라이브러리 설치  
 
 ```
 --- application.yml ---
