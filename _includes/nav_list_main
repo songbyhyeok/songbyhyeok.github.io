@@ -171,20 +171,12 @@
         </li>
 
         <li>
-            <span class="nav__sub-title" onclick="toggle('blogSubMenu8')">writing</span>
+            <span class="nav__sub-title" onclick="toggle('blogSubMenu8')">book-review</span>
             <ul id="blogSubMenu8" style="display: none;">
                 <ul>
                     {% for category in site.categories %}
                     {% if category[0] == "book-review" %}
-                    <li><a href="/book-review" id="nav__sub-item">book-review ({{category[1].size}})</a></li>
-                    {% endif %}
-                    {% endfor %}
-                </ul>
-                <ul>
-                    {% for category in site.categories %}
-                    {% if category[0] == "retrospective" %}
-                    <li><a href="/retrospective" id="nav__sub-item">retrospective ({{category[1].size}})</a>
-                    </li>
+                    <li><a href="/http-network-basic" id="nav__sub-item">http-network-basic ({{category[1].size}})</a></li>
                     {% endif %}
                     {% endfor %}
                 </ul>
