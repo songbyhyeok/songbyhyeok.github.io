@@ -3,6 +3,20 @@ title: 2 - CI/CD 설계
 categories: ci-cd-auth-project
 ---
 
+# CI/CD Workflow
+
+<img src="https://github.com/user-attachments/assets/110d7e0e-6a24-4d76-a867-fd6b7bb0bf0c" alt="empty"
+                    style="width: 70%; height: auto;">  
+
+위 다이어그램은 Spring 환경에서 적용된 GitHub Actions CI/CD Workflow 이다. 전체 프로세스는 다음과 같다.  
+
+1. CI/CD 구축을 위해 하나의 workflow를 생성하고 설계하였다. 이제 CI/CD workflow 안에서 특정 이벤트나 작업을 설정하여 자동화할 수 있게 있다. 
+2. 내가 의도한 대로 trigger가 작동하도록 이벤트에 Push와 Pull Request를 설정하였다. 이를 통해 Git 관리나 레포지토리 코딩 단계에서 CI/CD가 자동으로 작동하게 된다. 
+3. 운영과 관리를 효율적으로 하기 위해 CI와 CD로 작업(JOB)을 분리하였다. 이로써 CI가 먼저 실행된 후, 그 다음에 CD가 실행되도록 구성하였다.
+4. CI 작업에서는 레포지토리의 코드에 JDK 17과 Gradle을 설치하고, 빌드 작업을 수행하였다. 이후 단계에서는 효율적인 빌드 관리와 애플리케이션 개발이 가능해진다.
+5. 두 번째 CD 작업에서는 Docker를 사용해 CI에서 가져온 빌드된 파일을 가져와서 DockerHub에 업로드하였다. 이후, EC2 인스턴스에서 DockerHub에 저장된 이미지를 가져와 Docker 컨테이너에서 실행하기 위해 SSH 터널을 구축하여 EC2에 접속하였다.  
+
+<br>
 
 ## .env 파일 이식하기
 ### PlaceholderResolutionException Issue
