@@ -43,8 +43,7 @@ Security Filters는 요청 처리 중에 각 보안 작업(인증, 권한 부여
 <br>
 
 ## Spring Security 구조와 동작 원리
-<img src="https://github.com/user-attachments/assets/79ecebd1-308a-4803-8501-964199fa270d" alt="empty"
-                    style="width: 100%; height: auto;">  
+<img src="https://github.com/user-attachments/assets/76e0ba4e-f06f-4a02-9974-a683eb984ad3" alt="empty" style="width: 800px; height: auto;">   
 
 사용자의 로그인 요청이 들어오면, 인증 과정과 처리 절차가 어떻게 이루어지는지 정리하려고 한다.  
 
