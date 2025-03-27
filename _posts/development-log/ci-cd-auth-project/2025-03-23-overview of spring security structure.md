@@ -9,8 +9,7 @@ JWT 동작 과정을 이해하기 위해서는 ServletFilterChain과 SpringSecur
 <br>
 
 ## SecurityFilterChain이 생성되는 과정
-<img src="https://github.com/user-attachments/assets/50e5f4a9-3491-42cd-9371-f158dc839aed" alt="empty"
-                    style="width: 100%; height: auto;">  
+<img src="https://github.com/user-attachments/assets/50e5f4a9-3491-42cd-9371-f158dc839aed" alt="empty" loading="lazy" style="width: 900px; height: auto;">  
 
 Spring Security는 서블릿 필터를 기반으로 생성된 SecurityFilterChain을 관리하고 있다. 이 SecurityFilterChain이 생성되는 과정은 Servlet 개념에 대해서 먼저 알고 있어야 한다.  
 
@@ -20,17 +19,13 @@ Spring Security는 서블릿 필터를 기반으로 생성된 SecurityFilterChai
 서블릿 컨테이너는 서블릿을 실행하고 관리하는 서버다. 클라이언트의 HTTP 요청을 받아 서블릿을 호출하고, 서블릿이 처리한 결과를 다시 클라이언트에게 응답으로 전달한다. 서블릿 컨테이너는 원활한 통신을 위한 소켓 통신 지원, 서블릿의 생명 주기 관리, 멀티쓰레드 지원 및 관리 등 여러 기능들을 제공한다.  
 
 ### FilterChain
-![Image](https://github.com/user-attachments/assets/013aac35-acfb-4ead-8458-0d2b797f29aa)  
-
 Spring Security는 웹 애플리케이션의 보안 필터 체인을 구성하여 인증, 인가, 요청의 검증 등을 처리한다. Spring Security는 단일 HTTP 요청을 처리하기 위해 계층적으로 구성된 FilterChain을 생성한다.  
 
 필터 체인은 여러 개의 서블릿 필터와 하나의 서블릿으로 구성되어 있다. 필터 체인은 컨트롤러 단에서 처리하기 이전에 가로채서 먼저 수행하게 된다.  
 
 구성된 하나의 서블릿 필터는 하위 필터 인스턴스나 서블릿이 호출되지 않도록 방지한다. 그리고 하위 필터 인스턴스와 서블릿이 사용하는 HttpServletRequest 또는 HttpServletResponse를 수정한다. 이를 통해 요청이나 응답에 대한 처리를 유연하게 변경할 수 있다.  
 
-### DelegatingFilterProxy와 FilterChainProxy    
-![Image](https://github.com/user-attachments/assets/1e16d4e4-0263-4430-a26e-c09812af1f5c)  
-
+### DelegatingFilterProxy와 FilterChainProxy
 DelegatingFilterProxy는 ServletFilter의 구현체이다. 서블릿 컨테이너는 서블릿 필터를 관리하지만 스프링의 빈(Bean)은 인식하지 못하기 때문에 서블릿 필터 인스턴스를 실행할 수 없다. 이를 해결하기 위해 DelegatingFilterProxy가 Spring의 ApplicationContext에서 필터 역할을 하는 빈을 찾아서 필터 작업을 위임한다.  
 
 FilterChainProxy는 여러 Security 필터들을 하나의 체인으로 묶어, HTTP 요청이 들어올 때 각 필터가 순차적으로 실행되도록 한다.  
@@ -43,7 +38,7 @@ Security Filters는 요청 처리 중에 각 보안 작업(인증, 권한 부여
 <br>
 
 ## Spring Security 구조와 동작 원리
-<img src="https://github.com/user-attachments/assets/76e0ba4e-f06f-4a02-9974-a683eb984ad3" alt="empty" style="width: 800px; height: auto;">   
+<img src="https://github.com/user-attachments/assets/76e0ba4e-f06f-4a02-9974-a683eb984ad3" alt="empty" loading="lazy" style="width: 900px; height: auto;">   
 
 사용자의 로그인 요청이 들어오면, 인증 과정과 처리 절차가 어떻게 이루어지는지 정리하려고 한다.  
 
