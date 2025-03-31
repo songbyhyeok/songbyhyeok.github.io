@@ -115,7 +115,7 @@ analytics:
 author:
   name             : "Hyeok Namgung"
   # avatar           : "https://songbyhyeok.github.io/assets/avatar/bio-photo.jpg"
-  avatar           : "assets/avatar/bio-photo.jpg"
+  avatar           : "assets/avatar/bio-photo-default.png"
   bio              : "'오늘도' 기꺼이 받아들이고 주어진 일에 최선을 다할 것"
   location         : 
   email            : "songbyhyeok@gmail.com"

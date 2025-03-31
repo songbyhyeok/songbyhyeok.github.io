@@ -9,8 +9,8 @@ JWT 동작 과정을 이해하기 위해서는 ServletFilterChain과 SpringSecur
 <br>
 
 ## SecurityFilterChain이 생성되는 과정
-<img src="https://github.com/user-attachments/assets/2be36f2d-acff-4145-9584-96f14e3159ec" alt="empty"
-                    style="width: 70%; height: auto;">
+<img src="/assets/image/2025-03-23-overview of spring security structure-1.png" alt="empty"
+                    style="width: 70%; height: auto;">  
 
 Spring Security는 서블릿 필터를 기반으로 생성된 SecurityFilterChain을 관리하고 있다. 이 SecurityFilterChain이 생성되는 과정은 Servlet 개념에 대해서 먼저 알고 있어야 한다.  
 
@@ -39,8 +39,8 @@ Security Filters는 요청 처리 중에 각 보안 작업(인증, 권한 부여
 <br>
 
 ## Spring Security 구조와 동작 원리
-<img src="https://github.com/user-attachments/assets/3cb0c207-2d4a-4749-b305-7af16318e107" alt="empty"
-                    style="width: 70%; height: auto;">
+<img src="/assets/image/2025-03-23-overview of spring security structure-2.png" alt="empty"
+                    style="width: 100%; height: auto;">  
 
 사용자의 로그인 요청이 들어오면, 인증 과정과 처리 절차가 어떻게 이루어지는지 정리하려고 한다.  
 
