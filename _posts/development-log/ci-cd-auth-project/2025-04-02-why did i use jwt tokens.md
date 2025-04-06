@@ -1,5 +1,5 @@
 ---
-title: 왜 JWT 토큰을 사용했을까?
+title: 7 - 왜 JWT 토큰을 사용했을까?
 categories: ci-cd-auth-project
 ---
 
