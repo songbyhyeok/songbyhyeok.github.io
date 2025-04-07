@@ -1,6 +1,6 @@
 ---
 title: 5 - Spring Security에 JWT 도입
-categories: ci-cd-auth-project
+categories: temp
 ---
 
 # 코드 도입

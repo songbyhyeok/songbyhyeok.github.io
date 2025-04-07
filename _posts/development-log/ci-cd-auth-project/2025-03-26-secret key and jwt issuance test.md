@@ -1,10 +1,12 @@
 ---
-title: 6 - jwt 암호화와 secret key 생성 방법
+title: 5 - jwt 암호화와 secret key 생성 방법
 categories: ci-cd-auth-project
 ---
 
 # 양방향 암호화, 생성 방법
 jwt 토큰 암호화를 진행하면서 양방향의 대칭키와 비대칭키 두 가지 방식이 있는데 어떤 걸 사용해야 적합한지 의문점이 생겨 이를 조사해보려고 한다. 그리고 선택한 양방향 키를 어떻게 생성했는지 사용한 방법을 기록하려고 한다.  
+
+<br>
 
 ## SHA, HS, RS?
 JWT 토큰에 사용되는 키의 알고리즘 명을 보면 HS256나 RS256이라고 표기된 것을 몇 번 봤었다. S는 같은데 앞에 단어가 다르다 보니 헷갈리고 아리송했다.  
@@ -52,7 +54,9 @@ openssl rand -hex 64
 openssl rand 명령은 무작위 데이터를 생성하는 데 사용
 -hex 옵션은 출력이 16진수 형식으로 지정
 숫자 64 , 32는 출력 문자열의 길이를 바이트 단위로 지정
-``` 
+```  
+
+<br>
 
 ## 참고
 - [Session(세션)과 Token(토큰)의 차이는?](https://velog.io/@ddangle/Session%EC%84%B8%EC%85%98%EA%B3%BC-Token%ED%86%A0%ED%81%B0%EC%9D%98-%EC%B0%A8%EC%9D%B4%EB%8A%94)
