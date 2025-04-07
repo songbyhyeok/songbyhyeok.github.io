@@ -4,7 +4,7 @@ categories: ci-cd-auth-project
 ---
 
 # CI/CD Workflow
-<img src="/assets/image/2025-03-09-ci-cd-design-1.png" alt="empty"
+<img src="/assets/image/cicd-auth/2025-03-09-ci-cd-design-1.png" alt="empty"
                     style="width: 80%; height: auto;">  
 
 위 다이어그램은 Spring 환경에서 적용된 GitHub Actions CI/CD Workflow 이다. 전체 프로세스는 다음과 같다.  
