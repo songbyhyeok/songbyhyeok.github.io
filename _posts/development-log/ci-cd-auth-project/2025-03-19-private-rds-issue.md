@@ -23,7 +23,7 @@ AWS는 한 계정당 Public IP 사용 시간을 750시간 무료로 제공한다
 <br>
 
 ## SSH Tunneling & Port Forwarding
-![Image](/assets/image/2025-03-19-private-rds-issue-1.png)  
+![Image](/assets/image/cicd-auth/2025-03-19-private-rds-issue-1.png)  
 
 일반적으로 Private RDS는 인터넷에서 직접 접근할 수 없도록 설정되어 있기 때문에, EC2 중간 서버를 통해 우회해서 접근해야 한다. 이 방식을 가능하게 해 주는 방식이 일반적으로 두 가지가 있는데, SSM과 SSH이다.  
 
@@ -65,7 +65,7 @@ icacls.exe key-name.pem /inheritance:r
 ---
 
 ### Local Port Forwarding
-![Image](/assets/image/2025-03-19-private-rds-issue-2.png)  
+![Image](/assets/image/cicd-auth/2025-03-19-private-rds-issue-2.png)  
 
 SSH 터널링을 통해 호스트 -> EC2 -> RDS 구조를 구축하려면, 터널링을 설정해야 한다.  
 
