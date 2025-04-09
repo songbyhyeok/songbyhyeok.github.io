@@ -1,5 +1,5 @@
 ---
-title: 9 - Access Token과 Refresh Token을 사용한 JWT 보안 시스템 구현
+title: 9 - Refresh Token Rotation, Blacklist, ReplayAttack 감지 시스템 구현
 categories: ci-cd-auth-project
 ---
 

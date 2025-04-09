@@ -43,9 +43,9 @@ Access Token과 Refresh Token은 서로 상호작용하는 관계다. 때문에,
     * 이 경우에는 서버가 대응할 방법이 없다. 그저 만료될 때까지 기다리는 수 밖에, 하지만 겨우 몇 분 밖에 되지 않기 때문에 Access Token 탈취는 크게 걱정할 요소가 아니다.  
 
 * **Refresh 토큰 탈취**  
-    * Refresh 토큰이 탈취될 경우에는 문제가 심각하다. 왜냐하면 만료 기간이 많이 남았을 가능성이 높기 때문에 이를 탈취할 수 있기 때문이다. 따라서 이를 보완하기 위한 대응책이 바로 RTR(Refresh Token Rotation)다. ROT는 새 AccessToken을 발급할 때 기존 Refresh Token은 만료와 상관없이 새 Refresh Token을 같이 발급받는 것이다.  
+    * Refresh 토큰이 탈취될 경우에는 문제가 심각하다. 왜냐하면 만료 기간이 많이 남았을 가능성이 높기 때문에 이를 탈취할 수 있기 때문이다. 따라서 이를 보완하기 위한 대응책이 바로 RTR(Refresh Token Rotation)다. RTR은 새 AccessToken을 발급할 때 기존 Refresh Token은 만료와 상관없이 새 Refresh Token을 같이 발급받는 것이다.  
 
-나는 이전에 보안은 창과 방패라고 이야기했고, Refresh 탈취는 문제가 심각하다고 주장했다. 즉, ROT 방식에 문제점은 되로 더 큰 문제점을 야기한다. 그 이유는 
+나는 이전에 보안은 창과 방패라고 이야기했고, Refresh 탈취는 문제가 심각하다고 주장했다. 즉, RTR 방식에 문제점은 되로 더 큰 문제점을 야기한다. 그 이유는 
 새 Refresh Token을 발급하기 이전에 Refresh Token을 탈취해서 새 Access Token을 발급받을 수 있기 때문이다. (이를 Replay Attack라고 한다.) 그래서 이를 막아줄 더 방어력이 단단한 방패가 바로 Blacklist 보안 기능이다.  
 
 * **Replay Attack(재전송 공격)**  
