@@ -9,7 +9,7 @@ categories: ci-cd-auth-project
 <br>
 
 ## 코드 흐름
-<img src="/assets/image/cicd-auth/2025-04-07-implementation of jwt security system using access token and refresh token - 1.png" alt="empty" style="width: 100%; height: auto;">  
+<img src="/assets/image/projects/cicd-auth/2025-04-07-implementation of jwt security system using access token and refresh token - 1.png" alt="empty" style="width: 100%; height: auto;">  
 
 1. 클라이언트가 인증 이후 요청을 보내면 Spring Security Filter Chain에 등록된 JWT Filter가 호출이 된다.
 2. JWT Filter는 발급된 Access Token을 인증 헤더인 Bearer에 담아 validateAccessToken 메서드에서 Access Token 검증을 받게 된다.

@@ -59,7 +59,7 @@ Blacklist는 사용자가 Access 만료로 인해 토큰 재발급을 요청할 
 또 하지만, 해결 방법은 나오기 마련이다. 방금 전에 Blacklist는 감지 기능이 들어가 있다고 했다. 이를 활용해서 토큰을 모두 무효화 전략을 사용하면 된다.  
 
 ### 무효화 전략
-<img src="/assets/image/cicd-auth/2025-04-07-access token and refresh token flow.png" alt="empty" style="width: 100%; height: auto;">  
+<img src="/assets/image/projects/cicd-auth/2025-04-07-access token and refresh token flow.png" alt="empty" style="width: 100%; height: auto;">  
 - [출처: [인증인가] Access Token, Refresh Token의 저장 위치에 대한 고찰](https://olrlobt.tistory.com/98#access-token-%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%9D%B8%EC%A6%9D-%EB%B0%A9%EC%8B%9D)  
 
 무효화 전략이란 해커가 먼저 발급 시도로 사용자가 쫓겨나게 되는 억울한 상황을 만들지 않기 위해서 Blacklist에 감지된 토큰과 이후 발급된 토큰까지 모두 무효화 처리하는 방식이다.  
