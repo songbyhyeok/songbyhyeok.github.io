@@ -50,6 +50,7 @@ h3 {
 
 h4 {
   font-size: $h-size-4;
+  margin-bottom: 0em;
 }
 
 h5 {
@@ -116,7 +117,7 @@ blockquote {
   font-style: italic;
   //border-inline-start: 0.25em solid $primary-color;
   border-inline-start: 0.25em solid slategrey;
-
+  margin-left: 1%;
   cite {
     font-style: italic;
 
