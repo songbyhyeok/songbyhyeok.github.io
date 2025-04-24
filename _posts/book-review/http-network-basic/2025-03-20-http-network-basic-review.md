@@ -2,7 +2,7 @@
 title: Http & Network Basic 리뷰
 categories: http-network-basic
 ---
-<img src="https://github.com/user-attachments/assets/a349ae44-8bca-4b7f-9999-640dbecd37c0" alt="empty" style="width: 30%; height: auto;">  
+<img src="/assets/image/books/http-network-basic.jpg" alt="empty" style="width: 30%; height: auto;">  
 
 # 소개
 이 책은 2015년도에 발행한 책이다. 벌써 10년이나 지난 책이다 보니 IT 기술이 얼마나 빠르게 발전했는지 알 수 있다. 책의 주요 내용은 웹 통신에 필요한 기초적인 용어와 통신할 때 쓰이는 HTTP와 HTTPS 프로토콜의 내용 그리고 인증과 보안에 대한 기술적 용어에 대해서 다루고 있다.  

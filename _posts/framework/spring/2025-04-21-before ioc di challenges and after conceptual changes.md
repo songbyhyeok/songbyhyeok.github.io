@@ -1,5 +1,5 @@
 ---
-title: Ioc/DI
+title: IoC/DI 이전에 고충과 이후의 개념
 categories: spring
 ---
 
