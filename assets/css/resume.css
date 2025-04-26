@@ -61,6 +61,11 @@ td {
     padding: 0;
 }
 
+li > .subtext {
+    margin-left: 4%;
+    padding-top: 0.5%;
+}
+
 .divider {
     border: none;              
     border-top: 2px so  d #000000; 

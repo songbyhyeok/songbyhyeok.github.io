@@ -134,7 +134,7 @@
             <h3 class="project-name">실시간 중고 장터/전자상거래, 개인 프로젝트
                 <span class="period">2025.04.20 ~ </span>
             </h3>
-            <li class="desc"><b>포트폴리오 링크: </b><a href=""
+            <li class="desc"><b>깃허브 링크: </b><a href=""
                 target="_blank">github.com/songbyhyeok/미정</a>
             </li>
 
@@ -158,22 +158,20 @@
                     <td>
                         <p>RESTful API</p>
                     </td>
-                    <td>
-                        <p></p>
-                    </td>
                 </tr>
             </table>
 
-            <li><b>프로젝트 소개:</b></li>
-                온라인 중고 플랫폼에 여러 사람이 동시에 하나의 경매 물품에 접근할 경우 발생하는 동시성 문제를 해결하기 위한 프로젝트입니다.
+            <li>
+                <b>프로젝트 소개:</b>
+                <p class="subtext">온라인 중고 플랫폼에 여러 사람이 동시에 하나의 경매 물품에 접근할 경우 발생하는 동시성 문제를 해결하기 위한 프로젝트입니다.</p>
+            </li>
 
-            <br>
             <br>
 
             <h3 class="project-name">CI/CD 구축과 JWT 인증/인가, 개인 사이드 프로젝트
                 <span class="period">2025.02.22 ~ 2025.04.10</span>
             </h3>
-            <li class="desc"><b>포트폴리오 링크: </b><a href="https://github.com/songbyhyeok/ci-cd-authentication"
+            <li class="desc"><b>깃허브 링크: </b><a href="https://github.com/songbyhyeok/ci-cd-authentication"
                     target="_blank">github.com/songbyhyeok/ci-cd-authentication</a>
             </li>
             <li class="desc"><b>프로젝트 일지 링크:</b> <a
@@ -202,64 +200,40 @@
                 </tr>
             </table>
 
-            <li><b>프로젝트 소개:</b></li>
-                GitHub Actions를 활용한 CI/CD 파이프라인 구축과 Spring Security와 RESTful API를 이용하여 JWT(Json Web Token) 기반의 로그인 인증/인가
-                시스템을 구축 하였습니다.  
+            <li>
+                <b>프로젝트 소개:</b>
+                <p class="subtext">GitHub Actions를 활용한 CI/CD 파이프라인 구축과 Spring Security와 RESTful API를 이용하여 JWT(Json Web Token) 기반의 로그인 인증/인가
+                시스템을 구축 하였습니다.</p>
+            </li>
 
-            <br>
-            <br>
-            
             <div class="features">
-                <img src="/assets/image/projects/cicd-auth/2025-03-09-ci-cd-design-1.png" alt="empty"
-                    style="width: 100%; height: auto;">
+                <li>
+                    <b>문제 정의:</b>  
+                    <p class="subtext">1. AWS VPC의 Public Subnet에 위치한 RDS 인스턴스를 보안 및 성능 개선을 위해 Private IP로 변경한 결과</p>
+                    <p class="subtext">2. 클라이언트가 Private Subnet에 위치한 RDS에 접근할 수 없어 데이터베이스 연결 오류가 발생하였습니다.</p>
+                </li>
+    
+                <li>
+                    <b>문제 해결:</b>
+                    <p class="subtext">1. 우회 접근 방법으로 SSM(Systems Manager)와 SSH 방식 중, 키 관리와 간단한 설정으로 터널을 생성할 수 있는 SSH 방식을 선택했습니다.</p>
+                    <p class="subtext">2. SSH 터널을 통해 EC2 인스턴스를 중계점으로 설정한 후, VPC의 Private Subnet에 위치한 RDS에 접근하기 위해 로컬 포트 포워딩 방식을 사용하여 터널을
+                    구축하였습니다.</p>
+            </li>
 
-                <br>
-                <br>
 
-                이 다이어그램은 Spring 환경에서 GitHub Actions CI/CD Workflow를 설명하며, Push와 Pull Request 이벤트를 트리거로 자동화된 빌드와 배포를 설정합니다. 
-                CI 단계에서는 JDK 17과 Gradle을 사용해 빌드하고, CD 단계에서는 DockerHub에 이미지를 업로드한 후 EC2에서 도커 컨테이너 위에서 실행합니다. 
-                CI와 CD 작업을 분리하여 효율적인 관리가 가능합니다.  
-
-                <br>
-                <br>
-
-                <li><b>문제 정의:</b></li>
-                <img src="/assets/image/projects/cicd-auth/2025-03-19-private-rds-issue-1.png" alt="empty"
-                    style="width: 60%; height: auto;">  
-                
-                <br>
-
-                AWS VPC의 Public Subnet에 위치한 RDS 인스턴스를 보안 및 성능 개선을 위해 Private IP로 변경한 결과, 클라이언트가 Private Subnet에 위치한 RDS에
-                접근할 수 없어 데이터베이스 연결 오류가 발생하였습니다.
-
-                <li><b>문제 해결:</b></li>
-                우회 접근 방법으로 SSM(Systems Manager)와 SSH 방식 중, 키 관리와 간단한 설정으로 터널을 생성할 수 있는 SSH 방식을 선택했습니다.
-                그리고 SSH 터널을 통해 EC2 인스턴스를 중계점으로 설정한 후, VPC의 Private Subnet에 위치한 RDS에 접근하기 위해 로컬 포트 포워딩 방식을 사용하여 터널을
-                구축하였습니다.
-
-                <li><b>결과:</b></li>
-                로컬 환경에서 RDS 인스턴스로의 데이터베이스 연결이 성공적으로 이루어졌습니다.
+                <li>
+                    <b>결과:</b>
+                    <p class="subtext">로컬 환경에서 RDS 인스턴스로의 데이터베이스 연결이 성공적으로 이루어졌습니다.</p>
+                </li>
             </div>
 
             <br>
 
             <h3 class="project-name">클라우드 기반의 그룹웨어 시스템 구축 팀 프로젝트 <span class="period">2023.11 ~ 2023.12</span></h3>
             <li><b>팀 구성:</b> 풀스택 5명</li>
-            <li class="desc"><b>포트폴리오 링크: </b><a href="https://github.com/songbyhyeok/hicoding-groupware"
+            <li class="desc"><b>깃허브 링크: </b><a href="https://github.com/songbyhyeok/hicoding-groupware"
                     target="_blank">github.com/songbyhyeok/hicoding-groupware</a>
             </li>
-            <li class="desc"><b>깃허브 링크: </b><a href="https://github.com/orgs/Hicoding-Groupware/repositories"
-                    target="_blank">github.com/orgs/Hicoding-Groupware/repositories</a>
-            </li>
-            <li class="desc"><b>팀 PPT 링크: </b><a
-                    href="https://www.canva.com/design/DAF3ZcDA4iM/TO9eUrtcnvxRw2wu6nG-Rw/edit" target="_blank">canva
-                    link</a>
-            </li>
-            <li class="desc"><b>워크스페이스 링크: </b><a
-                    href="https://songbyhyeok.notion.site/hook-7911c64b8d394009b49804a39a0d302c" target="_blank">notion
-                    link</a>
-            </li>
-
             <table>
                 <tr>
                     <td>
@@ -283,41 +257,47 @@
             <br>
 
             <div class="features">
-                <img src="/assets/image/projects/hicoding/hicoding-arch.png" alt="empty"
-                    style="width: 100%; height: auto;">  
+                <li>
+                    <b>프로젝트 소개:</b>
+                    <p class="subtext">그룹웨어 도입으로 학원 시스템 관리 어려움을 해결하고, 효율적 업무 처리와 생산성을 목표로 프로젝트를 추진했습니다. 이를 통해 원활한 의사소통과 체계적인 정보 관리가 가능합니다.</p>
+                </li>
 
-                <li><b>프로젝트 소개:</b></li>
-                그룹웨어 도입으로 학원 시스템 관리 어려움을 해결하고, 효율적 업무 처리와 생산성을 목표로 프로젝트를 추진했습니다. 이를 통해 원활한 의사소통과 체계적인 정보 관리가 가능합니다.
+                <li>
+                    <b>답글/대댓글 기능 구현</b> 
+                    <p class="subtext">1. 답글/대댓글 기능 구현에는 크게 두 가지 방법이 있습니다. 1) 계층형 쿼리 처리, 2) 클라이언트에서 다진 트리 구조로 변환 후 DFS 방식</p>
+                    <p class="subtext">2. 계층형 쿼리 방식은 데이터의 깊이가 깊거나 양이 많아질수록 다중 조인과 재귀 쿼리로 인해 성능 저하 및 DB 부하가 발생할 수 있습니다. 특히 트리 구조 데이터를 반복적으로 요청해야 하는 실시간 UI에서는 병목이 생기기 쉬웠습니다.</p>
+                    <p class="subtext">3. 이러한 점을 고려하여, 데이터를 가져온 후에 클라이언트에서 다진 트리로 재구성한 후 DFS 방식으로 렌더링하는 방식을 채택했습니다.</p>
+                    <p class="subtext">4. 이는 트리 구조와 DFS 방식에 익숙했고, 클라이언트에서 처리하는 편이 더 유연하고 확장성이 높다고 판단했기 때문입니다. 구현 과정에서 발생한 두 가지 주요 이슈와 그 해결 방법을 설명하겠습니다.</p>
+                </li>
 
-                <br>
-                <br>
+                <li>
+                    <b>문제 정의:</b> 
+                    <p class="subtext">1. 답글이나 대댓글을 처리하기 위해서는 하나의 부모가 여러 개의 자식을 가질 수 있는 구조가 필요하고, 각 데이터에는 메타데이터가 있어야 했습니다.</p>
+                    <p class="subtext">2. 이에 따라 다진 트리 구조로 데이터를 재구성해야 했습니다.</p>
+                </li>
 
-                <li><b>답글/대댓글 기능 구현</b> </li>
-                답글/대댓글 기능 구현에는 크게 두 가지 방법이 있습니다. 1) 계층형 쿼리 처리, 2) 클라이언트에서 트리 구조로 변환 후 DFS 방식. 프로젝트 개발 당시 쿼리 처리 방식에 미숙했고,
-                시간적 비용이 많이 소요될 가능성이 있어 후자를 선택했습니다. 이는 트리와 DFS 이론에 익숙했기 때문입니다. 구현 과정에서 발생한 두 가지 주요 이슈와 그 해결 방법을 설명하겠습니다.
-
-                <li><b>문제 정의:</b> </li>
-                답글이나 대댓글을 처리하기 위해서는 하나의 부모가 여러 개의 자식을 가질 수 있는 구조가 필요하고, 각 데이터에는 메타데이터가 있어야 했습니다.
-                이에 따라 트리 구조로 데이터를 재구성해야 했습니다.
-
-                <li><b>문제 해결:</b> </li>
-                데이터를 처리할 때, 먼저 레벨이 가장 낮은 부모들을 리스트에 저장하고, 그 외의 자식들은 해당 부모의 자식 리스트에 저장하는 방식으로 해결했습니다.
-
-                <br>
-                <br>
+                <li>
+                    <b>문제 해결:</b> 
+                    <p class="subtext">1. 데이터를 처리할 때, 먼저 레벨이 가장 낮은 부모들을 리스트에 저장하였습니다.</p>
+                    <p class="subtext">2. 그 외의 자식들은 해당 부모의 자식 리스트에 저장하는 방식으로 해결했습니다.</p>
+                </li>
 
                 <img src="/assets/image/projects/hicoding/hicoding-desc-1.png" alt="empty"
                     style="width: 60%; height: auto;">
                 <img src="/assets/image/projects/hicoding/hicoding-desc-2.png"
                     alt="empty" style="width: 100%; height: auto;">
 
-                <li><b>문제 정의:</b></li>
-                레벨 0의 부모들을 게시판에 배치하는 과정에서, DFS 재귀 방식을 사용하면 등록일자 순으로 출력되는 문제가 발생했습니다.
-                이를 해결하기 위해 등록일자를 역순으로 처리하려 했으나, depth 0의 배치만 역으로 바뀌는 문제가 생겼습니다.
-                <li><b>문제 해결:</b> </li>
-                DFS-스택 방식을 사용하여 자식들을 역순으로 먼저 삽입하고, 스택을 활용해 자식들을 먼저 처리한 후 부모를 출력하는 방식으로 문제를 해결했습니다.
+                <li>
+                    <b>문제 정의:</b>
+                    <p class="subtext">1. 레벨 0의 부모들을 게시판에 배치하는 과정에서, DFS 재귀 방식을 사용하면 등록일자 순으로 출력되는 문제가 발생했습니다.</p>
+                    <p class="subtext">2. 이를 해결하기 위해 등록일자를 역순으로 처리하려 했으나, depth 0의 배치만 역으로 바뀌는 문제가 생겼습니다.</p>
+                </li>
+                <li>
+                    <b>문제 해결:</b> 
+                    <p class="subtext">1. DFS-스택 방식을 사용하여 자식들을 역순으로 먼저 삽입하였습니다.</p>
+                    <p class="subtext">2. 그리고 스택을 활용해 자식들을 먼저 처리한 후 부모를 출력하는 방식으로 문제를 해결했습니다.</p>
+                </li>
             </div>
-
         </div>
 
         <br>
