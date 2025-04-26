@@ -122,7 +122,7 @@
             <ul id="blogSubMenu8" style="display: none;">
                 <ul>
                     {% for category in site.categories %}
-                    {% if category[0] == "book-review" %}
+                    {% if category[0] == "http-network-basic" %}
                     <li><a href="/http-network-basic" id="nav__sub-item">http-network-basic ({{category[1].size}})</a></li>
                     {% endif %}
                     {% endfor %}
