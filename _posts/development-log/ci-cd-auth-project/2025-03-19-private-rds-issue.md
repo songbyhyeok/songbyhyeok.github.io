@@ -1,5 +1,5 @@
 ---
-title: 3 - private RDS 접근하기
+title: 3 - Private RDS 접근하기
 categories: ci-cd-auth-project
 ---
 
@@ -320,7 +320,6 @@ public class DataSourceConfig {
 위에서 생성한 SSH 터널을 통해 로컬 포트로 전달되는 연결을 사용하여 데이터베이스에 접속하는 DataSource를 구성한다.  
 
 <br>
----
 
 **SSH Private Key 값을 사용해서 SSH 터널 생성하기**  
 ```

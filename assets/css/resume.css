@@ -28,6 +28,19 @@ td {
     color: blue;
 }
 
+.desc > p > a {
+    text-decoration: none;  
+    color: blue;
+    margin: 0;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;       
+    font-size: small;
+}
+
+.desc > p > a:visited {
+    color: blue;
+}
+
 .q-item {
     font-size: medium;
     font-weight: 400;
