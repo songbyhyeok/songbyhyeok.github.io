@@ -1,5 +1,5 @@
 ---
-title: enter-the-gungeon
+title: enter the gungeon
 categories: projects
 ---
 
