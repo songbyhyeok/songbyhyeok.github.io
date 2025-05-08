@@ -1,5 +1,6 @@
 ---
 title: 7 - Access Token과 Refresh Token
+
 categories: ci-cd-auth-project
 ---
 
@@ -26,7 +27,7 @@ Access Token은 서버 인증 이후에 사용자에게 제공되는 인증과 �
 
 Access Token이 짧은 만료 기간을 가지고 있다면 그와는 반대로 Refresh Token은 일반적으로 최소 2주 정도의 긴 만료 기간을 가지고 있다.  
 
-Refresh Token은 Access Token과 반대로 주도권이 서버에게 있다. 따라서 탈취 당하더라도 이를 Blacklist 보안 기능을 통해 탈취한 Refresh Token을 사용해서 Access Token을 재발급하는 행위를 방지할 수 있다. 그런데, 여기서 의문점이 한 가지가 든다면 바로 stateful 특성이다. JWT 토큰은 분명 stateless일텐데 서버가 관리하게 되면서 Session 방식과 같아지기 때문이다. 이는 여러 가지로 논란이 많지만 내 생각엔 JWT 토큰 자체는 stateless가 맞지만, 보안 처리 과정에서 어쩔 수 없이 저장할 수 밖에 없었던 문제이기 때문에 인증/인가 과정은 stateful이 맞다. 그렇지만, session과 완전히 같지는 않다. 왜냐하면 서버 저장 환경을 Redis에 저장함으로써 단점들을 상쇄하기 때문이다.  
+Refresh Token은 Access Token과 반대로 주도권이 서버에게 있다. 따라서 탈취 당하더라도 이를 Blacklist 보안 기능을 통해 탈취한 Refresh Token을 사용해서 Access Token을 재발급하는 행위를 방지할 수 있다. 그런데, 여기서 의문점이 한 가지가 든다면 바로 stateful 특성이다. JWT 토큰은 분명 stateless일텐데 서버가 관리하게 되면서 Session 방식과 같아지기 때문이다. 이는 여러 가지로 논란이 많지만 내 생각엔 JWT 토큰 자체는 stateless가 맞지만, 보안 처리 과정에서 어쩔 수 없이 저장할 수 밖에 없었던 문제이기 때문에 인증/인가 과정은 stateful이 맞다. 그렇지만, session과 완전히 같지는 않다. 왜냐하면 서버 저장 환경을 Redis에 저장함으로써 단점들을 상쇄했기 때문이다.  
 
 <br>
 

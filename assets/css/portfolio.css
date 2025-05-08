@@ -267,7 +267,7 @@ main {
 }
 
 .skill-title p{
-    font-size: clamp(12px, 1.5vw, 22px);
+    font-size: clamp(12px, 1zvw, 22px);
     font-weight: 500;
 }
 

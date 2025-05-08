@@ -4,9 +4,7 @@ categories: ci-cd-auth-project
 ---
 
 # 개요
-지난 편의 주제인 Access & Refresh Flow를 바탕으로 JWT 인증 시스템을 구현했다. 그래서 코드 중심으로 간단히 소개하려고 한다.  
-
-<br>
+지난 편에서 다뤘던 Access & Refresh Token Flow를 바탕으로 JWT 기반 인증 시스템을 구현하였다. 이번 글에서는 그 구현 내용을 코드 중심으로 간단히 소개하려고 한다.
 
 ## 코드 흐름
 <img src="/assets/image/projects/cicd-auth/2025-04-07-implementation of jwt security system using access token and refresh token - 1.png" alt="empty" style="width: 100%; height: auto;">  
@@ -16,6 +14,8 @@ categories: ci-cd-auth-project
    1. AccessToken이 만약 null이라면 발급도 받지 않은 경우이므로 다음 필터로 넘어가게 된다.
    2. AccessToken이 만료됐다면 서버는 ProcessRefreshToken 메서드를 호출해서 RefreshToken 검증, replayAttack 감지, Access & Refresh 재생성 처리를 진행하게 된다.
 3. Access Token이 문제가 없는 경우라면 setSecurityContextWithUserDetails 메서드로 진입해서 Access Token의 Payload에 들어있는 사용자 정보를 ContextHolder에 저장해서 인증/인가 처리한다.
+
+<br>
 
 ## 코드
 ### JWTFilter

@@ -13,7 +13,13 @@ td {
 .period {
     color: rgb(108, 108, 113);
     font-size: clamp(14px, 1vw, 15px);
+    font-weight: 500;
+}
+
+.desc > .problem-title {
     font-weight: 450;
+    /* color: rgba(51, 126, 169, 1); */
+    color: #000000;
 }
 
 .desc > a {
@@ -113,23 +119,11 @@ li > .subtext {
 }
 
 .name {
-    font-size: 32px;  
-    font-weight: 400;       
-    font-weight: bold;     
-
+    font-size: 27px;  
+    font-weight: 350;         
+    
     margin: 0;
-    margin-bottom: 0.2em;
-    padding: 0;
-}
-
-.dev-role {
-    font-size: 23px;       
-    font-weight: 300;   
-    color: #555;        
-
-    margin: 0;
-    margin-top: 0;         
-    margin-bottom: 0.3em;   
+    margin-bottom: 0.3em;
     padding: 0;
 }
 
@@ -143,7 +137,7 @@ li > .subtext {
 }
 
 .info .contact .item:nth-child(odd) {
-    width: 15%;
+    width: 16%;
 }
 
 .info .contact .item:nth-child(odd) p{
@@ -194,8 +188,30 @@ li > .subtext {
     margin-top: 0.5em;
 }
 
-.skill-stack {
+.skill-set {
+    width: 100%;
+    margin: 0;
     margin-top: 1%;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.skill-title p{
+    font-size: clamp(13px, 1vw, 18px);
+}
+
+.skill-item-list {    
+    display: flex; 
+    flex-wrap: wrap; 
+    position: absolute;
+    left: 20%;
+}
+
+.skill-item-list td{    
+    font-size: clamp(12px, 1vw, 13px);
 }
 
 @media print {
