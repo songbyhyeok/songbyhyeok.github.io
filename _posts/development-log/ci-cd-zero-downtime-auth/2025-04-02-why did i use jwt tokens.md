@@ -1,6 +1,6 @@
 ---
 title: 6 - 왜 JWT 토큰을 사용했을까?
-categories: ci-cd-auth-project
+categories: ci-cd-zero-downtime-auth
 ---
 
 # 다양한 옵션 중 어떤 기술을 왜 선택했는가?

@@ -1,7 +1,6 @@
 ---
 title: 7 - Access Token과 Refresh Token
-
-categories: ci-cd-auth-project
+categories: ci-cd-zero-downtime-auth
 ---
 
 # 워밍업

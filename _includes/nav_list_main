@@ -109,8 +109,8 @@
             <ul id="blogSubMenu7" style="display: none;">
                 <ul>
                     {% for category in site.categories %}
-                    {% if category[0] == "ci-cd-auth-project" %}
-                    <li><a href="/ci-cd-auth-project" id="nav__sub-item">ci/cd-auth-project ({{category[1].size}})</a></li>
+                    {% if category[0] == "ci-cd-zero-downtime-auth" %}
+                    <li><a href="/ci-cd-zero-downtime-auth" id="nav__sub-item">ci-cd-zero-downtime-auth ({{category[1].size}})</a></li>
                     {% endif %}
                     {% endfor %}
                 </ul>

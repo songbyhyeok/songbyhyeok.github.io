@@ -1,6 +1,6 @@
 ---
 title: 1 - 프로젝트 기획 및 설계
-categories: ci-cd-auth-project
+categories: ci-cd-zero-downtime-auth
 ---
 
 # 기획 및 설계

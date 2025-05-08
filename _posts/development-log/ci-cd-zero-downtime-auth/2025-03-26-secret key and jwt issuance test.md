@@ -1,6 +1,6 @@
 ---
 title: 5 - jwt 암호화와 secret key 생성 방법
-categories: ci-cd-auth-project
+categories: ci-cd-zero-downtime-auth
 ---
 
 # 양방향 암호화, 생성 방법

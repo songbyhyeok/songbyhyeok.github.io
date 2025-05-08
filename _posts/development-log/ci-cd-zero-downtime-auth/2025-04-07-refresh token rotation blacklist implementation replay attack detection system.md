@@ -1,13 +1,13 @@
 ---
 title: 9 - Refresh Token Rotation, Blacklist, ReplayAttack 감지 시스템 구현
-categories: ci-cd-auth-project
+categories: ci-cd-zero-downtime-auth
 ---
 
 # 개요
 지난 편에서 다뤘던 Access & Refresh Token Flow를 바탕으로 JWT 기반 인증 시스템을 구현하였다. 이번 글에서는 그 구현 내용을 코드 중심으로 간단히 소개하려고 한다.
 
 ## 코드 흐름
-<img src="/assets/image/projects/cicd-auth/2025-04-07-implementation of jwt security system using access token and refresh token - 1.png" alt="empty" style="width: 100%; height: auto;">  
+<img src="/assets/image/projects/ci-cd-zero-downtime-auth/2025-04-07-implementation of jwt security system using access token and refresh token - 1.png" alt="empty" style="width: 100%; height: auto;">  
 
 1. 클라이언트가 인증 이후 요청을 보내면 Spring Security Filter Chain에 등록된 JWT Filter가 호출이 된다.
 2. JWT Filter는 발급된 Access Token을 인증 헤더인 Bearer에 담아 validateAccessToken 메서드에서 Access Token 검증을 받게 된다.
