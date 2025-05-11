@@ -352,4 +352,3 @@ EC2에 배포하기 위해 도커 파일을 빌드 및 허브에 PUSH 한다.
 - [[서비스 배포 전략 구상하기] 무중단 배포 3가지 방식 (Rolling, Blue-Green, Canary)](https://loosie.tistory.com/781)
 - [도커를 이용한 웹서비스 무중단 배포하기](https://subicura.com/2016/06/07/zero-downtime-docker-deployment.html)
 - [Published 2024. 4. 16. 17:17 L4 스위치의 A to Z (Load Balancing, Traffic Flow, SSL Offload 등)](https://kangmanjoo.tistory.com/161)
-- [스프링부트 무중단 배포(SpringBoot, Maven, AWS EC2, Github Actions, Docker, Nginx) - 6강](https://www.youtube.com/watch?v=h206Ct3pAzQ&list=PLcyPfaKZ8Ykg4OkqAhFgwLvASs5T_-UjE&index=6)
