@@ -3,6 +3,20 @@ title: hicoding groupware
 categories: projects
 ---
 
+# Hicoding Groupware
+<em>클라우드 기반의 그룹웨어 시스템</em>
+
+**깃허브 링크**: <a href="https://github.com/songbyhyeok/hicoding-groupware" target="_blank" style="color: blue; text-decoration: none;">github link</a>  
+**개발 인원**: 5명, 팀원  
+**기술 스택**:  
+- JPA(DataJPA, Criteria)
+- RESTFul
+- Deploy(AWS(EC2, S3, RDS), Docker, Ubuntu)
+- MySQL
+- React
+
+<br>
+
 # 기술적 이슈 및 해결과정
  
 ## 답글, 대댓글 구현(Tree 형태로 재구축 후 DFS-Stack 처리)

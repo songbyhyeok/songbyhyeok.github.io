@@ -70,29 +70,24 @@ main {
 }
 
 .container {
-    width: 80%;
-    max-width: 80%;  
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 100%;  
+    background: linear-gradient(-60deg, #F5F5F5, #D3D3D3);
+    padding-top: 5%;
+    padding-bottom: 9%;
     display: flex;  
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: start;
 }
 
 .section-title {
-    margin: 0;
-    margin-right: 92%;
-    padding: 0;
-    padding-top: 2%;
-    border-bottom: 4px solid lightslategrey;
-}
-
-.section-title p {
-    font-size: clamp(14px, 1.7vw, 24px);
+    font-size: clamp(58px, 5vw, 68px);
     font-weight: 500;
-    text-align: left;
-    margin: 0; 
+    margin: 0;
     padding: 0;
+    padding-left: 5%;
+    padding-bottom: 2%;
 }
 
 .item-container {
@@ -103,14 +98,7 @@ main {
 }
 
 .portfolio-cover {
-    width: 100%;
-    max-width: 100%;      
-    background: linear-gradient(-60deg, #F5F5F5, #D3D3D3);
-    padding-bottom: 12%;
-    display: flex;  
-    justify-content: center;
-    align-items: start;
-    object-fit: contain;
+    flex-direction: row;
 }
 
 .cover-left {
@@ -121,55 +109,41 @@ main {
     max-width: 100%;
     max-height: 100%;
     margin: 0;
-    padding: 20% 0 0 15%;
+    padding: 10% 0 0 3%;
     object-fit: contain;
 }
 
-.cover-title {
-    font-size: clamp(34px, 5vw, 68px);
-    font-weight: 500;
-    margin: 0;
-    padding: 0;
-}
-
-.cover-desc {
-    font-size: clamp(12px, 2.5vw, 24px);
-    margin: 0;
-    padding: 0;
-    padding-left: 1%;
-}
-
 .cover-right {
-    flex: 3.7;
+    flex: 4.5;
 }
 
-.portfolio-profile {
+.portfolio-main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
     gap: 5%;
-    margin-top: 65%;
+    margin-top: 75%;
 }
 
-.profile-header {
-    max-width: 80%;
-    max-height: 80%;
+.main-header {
+    max-width: 100%;
+    max-height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items:end;
-    gap: 2%;  
-    object-fit: contain;  
+    align-items: start;
+    gap: 3%;  
 }
 
 .id-photo {
-    max-width: 30%;
+    max-width: 100%;
     max-height: auto;
     object-fit: contain; 
 }
 
 .id-photo img{
+    width: 400px;
     max-width: 100%; 
     max-height: 100%;    
     object-fit: contain;  
@@ -178,75 +152,134 @@ main {
     box-sizing: border-box;      
 }
 
-.profile-info {
-    padding-top: 5%;
-    flex: 1 1 auto;
-    object-fit: contain;    
+.main-info {
+    width: 100%;
 }
 
 .user-name{    
-    font-size: clamp(17px, 3vw, 58px);
+    font-size: clamp(35px, 3vw, 55px);
     font-weight: 500;
     margin: 0;
     padding: 0;
 }
 
 .secondary-name {
-    font-size: clamp(11px, 2vw, 25px);
+    font-size: clamp(25px, 3vw, 30px);
     font-weight: 400;
     margin: 0;
     padding: 0;
-}
-
-.user-job {
-    font-size: clamp(10px, 1.5vw, 20px);
-    font-weight: 300;
-    margin: 0;
-    padding: 0;
-}
-
-.contact-info {
-    margin-top: 1%;
-    padding: 0;
-    object-fit: contain; 
-}
-
-.contact-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: start;
-}
-
-.contact-item span {
-    font-size: clamp(12px, 2vw, 24px);
-    padding: 0;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    display: inline-block;
-}
-
-.contact-label, .contact-detail {
-    padding: 0;
-}
-
-.contact-label {
-    flex: 1.3;
-    font-weight: 400;
+    padding-bottom: 3%;
 }
 
 .contact-detail {
-    flex: 8.7;
+    font-size: clamp(15px, 3vw, 20px);
     font-weight: 300;
+    margin: 0;
+    padding: 0;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 .contact-detail a {
     text-decoration: none;
-    color: #000000;
+    color: blue;
+}
+
+.profile.container {
+    padding-top: 5%;
+    padding-bottom: 4%;
+}
+
+.profile.item-container {
+}
+
+.contact-item {
+    margin-left: 5%;
+    padding-bottom: 4.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start; 
+    align-items: start;
+    gap: 4%;
+}
+
+.id-photo2 {
+    width: 200px;
+    max-height: auto;
+    object-fit: contain; 
+}
+
+.id-photo2 img{
+    width: 200px;
+    object-fit: contain;  
+    border: 1px solid rgba(0, 0, 0, 0.2);    
+    border-radius: 5px;
+    box-sizing: border-box;      
+}
+
+.profile-contact {
+    padding-top: 1%;
+}
+
+.profile-contact p{
+    font-size: clamp(23px, 2vw, 27px);
+}
+
+.contact-item2 {
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start; 
+    align-items: start;
+    gap: 12%;
+}
+
+.main-title {
+    font-size: clamp(35px, 3vw, 40px);
+    font-weight: 400;
+}
+
+.education.item-container {
+    display: flex;  
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    object-fit: contain;   
+}
+
+.certificate.item-container {
+    display: flex;  
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    object-fit: contain;   
+}
+
+.item-title{
+    font-size: clamp(12px, 1.4vw, 22px);
+    font-weight: 500;
+}
+
+.item-title span {
+    font-size: clamp(9px, 1vw, 19px);
+    font-weight: 300;
+}
+
+.item-desc {
+    font-size: clamp(11px, 1vw, 21px);
+    font-weight: 350;
+}
+
+.skill-stack.container {
+    padding: 0;
+    padding-bottom: 22%;
+}
+
+.skill-stack.section-title {
+    padding-top: 5%;
 }
 
 .skill-stack.item-container {
-    margin-left: 2%;
     display: flex;  
     flex-direction: column;
     justify-content: start;
@@ -261,19 +294,26 @@ main {
     padding: 0;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: start;
+    align-items: center;     
     object-fit: contain;
     position: relative;
 }
 
+.skill-title{
+    padding-top: 5%;
+    padding-left: 6%;
+}
+
 .skill-title p{
-    font-size: clamp(12px, 1zvw, 22px);
+    font-size: clamp(28px, 2vw, 35px);
     font-weight: 500;
 }
 
 .skill-item-list {    
     margin: 0;
     padding: 0;
+    padding-top: 5%;
     display: flex; 
     flex-wrap: wrap; 
     position: absolute;
@@ -284,21 +324,25 @@ main {
     font-size: clamp(11px, 1.1vw, 20px);
 }
 
+.project {
+    padding-bottom: 5%;
+}
+
 .project.item-container {
     margin: 0;
     display: flex;
     flex-direction: row;
-    justify-content: center; 
+    justify-content: start; 
     align-items: center;
     object-fit: contain; 
     flex-wrap: wrap;
-    gap: 5%; 
+    gap: 6%; 
 }
 
 .project-item {
     padding: 20px; 
-    margin-top: 2%;
     margin-bottom: 2%;
+    margin-left: 6%;
     background-color: #ffffff; 
     border-radius: 10px; 
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
@@ -363,77 +407,26 @@ main {
     font-weight: 300;
 }
 
-.education.item-container {
-    margin-left: 2%;
-    display: flex;  
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    object-fit: contain;   
+.about-me.container {
+    padding-bottom: 21%;
 }
 
-.certificate.item-container {
-    margin-left: 2%;
-    display: flex;  
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    object-fit: contain;   
+.about-me-sub {
+    font-size: clamp(28px, 4vw, 35px);
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    padding-left: 6%;
+    padding-bottom: 1%;
 }
 
-.other.item-container {
-    margin-left: 2%;
-    display: flex;  
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    object-fit: contain;   
-}
-
-.other.item {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-}
-
-.item-title{
-    font-size: clamp(12px, 1.4vw, 22px);
-    font-weight: 500;
-}
-
-.item-title span {
-    font-size: clamp(9px, 1vw, 19px);
-    font-weight: 300;
-}
-
-.item-desc {
-    font-size: clamp(11px, 1vw, 21px);
-    font-weight: 350;
-}
-
-.other-related-link {
-    font-size: clamp(10px, 1vw, 20px);
-    font-weight: 350;
-    text-decoration: none;
-    color: blue;
-}
-
-.other-related-link:visited {
-    color: blue;
-}
-
-.other-link {
-    font-size: clamp(10px, 1vw, 20px);
-    font-weight: 350;
-    text-decoration: none;   
-    color: blue;
-}
-
-.other-link:visited {
-    color: blue;
+.about-me-desc {
+    font-size: clamp(20px, 3vw, 25px);
+    margin: 0;
+    padding: 0;
+    padding-left: 6%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
 }
 
 footer {
@@ -511,10 +504,6 @@ footer > p {
         display: none;
     }
 
-    .other.item > ul {
-        margin-left: 4%;
-    }
-
     footer {
         max-height: 60px;
     }
@@ -540,10 +529,6 @@ footer > p {
 
     .skill-item-list {    
         position: static;
-    }
-
-    .other.item > ul {
-        margin-left: 7%;
     }
 
     footer {
