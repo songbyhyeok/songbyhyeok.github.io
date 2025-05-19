@@ -336,7 +336,7 @@ main {
     align-items: center;
     object-fit: contain; 
     flex-wrap: wrap;
-    gap: 6%; 
+    gap: 2%; 
 }
 
 .project-item {
@@ -393,17 +393,17 @@ main {
 }
 
 .project-type {
-    font-size: clamp(11px, 1vw, 20px);
+    font-size: clamp(12px, 1vw, 20px);
     font-weight: 400;
 }
 
 .project-desc {
-    font-size: clamp(12px, 1.1vw, 20px);
+    font-size: clamp(11px, 1vw, 18px);
     font-weight: 350;
 }
 
-.project-stack {
-    font-size: clamp(12px, 0.9vw, 19px);
+.project-stack{
+    font-size: clamp(10px, 1vw, 17px);
     font-weight: 300;
 }
 
@@ -412,7 +412,7 @@ main {
 }
 
 .about-me-sub {
-    font-size: clamp(28px, 4vw, 35px);
+    font-size: clamp(28px, 3vw, 34px);
     font-weight: 400;
     margin: 0;
     padding: 0;
@@ -421,7 +421,7 @@ main {
 }
 
 .about-me-desc {
-    font-size: clamp(20px, 3vw, 25px);
+    font-size: clamp(15px, 2vw, 20px);
     margin: 0;
     padding: 0;
     padding-left: 6%;
