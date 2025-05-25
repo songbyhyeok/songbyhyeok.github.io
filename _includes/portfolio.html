@@ -25,8 +25,8 @@
 
         <nav class="navbar">
             <a href="javascript:void(0)" onclick="scrollToSection('homeSection')" class="nav-item">home</a>
-            <a href="/resume" class="nav-item">resume</a>
             <a href="javascript:void(0)" onclick="scrollToSection('projectSection')" class="nav-item">projects</a>
+            <a href="/resume" class="nav-item">resume</a>
             <a href="/" class="nav-item">blog</a>
             <a href="/cover-letter" class="nav-item">cl</a>
         </nav>
@@ -124,21 +124,6 @@
             <div class="skill-stack item-container">
                 <div class="skill-set">
                     <div class="skill-title">
-                        <p>Languages</p>
-                    </div>
-
-                    <div class="skill-item-list">
-                        <table>
-                            <tr>
-                                <td>Java</td>
-                                <td>C++</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="skill-set">
-                    <div class="skill-title">
                         <p>Backend</p>
                     </div>
 
@@ -170,6 +155,21 @@
                                 <td>CSS3</td>
                                 <td>SpringThymeleaf</td>
                                 <td>Bootstrap</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="skill-set">
+                    <div class="skill-title">
+                        <p>Languages</p>
+                    </div>
+
+                    <div class="skill-item-list">
+                        <table>
+                            <tr>
+                                <td>Java</td>
+                                <td>C++</td>
                             </tr>
                         </table>
                     </div>
@@ -207,9 +207,9 @@
                 </div>
 
                 <div class="project-item">
-                    <a href="https://songbyhyeok.github.io/projects/hicoding-groupware" target="_blank">
+                    <a href="javascript:void(0)" onclick="scrollToSection('project-item2')" class="nav-item">
                         <div class="project-title">
-                            <p>hicoding-groupware</p>
+                            <p>hicoding groupware</p>
                         </div>
 
                         <div class="project-period">
@@ -232,9 +232,9 @@
                 </div>
 
                 <div class="project-item">
-                    <a href="https://github.com/songbyhyeok/ci-cd-zero-downtime-auth/tree/main" target="_blank">
+                    <a href="javascript:void(0)" onclick="scrollToSection('project-item1')" class="nav-item">
                         <div class="project-title">
-                            <p>ci-cd-zero-downtime-auth</p>
+                            <p>ci/cd zero downtime auth</p>
                         </div>
 
                         <div class="project-period">
@@ -242,8 +242,7 @@
                         </div>
 
                         <div class="project-imgbox">
-                            <img src="assets/image/projects/ci-cd-zero-downtime-auth/ci-cd-logo.png"
-                                alt="Example Image">
+                            <img src="assets/image/projects/ci-cd-zero-downtime-auth/ci-cd-logo.png" alt="Example Image">
                         </div>
 
                         <div class="project-info">
@@ -254,6 +253,151 @@
                             <p class="project-stack">Spring Security, GitHub Actions, Docker, Redis, Nginx</p>
                         </div>
                     </a> 
+                </div>
+            </div>
+        </div>
+
+        <div class="project-element container" id="project-item1">
+            <div class="project-element subsection">
+                <div class="project-element-header">
+                    <div class="project-element-imgbox">
+                        <img src="assets/image/projects/ci-cd-zero-downtime-auth/ci-cd-logo.png" alt="Example Image">
+                    </div>
+                    <div class="project-element-intro">
+                        <p class="project-element-intro-title">ci cd zero downtime auth</p>
+                        <p class="project-element-intro-subtitle">무중단 배포와 인증·인가를 통합해 안정성과 보안을 갖춘 CI/CD 기반 시스템</p>
+                        <div class="project-element-intro-link-div">
+                            <p class="project-element-intro-link">깃허브 링크: <a href="https://github.com/songbyhyeok/ci-cd-zero-downtime-auth" target="_blank">github.com/songbyhyeok/ci-cd-zero-downtime-auth</a></p>
+                            <p class="project-element-intro-link">프로젝트 일지: <a href="https://songbyhyeok.github.io/ci-cd-zero-downtime-auth" target="_blank">songbyhyeok.github.io/ci-cd-zero-downtime-auth</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-element-spec">
+                    <div class="spec-item">
+                        <span class="spec-key">참여 형태:</span>
+                        <span class="spec-value">개인 사이드 프로젝트</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-key">개발 기간:</span>
+                        <span class="spec-value">2025.03 ~ 2025.05</span>
+                    </div>
+                    <div class="spec-item">
+                        <p class="spec-key">사용 기술:</p>
+                        <p class="spec-value">Spring(Boot, Security, JPA) / CI/CD(GitHub Actions, AWS(EC2, RDS), Ubuntu, Docker, Redis, Nginx) / MySQL 8.0 / RESTful API / Postman</p>
+                    </div>
+
+                    <div>
+                        <img src="/assets/image/projects/ci-cd-zero-downtime-auth/2025-03-09-ci-cd-design-1.png" alt="empty" style="width: 60%; height: auto;">  
+                    </div>
+
+                </div>
+
+                <br>
+
+                <div class="project-element-details">
+                    <p class="detail-section-title">기술 내용</p>
+
+                    <div class="detail-section">
+                        <h3>Nginx을 활용한 무중단 배포</h3>
+
+                        <img src="/assets/image/projects/ci-cd-zero-downtime-auth/zero-downtime-deployment-2.png" alt="empty" style="width: 25%; height: auto;">  
+
+                        <li>문제 분석:</li>
+                        <p>애플리케이션 배포 시 일시적인 중단이 발생하여 사용자 요청이 실패하고, 이로 인해 사용자 경험이 저해되는 문제에 대해 고민하였습니다.</p>
+
+                        <li>문제 해결:</li>
+                        <p>1. 그래서 이를 방지하는 하나의 방법 중, 무중단 배포 기술을 도입을 하였습니다. 그리고 무중단 배포 트래픽 제어 도구로 Nginx를 선택했습니다. 그 이유는 리버스 프록시 및 로드 밸런서를 지원하며, 낮은 오버헤드로 빠른 요청 처리가 가능하기 때문입니다.</p>
+                        <p>2. 다양한 배포 전략 중에서 Blue-Green 배포 전략을 채택했습니다. 왜냐하면, 기존 버전과 신규 버전의 실행 환경을 완전히 분리하여 운영할 수 있어, 새 버전의 안정성을 검증한 후 트래픽을 안전하게 전환할 수 있고, 문제가 발생했을 때 즉시 롤백이 가능하기 때문입니다.</p>
+                        <p>3. Nginx의 upstream 블록을 사용해 두 배포 환경(blue, green)에 대한 서버 그룹을 정의하고, 요청을 분산 처리했습니다.</p>
+
+                        <li>결과:</li>
+                        <p>결과적으로, Blue-Green 배포 전략과 Nginx 기반의 로드 밸런싱 구조를 통해 무중단 배포 환경을 성공적으로 구축하였고, 사용자 경험을 해치지 않으면서도 안정적인 운영이 가능해졌습니다.</p>
+
+                        <h3>Refresh Token Rotation으로 인한 토큰 재사용 및 세션 탈취 문제</h3>
+                        <li>문제 분석:</li>
+                        <p>사용자가 refresh token을 사용해 access token을 갱신한 뒤, 이전 refresh token이 탈취된 경우 공격자가 그 이전 토큰으로 다시 요청이 가능한 보안적 이슈가 발생하였습니다.</p>
+
+                        <li>문제 해결:</li>
+                        <p>1. 이와 같은 토큰 탈취 및 재사용 문제를 방지하고자, 블랙리스트 보안 기능을 구현하였습니다. 서버에서는 Refresh Token의 고유 식별자 및 만료 정보를 저장하고, 이를 바탕으로 토큰의 사용 여부와 유효성을 실시간으로 검증하는 방식으로 대응하였습니다.</p>
+                        <p>2. Refresh Token을 서버에 저장하면 JWT의 stateless 특성이 사라지고, 서버 분산 환경에서 동기화 및 부하 문제가 발생할 수 있습니다. 이를 해결하기 위해 Redis를 사용하여 Refresh Token을 관리함으로써, 데이터베이스 접근 없이도 빠른 검증이 가능하고, 서버 간 상태 공유 없이도 일관된 인증 처리가 가능하게 하였습니다.</p>
+
+                        <li>결과:</li>
+                        <p>토큰 재사용 공격을 효과적으로 차단함으로써 인증 시스템의 보안성을 향상시켰고, Redis를 통한 경량 상태 관리로 분산 서버 환경에서의 복잡성을 최소화할 수 있었습니다. 이에 따라 stateless 기반 JWT 구조의 이점을 유지하면서도, stateful 방식의 보안 제어 기능을 안정적으로 접목시킬 수 있었습니다.</p>
+
+                        <h3>Private RDS 접근</h3>
+
+                        <img src="/assets/image/projects/ci-cd-zero-downtime-auth/2025-03-19-private-rds-issue-1.png" alt="empty" style="width: 20%; height: auto;">  
+
+                        <li>문제 분석:</li>
+                        <p>AWS VPC의 Public Subnet에 위치한 RDS 인스턴스를 보안 및 성능 개선을 위해 Private IP로 변경한 결과, 클라이언트가 Private Subnet에 위치한 RDS에 접근할 수 없어 데이터베이스 연결 오류가 발생하였습니다.</p>
+
+                        <li>문제 해결:</li>
+                        <p>1. 우회 접근 방법으로 SSM(Systems Manager)와 SSH 방식 중, 키 관리와 간단한 설정으로 터널을 생성할 수 있는 SSH 방식을 선택했습니다.</p>
+                        <p>2. SSH 터널을 통해 EC2 인스턴스를 중계점으로 설정한 후, VPC의 Private Subnet에 위치한 RDS에 접근하기 위해 로컬 포트 포워딩 방식을 사용하여 터널을 구축하였습니다.</p>
+
+                        <li>결과:</li>
+                        <p>SSH 터널을 통해 로컬 환경에서 Private Subnet에 위치한 RDS 인스턴스에 안전하게 접근할 수 있게 되었으며, 데이터베이스 연결 오류 문제를 효과적으로 해결할 수 있었습니다. 이를 통해 보안은 강화하면서도 개발 및 운영 환경에서의 접근성은 유지하는 안정적인 구조를 확보하였습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-element container" id="project-item2">
+            <div class="project-element subsection">
+                <div class="project-element-header">
+                    <div class="project-element-imgbox">
+                        <img src="assets/image/projects/hicoding/hicoding-logo.png" alt="Example Image">
+                    </div>
+                    <div class="project-element-intro">
+                        <p class="project-element-intro-title">hicoding groupware</p>
+                        <p class="project-element-intro-subtitle">복잡한 업무도 쉽게 처리할 수 있는, 클라우드 그룹웨어 시스템</p>
+                        <div class="project-element-intro-link-div">
+                            <p class="project-element-intro-link">깃허브 링크: <a href="https://github.com/songbyhyeok/hicoding-groupware" target="_blank">github.com/songbyhyeok/hicoding-groupware</a></p>
+                            <p class="project-element-intro-link">기술 문서 링크: <a href="https://songbyhyeok.github.io/projects/hicoding-groupware" target="_blank">songbyhyeok.github.io/projects/hicoding-groupware</a></p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-element-spec">
+                    <div class="spec-item">
+                        <span class="spec-key">참여 형태:</span>
+                        <span class="spec-value">5인, 팀원</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-key">개발 기간:</span>
+                        <span class="spec-value">2023.11 ~ 2023.12</span>
+                    </div>
+                    <div class="spec-item">
+                        <p class="spec-key">사용 기술:</p>
+                        <p class="spec-value">JPA(DataJPA, Criteria) / RESTFul / Deploy(AWS(EC2, S3, RDS), Docker, Ubuntu) / MySQL / React</p>
+                    </div>
+                </div>
+
+                <div style="padding-left: 3%;">
+                    <img src="/assets/image/projects/hicoding/hicoding-arch.png" alt="empty" style="width: 50%; height: auto;">  
+                </div>
+
+            <br>
+
+                <div class="project-element-details">
+                    <p class="detail-section-title">기술 내용</p>
+
+                    <div class="detail-section">
+                        <h3>계층형 쿼리의 성능 한계와 DFS 기반 트리 탐색을 통한 최적화</h3>
+
+                        <img src="/assets/image/projects/hicoding/hicoding-desc-1.png" alt="empty" style="width: 39%; height: auto;">  
+                        <img src="/assets/image/projects/hicoding/hicoding-desc-2.png" alt="empty" style="width: 39%; height: auto;">  
+
+                        <li>문제 분석:</li>
+                        <p>계층형 쿼리를 이용해 댓글과 대댓글을 처리할 경우, 심각한 성능 문제에 직면할 수 있습니다. 이러한 쿼리는 각 댓글의 부모를 따라 재귀적으로 데이터를 조회해야 하므로, 댓글의 깊이가 깊어지거나 전체 댓글 수가 많아질수록 쿼리 비용이 기하급수적으로 증가합니다. 그 결과, 조회 성능이 저하되고 데이터베이스에 과도한 부하가 발생하여, 특히 트래픽이 많은 환경에서는 시스템 전체의 응답 속도에 악영향을 줄 수 있습니다. 이는 중요한 병목 요소로 작용할 수 있습니다.</p>
+
+                        <li>문제 해결:</li>
+                        <p>이러한 성능 문제를 해결하기 위해, 계층형 쿼리를 직접 사용하는 대신 다진 트리 기반의 DFS(Depth-First Search) 순회 방식을 도입했습니다. 이 방식은 댓글 데이터를 계층 트리 구조로 구성한 후, 메모리 상에서 깊이 우선 탐색을 수행하여 렌더링합니다. 하지만, 일반적인 DFS 탐색 방식에는 또 다른 문제가 존재합니다. 자식 노드를 순차적으로 탐색하기 때문에, 등록일 기준으로 가장 최신의 댓글이 하단에 배치되는 정렬 문제가 발생할 수 있습니다. 이를 해결하기 위해 DFS 수행 시 자식 노드들을 등록일 역순으로 스택에 삽입하도록 구성했습니다. 이렇게 하면 스택의 LIFO(Last-In-First-Out) 특성에 따라 최신 댓글이 먼저 탐색되어, 각 계층에서도 자연스럽게 등록일 기준 최신순 정렬을 유지할 수 있습니다.</p>
+
+                        <li>결과:</li>
+                        <p>이러한 구조적 개선을 통해 댓글 조회 성능을 크게 향상시킬 수 있었습니다. 데이터는 메모리에서 처리되므로 데이터베이스에 과도한 부하를 주지 않으며, 트리 구조의 탐색 역시 빠르게 수행됩니다. 특히 최신 댓글이 상단에 배치되도록 정렬 전략을 적용함으로써, 사용자 입장에서는 보다 직관적이고 가독성 높은 UI/UX를 경험할 수 있게 되었습니다.</p>
+                    </div>
                 </div>
             </div>
         </div>

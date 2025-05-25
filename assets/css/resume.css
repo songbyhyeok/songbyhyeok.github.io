@@ -10,99 +10,11 @@ td {
     font-size: clamp(10px, 1vw, 14px);
 }
 
-.period {
-    color: rgb(108, 108, 113);
-    font-size: clamp(14px, 1vw, 15px);
-    font-weight: 500;
-}
-
-.desc > .problem-title {
-    font-weight: 450;
-    /* color: rgba(51, 126, 169, 1); */
-    color: #000000;
-}
-
-.desc > a {
-    text-decoration: none;  
-    color: blue;
-    margin: 0;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;       
-}
-
-.desc > a:visited {
-    color: blue;
-}
-
-.desc > p > a {
-    text-decoration: none;  
-    color: blue;
-    margin: 0;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;       
-    font-size: medium;
-}
-
-.desc > p > a:visited {
-    color: blue;
-}
-
-.q-item {
-    font-size: medium;
-    font-weight: 400;
-    margin-top: 0.4em;
-}
-
-.study-link {
-    text-decoration: none;
-    color: blue;
-    margin: 0;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-}
-
-.study-link:visited {
-    color: blue;
-}
-
-.project-type {
-    padding-top: 0.2%;
-}
-
-.project-type.desc {
-    font-size: clamp(14px, 1vw, 15px);
-    font-weight: 500;
-}
-
-.features {
-    margin: 0;
-    margin-top: 0.3em;
-    padding: 0;
-}
-
-li > .subtext {
-    margin-left: 4%;
-    padding-top: 0.5%;
-}
-
-.divider {
-    border: none;              
-    border-top: 2px so  d #000000; 
-    margin: 20px 0;           
-}
-
-.child-list {
-    list-style-type: circle; 
-}
-
 .container {
     background-color: white;
-
     min-width: 330px; 
     min-height: 667px;
     max-width: 800px;
-    
-       
     padding: 2% 4%;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 3px;
@@ -121,7 +33,6 @@ li > .subtext {
 .name {
     font-size: 27px;  
     font-weight: 350;         
-    
     margin: 0;
     margin-bottom: 0.3em;
     padding: 0;
@@ -137,7 +48,7 @@ li > .subtext {
 }
 
 .info .contact .item:nth-child(odd) {
-    width: 16%;
+    width: 20%;
 }
 
 .info .contact .item:nth-child(odd) p{
@@ -182,10 +93,31 @@ li > .subtext {
     object-fit: cover;
 }
 
-.introduction {
-    font-size: clamp(15px, 1vw, 17px);
-    font-weight: 300;
-    margin-top: 0.5em;
+.about-me-desc {
+    display: flex; 
+    flex-direction: row;
+    justify-content: start; 
+    align-items: start;
+    margin-left: 0.5%;
+    padding-bottom: 1%;
+}
+
+.about-me-desc-div > p {
+    font-size: clamp(14px, 1vw, 16px);
+}
+
+.about-me-desc-title {
+    font-weight: 500;
+}
+
+.about-me-desc-div > p > a {
+    color: rgba(0, 0, 255, 0.6);
+    font-weight: 400;
+    margin: 0;
+}
+
+.about-me-desc-div > p > a:visited {
+    color: rgba(0, 0, 255, 0.6);
 }
 
 .skill-set {
@@ -200,18 +132,92 @@ li > .subtext {
 }
 
 .skill-title p{
-    font-size: clamp(13px, 1vw, 18px);
+    font-size: clamp(12px, 1vw, 16px);
+    font-weight: 500;
 }
 
 .skill-item-list {    
     display: flex; 
     flex-wrap: wrap; 
-    position: absolute;
-    left: 20%;
 }
 
 .skill-item-list td{    
-    font-size: clamp(12px, 1vw, 13px);
+    font-size: clamp(7px, 1vw, 13px);
+}
+
+.features {
+    margin: 0;
+    margin-top: 0.3em;
+    padding: 0;
+}
+
+.period {
+    color: rgb(108, 108, 113);
+    font-size: clamp(14px, 1vw, 15px);
+    font-weight: 500;
+}
+
+.project-subtext {
+    font-size: clamp(14px, 1vw, 16px);
+}
+
+.feat-desc {
+    display: flex;              
+    justify-content: start; 
+    align-items: start;       
+    margin-left: 0.5%;
+    padding-bottom: 1%;
+}
+
+.feat-desc > span {
+    font-size: clamp(14px, 1vw, 16px);
+}
+
+.feat-desc > span a{
+    color: rgba(0, 0, 255, 0.6);
+    font-weight: 400;
+    margin: 0;
+}
+
+.feat-desc > span a:visited{ 
+    color: rgba(0, 0, 255, 0.6);
+}
+
+.feat-desc > p {
+    font-size: clamp(14px, 1vw, 16px);
+    font-weight: 400;
+}
+
+.feat-desc > p > span {
+    font-weight: 300;
+}
+
+.feat-desc > p > a {
+    text-decoration: none;  
+    color: blue;
+    font-weight: 300;
+    margin: 0;
+}
+
+.feat-desc > p > a:visited {
+    color: blue;
+}
+
+.section li {
+    font-size: clamp(14px, 1vw, 16px);
+    font-weight: 320;
+}
+
+.study-link {
+    text-decoration: none;
+    color: blue;
+    margin: 0;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+
+.study-link:visited {
+    color: blue;
 }
 
 @media print {
